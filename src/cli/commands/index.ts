@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: MIT
+/**
+ * Ponto de entrada único para todos os comandos da CLI do Oráculo.
+ *
+ * Este arquivo centraliza as exportações de todos os comandos disponíveis,
+ * facilitando a manutenção e evitando múltiplas importações espalhadas.
+ */
+
+// Comandos principais
+export { comandoAnalistas } from './comando-analistas.js';
+export { comandoAtualizar } from './comando-atualizar.js';
+export { comandoDiagnosticar } from './comando-diagnosticar.js';
+export { criarComandoFixTypes } from './comando-fix-types.js';
+export { comandoFormatar } from './comando-formatar.js';
+export { comandoGuardian } from './comando-guardian.js';
+export { comandoMetricas } from './comando-metricas.js';
+export { comandoOtimizarSvg } from './comando-otimizar-svg.js';
+export { comandoPerf } from './comando-perf.js';
+export { comandoPodar } from './comando-podar.js';
+export { comandoReestruturar } from './comando-reestruturar.js';
+
+// Comando de reversão (diferente padrão de export)
+export { registrarComandoReverter } from './comando-reverter.js';

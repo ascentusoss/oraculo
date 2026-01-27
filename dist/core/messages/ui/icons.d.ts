@@ -1,0 +1,230 @@
+export declare const ICONES_NIVEL: {
+    readonly sucesso: "\u001B[32mSUCESSO\u001B[0m";
+    readonly info: "\u001B[34mINFO\u001B[0m";
+    readonly aviso: "\u001B[33mAVISO\u001B[0m";
+    readonly erro: "\u001B[31mERRO\u001B[0m";
+    readonly critico: "\u001B[31mERRO\u001B[0m";
+    readonly debug: "\u001B[37mDEBUG\u001B[0m";
+};
+export declare const ICONES_STATUS: {
+    readonly ok: "[OK]";
+    readonly falha: "[FALHA]";
+    readonly pendente: "[...]";
+    readonly executando: "[>]";
+    readonly pausado: "[||]";
+    readonly pulado: "[>>]";
+};
+export declare const ICONES_ACAO: {
+    readonly analise: "[SCAN]";
+    readonly correcao: "[FIX]";
+    readonly limpeza: "[CLEAN]";
+    readonly organizacao: "[ORG]";
+    readonly validacao: "[CHECK]";
+    readonly compilacao: "[BUILD]";
+    readonly teste: "[TEST]";
+    readonly export: "[EXPORT]";
+    readonly import: "[IMPORT]";
+    readonly criar: "[+]";
+    readonly deletar: "[-]";
+    readonly mover: "[MOVE]";
+    readonly copiar: "[COPY]";
+    readonly renomear: "[RENAME]";
+};
+export declare const ICONES_ARQUIVO: {
+    readonly arquivo: "[FILE]";
+    readonly diretorio: "[DIR]";
+    readonly config: "[CFG]";
+    readonly codigo: "[CODE]";
+    readonly teste: "[TEST]";
+    readonly doc: "[DOC]";
+    readonly lock: "[LOCK]";
+    readonly package: "[PKG]";
+    readonly json: "[JSON]";
+    readonly typescript: "[TS]";
+    readonly javascript: "[JS]";
+};
+export declare const ICONES_FEEDBACK: {
+    readonly dica: "[DICA]";
+    readonly atencao: "[!]";
+    readonly importante: "[!]";
+    readonly info: "[i]";
+    readonly pergunta: "[?]";
+    readonly celebracao: "[!]";
+    readonly foguete: "[>]";
+};
+export declare const ICONES_DIAGNOSTICO: {
+    readonly inicio: "[SCAN]";
+    readonly progresso: "[...]";
+    readonly arquetipos: "[ARQ]";
+    readonly guardian: "[GUARD]";
+    readonly autoFix: "[FIX]";
+    readonly executive: "[EXEC]";
+    readonly rapido: "[FAST]";
+    readonly completo: "[FULL]";
+    readonly stats: "[STATS]";
+};
+export declare const ICONES_TIPOS: {
+    readonly any: "\u001B[31m[ANY]\u001B[0m";
+    readonly unknown: "\u001B[33m[?]\u001B[0m";
+    readonly legitimo: "\u001B[32m[OK]\u001B[0m";
+    readonly melhoravel: "\u001B[33m[!]\u001B[0m";
+    readonly corrigir: "\u001B[31m[FIX]\u001B[0m";
+    readonly seguro: "[OK]";
+    readonly inseguro: "[!]";
+};
+export declare const ICONES_COMANDO: {
+    readonly diagnosticar: "[SCAN]";
+    readonly reestruturar: "[ORG]";
+    readonly podar: "[CLEAN]";
+    readonly fixTypes: "[FIX]";
+    readonly guardian: "[GUARD]";
+    readonly metricas: "[STATS]";
+    readonly reverter: "[UNDO]";
+    readonly atualizar: "[UPD]";
+    readonly perf: "[PERF]";
+};
+export declare const ICONES_RELATORIO: {
+    readonly resumo: "[SUMMARY]";
+    readonly detalhado: "[DETAIL]";
+    readonly grafico: "[GRAPH]";
+    readonly tabela: "[TABLE]";
+    readonly lista: "[LIST]";
+    readonly warning: "\u001B[33m[!]\u001B[0m";
+    readonly error: "\u001B[31m[ERR]\u001B[0m";
+    readonly success: "\u001B[32m[OK]\u001B[0m";
+};
+export declare const ICONES_ZELADOR: {
+    readonly inicio: "[START]";
+    readonly sucesso: "\u001B[32m[OK]\u001B[0m";
+    readonly erro: "\u001B[31m[ERR]\u001B[0m";
+    readonly aviso: "\u001B[33m[!]\u001B[0m";
+    readonly resumo: "[SUMMARY]";
+    readonly arquivo: "[FILE]";
+    readonly diretorio: "[DIR]";
+    readonly correcao: "[FIX]";
+    readonly dryRun: "[DRY]";
+    readonly estatistica: "[STATS]";
+};
+export type IconeNivel = keyof typeof ICONES_NIVEL;
+export type IconeStatus = keyof typeof ICONES_STATUS;
+export type IconeAcao = keyof typeof ICONES_ACAO;
+export type IconeArquivo = keyof typeof ICONES_ARQUIVO;
+export type IconeFeedback = keyof typeof ICONES_FEEDBACK;
+export type IconeDiagnostico = keyof typeof ICONES_DIAGNOSTICO;
+export type IconeTipo = keyof typeof ICONES_TIPOS;
+export type IconeComando = keyof typeof ICONES_COMANDO;
+export type IconeRelatorio = keyof typeof ICONES_RELATORIO;
+export type IconeZelador = keyof typeof ICONES_ZELADOR;
+export declare function getIcone(categoria: 'nivel' | 'status' | 'acao', nome: string): string;
+export declare function suportaCores(): boolean;
+export declare const ICONES: {
+    readonly nivel: {
+        readonly sucesso: "\u001B[32mSUCESSO\u001B[0m";
+        readonly info: "\u001B[34mINFO\u001B[0m";
+        readonly aviso: "\u001B[33mAVISO\u001B[0m";
+        readonly erro: "\u001B[31mERRO\u001B[0m";
+        readonly critico: "\u001B[31mERRO\u001B[0m";
+        readonly debug: "\u001B[37mDEBUG\u001B[0m";
+    };
+    readonly status: {
+        readonly ok: "[OK]";
+        readonly falha: "[FALHA]";
+        readonly pendente: "[...]";
+        readonly executando: "[>]";
+        readonly pausado: "[||]";
+        readonly pulado: "[>>]";
+    };
+    readonly acao: {
+        readonly analise: "[SCAN]";
+        readonly correcao: "[FIX]";
+        readonly limpeza: "[CLEAN]";
+        readonly organizacao: "[ORG]";
+        readonly validacao: "[CHECK]";
+        readonly compilacao: "[BUILD]";
+        readonly teste: "[TEST]";
+        readonly export: "[EXPORT]";
+        readonly import: "[IMPORT]";
+        readonly criar: "[+]";
+        readonly deletar: "[-]";
+        readonly mover: "[MOVE]";
+        readonly copiar: "[COPY]";
+        readonly renomear: "[RENAME]";
+    };
+    readonly arquivo: {
+        readonly arquivo: "[FILE]";
+        readonly diretorio: "[DIR]";
+        readonly config: "[CFG]";
+        readonly codigo: "[CODE]";
+        readonly teste: "[TEST]";
+        readonly doc: "[DOC]";
+        readonly lock: "[LOCK]";
+        readonly package: "[PKG]";
+        readonly json: "[JSON]";
+        readonly typescript: "[TS]";
+        readonly javascript: "[JS]";
+    };
+    readonly feedback: {
+        readonly dica: "[DICA]";
+        readonly atencao: "[!]";
+        readonly importante: "[!]";
+        readonly info: "[i]";
+        readonly pergunta: "[?]";
+        readonly celebracao: "[!]";
+        readonly foguete: "[>]";
+    };
+    readonly diagnostico: {
+        readonly inicio: "[SCAN]";
+        readonly progresso: "[...]";
+        readonly arquetipos: "[ARQ]";
+        readonly guardian: "[GUARD]";
+        readonly autoFix: "[FIX]";
+        readonly executive: "[EXEC]";
+        readonly rapido: "[FAST]";
+        readonly completo: "[FULL]";
+        readonly stats: "[STATS]";
+    };
+    readonly tipos: {
+        readonly any: "\u001B[31m[ANY]\u001B[0m";
+        readonly unknown: "\u001B[33m[?]\u001B[0m";
+        readonly legitimo: "\u001B[32m[OK]\u001B[0m";
+        readonly melhoravel: "\u001B[33m[!]\u001B[0m";
+        readonly corrigir: "\u001B[31m[FIX]\u001B[0m";
+        readonly seguro: "[OK]";
+        readonly inseguro: "[!]";
+    };
+    readonly comando: {
+        readonly diagnosticar: "[SCAN]";
+        readonly reestruturar: "[ORG]";
+        readonly podar: "[CLEAN]";
+        readonly fixTypes: "[FIX]";
+        readonly guardian: "[GUARD]";
+        readonly metricas: "[STATS]";
+        readonly reverter: "[UNDO]";
+        readonly atualizar: "[UPD]";
+        readonly perf: "[PERF]";
+    };
+    readonly relatorio: {
+        readonly resumo: "[SUMMARY]";
+        readonly detalhado: "[DETAIL]";
+        readonly grafico: "[GRAPH]";
+        readonly tabela: "[TABLE]";
+        readonly lista: "[LIST]";
+        readonly warning: "\u001B[33m[!]\u001B[0m";
+        readonly error: "\u001B[31m[ERR]\u001B[0m";
+        readonly success: "\u001B[32m[OK]\u001B[0m";
+    };
+    readonly zelador: {
+        readonly inicio: "[START]";
+        readonly sucesso: "\u001B[32m[OK]\u001B[0m";
+        readonly erro: "\u001B[31m[ERR]\u001B[0m";
+        readonly aviso: "\u001B[33m[!]\u001B[0m";
+        readonly resumo: "[SUMMARY]";
+        readonly arquivo: "[FILE]";
+        readonly diretorio: "[DIR]";
+        readonly correcao: "[FIX]";
+        readonly dryRun: "[DRY]";
+        readonly estatistica: "[STATS]";
+    };
+};
+export default ICONES;
+//# sourceMappingURL=icons.d.ts.map

@@ -1,0 +1,111 @@
+{
+  "INCLUDE_EXCLUDE_RULES": {
+    "globalExcludeGlob": [
+      "node_modules/**",
+      "dist/**",
+      "coverage/**",
+      "scripts/**",
+      ".deprecados/**",
+      "**/*.log",
+      ".git/**"
+    ]
+  },
+  "ESTRUTURA_ARQUIVOS_RAIZ_MAX": 60,
+  "REPO_ARQUETIPO": "cli-modular",
+  "STRUCTURE_AUTO_FIX": false,
+  "REPORT_EXPORT_ENABLED": true,
+  "coverageGate": {
+    "lines": 90,
+    "functions": 90,
+    "branches": 90,
+    "statements": 90
+  },
+  "languageSupport": {
+    "javascript": {
+      "enabled": true
+    },
+    "typescript": {
+      "enabled": true
+    },
+    "html": {
+      "enabled": true
+    },
+    "css": {
+      "enabled": true
+    },
+    "xml": {
+      "enabled": true
+    },
+    "php": {
+      "enabled": true
+    },
+    "python": {
+      "enabled": true
+    }
+  },
+  "suppress": {
+    "rules": [
+      "weak-crypto",
+      "magic-constants",
+      "unhandled-async",
+      "missing-jsdoc",
+      "magic-constants",
+      "poor-naming"
+    ],
+    "severity": {},
+    "paths": []
+  },
+  "rules": {
+    "tipo-inseguro": {
+      "severity": "error",
+      "exclude": [
+        "test/**/*",
+        "tests/**/*",
+        "**/*.test.ts",
+        "**/*.spec.ts",
+        "**/__tests__/**"
+      ]
+    },
+    "arquivo-orfao": {
+      "severity": "warning",
+      "allowTestFiles": true,
+      "exclude": ["test/**/*", "tests/**/*", "**/*.test.ts", "**/*.spec.ts"]
+    },
+    "dependencia-circular": {
+      "severity": "error",
+      "showFullPath": true
+    }
+  },
+  "testPatterns": {
+    "files": [
+      "**/*.test.*",
+      "**/*.spec.*",
+      "test/**/*",
+      "tests/**/*",
+      "**/__tests__/**"
+    ],
+    "excludeFromOrphanCheck": true,
+    "allowAnyType": true
+  },
+  "fastMode": {
+    "analystsInclude": [
+      "detector-dependencias",
+      "detector-estrutura",
+      "arquitetura",
+      "seguranca",
+      "detector-tipos-inseguros",
+      "todo-comments",
+      "analista-padroes-uso"
+    ],
+    "conventions": {
+      "typesDirectory": "src/types"
+    },
+    "analystsExclude": [
+      "documentacao",
+      "duplicacoes",
+      "xml",
+      "performance",
+      "qualidade-testes"
+    ]
+  }
+}

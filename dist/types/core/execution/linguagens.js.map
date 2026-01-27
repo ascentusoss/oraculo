@@ -1,0 +1,1 @@
+{"version":3,"file":"linguagens.js","sourceRoot":"","sources":["../../../../src/types/core/execution/linguagens.ts"],"names":[],"mappings":"","sourcesContent":["// SPDX-License-Identifier: MIT\n\nexport interface LinguagensJson {\n  total: number;\n  extensoes: Record<string, number>;\n}\n"]}

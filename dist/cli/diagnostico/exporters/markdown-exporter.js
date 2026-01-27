@@ -1,0 +1,270 @@
+export function gerarRelatorioMarkdown(dados, options = {}) {
+    const opts = {
+        includeToc: options.includeToc ?? true,
+        includeStats: options.includeStats ?? true,
+        includeGuardian: options.includeGuardian ?? true,
+        includeArquetipos: options.includeArquetipos ?? true,
+        includeAutoFix: options.includeAutoFix ?? true,
+        includeOcorrencias: options.includeOcorrencias ?? true,
+        agruparPorArquivo: options.agruparPorArquivo ?? false,
+        maxOcorrencias: options.maxOcorrencias,
+        titulo: options.titulo ?? 'Relatório de Diagnóstico',
+        subtitulo: options.subtitulo,
+    };
+    const secoes = [];
+    secoes.push(gerarCabecalho(opts.titulo ?? 'Relatório de Diagnóstico', opts.subtitulo, dados.metadata));
+    if (opts.includeToc) {
+        secoes.push(gerarIndice(opts, dados));
+    }
+    if (opts.includeStats && dados.stats) {
+        secoes.push(gerarSecaoStats(dados.stats, dados.linguagens));
+    }
+    if (opts.includeGuardian && dados.guardian?.executado) {
+        secoes.push(gerarSecaoGuardian(dados.guardian));
+    }
+    if (opts.includeArquetipos && dados.arquetipos?.executado) {
+        secoes.push(gerarSecaoArquetipos(dados.arquetipos));
+    }
+    if (opts.includeAutoFix && dados.autoFix?.executado) {
+        secoes.push(gerarSecaoAutoFix(dados.autoFix));
+    }
+    if (opts.includeOcorrencias &&
+        dados.ocorrencias &&
+        dados.ocorrencias.length > 0) {
+        secoes.push(gerarSecaoOcorrencias(dados.ocorrencias, opts));
+    }
+    if (dados.sugestoes && dados.sugestoes.length > 0) {
+        secoes.push(gerarSecaoSugestoes(dados.sugestoes));
+    }
+    secoes.push(gerarRodape());
+    return secoes.join('\n\n---\n\n');
+}
+function gerarCabecalho(titulo, subtitulo, metadata) {
+    let md = `# ${titulo}\n\n`;
+    if (subtitulo) {
+        md += `> ${subtitulo}\n\n`;
+    }
+    if (metadata) {
+        md += `**Data**: ${new Date(metadata.timestamp).toLocaleString('pt-BR')}\n`;
+        md += `**Modo**: ${metadata.modo}\n`;
+        if (metadata.flags.length > 0) {
+            md += `**Flags**: \`${metadata.flags.join('`, `')}\`\n`;
+        }
+    }
+    return md;
+}
+function gerarIndice(opts, dados) {
+    const itens = [];
+    if (opts.includeStats && dados.stats) {
+        itens.push('- [📊 Estatísticas](#-estatísticas)');
+    }
+    if (opts.includeGuardian && dados.guardian?.executado) {
+        itens.push('- [🛡️ Guardian](#️-guardian)');
+    }
+    if (opts.includeArquetipos && dados.arquetipos?.executado) {
+        itens.push('- [🏗️ Arquetipos](#️-arquetipos)');
+    }
+    if (opts.includeAutoFix && dados.autoFix?.executado) {
+        itens.push('- [🔧 Auto-fix](#-auto-fix)');
+    }
+    if (opts.includeOcorrencias &&
+        dados.ocorrencias &&
+        dados.ocorrencias.length > 0) {
+        itens.push('- [🔍 Ocorrências](#-ocorrências)');
+    }
+    if (dados.sugestoes && dados.sugestoes.length > 0) {
+        itens.push('- [💡 Sugestões](#-sugestões)');
+    }
+    return `## Índice\n\n${itens.join('\n')}`;
+}
+function gerarSecaoStats(stats, linguagens) {
+    let md = '## 📊 Estatísticas\n\n';
+    md += '| Métrica | Valor |\n';
+    md += '|---------|-------|\n';
+    md += `| Arquivos analisados | ${stats.arquivosAnalisados} |\n`;
+    md += `| Arquivos com problemas | ${stats.arquivosComProblemas} |\n`;
+    md += `| Total de ocorrências | ${stats.totalOcorrencias} |\n`;
+    if (stats.tempoExecucao) {
+        const tempoSeg = (stats.tempoExecucao / 1000).toFixed(2);
+        md += `| Tempo de execução | ${tempoSeg}s |\n`;
+    }
+    md += '\n### Por Nível\n\n';
+    md += '| Nível | Quantidade |\n';
+    md += '|-------|------------|\n';
+    md += `| ❌ Erro | ${stats.porNivel.erro} |\n`;
+    md += `| ⚠️ Aviso | ${stats.porNivel.aviso} |\n`;
+    md += `| ℹ️ Info | ${stats.porNivel.info} |\n`;
+    if (Object.keys(stats.porCategoria).length > 0) {
+        md += '\n### Por Categoria\n\n';
+        md += '| Categoria | Quantidade |\n';
+        md += '|-----------|------------|\n';
+        const categorias = Object.entries(stats.porCategoria)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+        for (const [categoria, count] of categorias) {
+            md += `| ${categoria} | ${count} |\n`;
+        }
+    }
+    if (linguagens && Object.keys(linguagens.extensoes).length > 0) {
+        md += '\n### Linguagens Detectadas\n\n';
+        md += '| Extensão | Arquivos |\n';
+        md += '|----------|----------|\n';
+        const extensoes = Object.entries(linguagens.extensoes)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+        for (const [ext, count] of extensoes) {
+            md += `| .${ext} | ${count} |\n`;
+        }
+    }
+    return md;
+}
+function gerarSecaoGuardian(guardian) {
+    let md = '## 🛡️ Guardian\n\n';
+    md += `**Status**: ${guardian.status ?? 'desconhecido'}\n`;
+    md += `**Problemas**: ${guardian.temProblemas ? '❌ Detectados' : '✅ Nenhum'}\n\n`;
+    if (guardian.resultado?.detalhes && guardian.resultado.detalhes.length > 0) {
+        md += `### Detalhes\n\n`;
+        for (const detalhe of guardian.resultado.detalhes) {
+            md += `- ${detalhe}\n`;
+        }
+        md += '\n';
+    }
+    if (guardian.drift && guardian.drift > 0) {
+        md += `### Drift Detectado\n\n`;
+        md += `- Mudanças: ${guardian.drift}\n`;
+    }
+    return md;
+}
+function gerarSecaoArquetipos(arquetipos) {
+    let md = '## 🏗️ Arquetipos\n\n';
+    if (arquetipos.principal) {
+        md += `**Arquétipo Principal**: ${arquetipos.principal.tipo}\n`;
+        md += `**Confiança**: ${(arquetipos.principal.confianca * 100).toFixed(1)}%\n\n`;
+    }
+    if (arquetipos.arquetipos && arquetipos.arquetipos.length > 1) {
+        md += '### Outros Candidatos\n\n';
+        md += '| Arquétipo | Confiança | Características |\n';
+        md += '|-----------|-----------|------------------|\n';
+        for (const arq of arquetipos.arquetipos.slice(1, 6)) {
+            const caracteristicas = arq.caracteristicas?.slice(0, 3).join(', ') ?? '';
+            md += `| ${arq.tipo} | ${(arq.confianca * 100).toFixed(1)}% | ${caracteristicas} |\n`;
+        }
+    }
+    if (arquetipos.salvo) {
+        md += '\n✅ Arquétipo salvo em `oraculo.repo.arquetipo.json`\n';
+    }
+    return md;
+}
+function gerarSecaoAutoFix(autoFix) {
+    let md = '## 🔧 Auto-fix\n\n';
+    md += `**Modo**: ${autoFix.mode}\n`;
+    md += `**Dry-run**: ${autoFix.dryRun ? 'Sim' : 'Não'}\n\n`;
+    md += '### Estatísticas\n\n';
+    md += '| Métrica | Valor |\n';
+    md += '|---------|-------|\n';
+    md += `| Arquivos analisados | ${autoFix.stats.arquivosAnalisados} |\n`;
+    md += `| Arquivos modificados | ${autoFix.stats.arquivosModificados} |\n`;
+    md += `| Correções aplicadas | ${autoFix.stats.correcoesAplicadas} |\n`;
+    md += `| Correções sugeridas | ${autoFix.stats.correcoesSugeridas} |\n`;
+    md += `| Correções puladas | ${autoFix.stats.correcoesPuladas} |\n`;
+    if (autoFix.correcoesPorTipo &&
+        Object.keys(autoFix.correcoesPorTipo).length > 0) {
+        md += '\n### Por Tipo\n\n';
+        md += '| Tipo | Quantidade |\n';
+        md += '|------|------------|\n';
+        for (const [tipo, count] of Object.entries(autoFix.correcoesPorTipo)) {
+            md += `| ${tipo} | ${count} |\n`;
+        }
+    }
+    return md;
+}
+function gerarSecaoOcorrencias(ocorrencias, opts) {
+    let md = '## 🔍 Ocorrências\n\n';
+    let lista = ocorrencias;
+    if (opts.maxOcorrencias && lista.length > opts.maxOcorrencias) {
+        lista = lista.slice(0, opts.maxOcorrencias);
+        md += `> Mostrando ${opts.maxOcorrencias} de ${ocorrencias.length} ocorrências\n\n`;
+    }
+    if (opts.agruparPorArquivo) {
+        md += gerarOcorrenciasPorArquivo(lista);
+    }
+    else {
+        md += gerarTabelaOcorrencias(lista);
+    }
+    return md;
+}
+function gerarTabelaOcorrencias(ocorrencias) {
+    let md = '| Arquivo | Linha | Nível | Tipo | Mensagem |\n';
+    md += '|---------|-------|-------|------|----------|\n';
+    for (const ocorrencia of ocorrencias) {
+        const arquivo = ocorrencia.relPath || 'desconhecido';
+        const linha = ocorrencia.linha ?? '-';
+        const nivel = getNivelIcon(ocorrencia.nivel || 'info');
+        const tipo = ocorrencia.tipo || 'outros';
+        const rawMensagem = ocorrencia.mensagem;
+        const mensagemEscapada = rawMensagem
+            .replace(/\\/g, '\\\\')
+            .replace(/\|/g, '\\|');
+        const mensagem = mensagemEscapada.slice(0, 80);
+        md += `| ${arquivo} | ${linha} | ${nivel} | ${tipo} | ${mensagem} |\n`;
+    }
+    return md;
+}
+function gerarOcorrenciasPorArquivo(ocorrencias) {
+    const porArquivo = new Map();
+    for (const ocorrencia of ocorrencias) {
+        const arquivo = ocorrencia.relPath || 'desconhecido';
+        if (!porArquivo.has(arquivo)) {
+            porArquivo.set(arquivo, []);
+        }
+        const listaArquivo = porArquivo.get(arquivo);
+        if (listaArquivo) {
+            listaArquivo.push(ocorrencia);
+        }
+    }
+    let md = '';
+    for (const [arquivo, lista] of porArquivo) {
+        md += `### 📄 ${arquivo}\n\n`;
+        for (const ocorrencia of lista) {
+            const nivel = getNivelIcon(ocorrencia.nivel || 'info');
+            const linha = ocorrencia.linha ? `:${ocorrencia.linha}` : '';
+            md += `- ${nivel} **${ocorrencia.tipo}**${linha}: ${ocorrencia.mensagem}\n`;
+        }
+        md += '\n';
+    }
+    return md;
+}
+function gerarSecaoSugestoes(sugestoes) {
+    let md = '## 💡 Sugestões\n\n';
+    for (const sugestao of sugestoes) {
+        md += `- ${sugestao}\n`;
+    }
+    return md;
+}
+function gerarRodape() {
+    return `---\n\n*Gerado por Oráculo v0.2.0 em ${new Date().toLocaleString('pt-BR')}*`;
+}
+function getNivelIcon(nivel) {
+    switch (nivel) {
+        case 'erro':
+            return '❌';
+        case 'aviso':
+            return '⚠️';
+        case 'info':
+            return 'ℹ️';
+        default:
+            return '•';
+    }
+}
+export function escaparMarkdown(texto) {
+    return texto
+        .replace(/\\/g, '\\\\')
+        .replace(/\*/g, '\\*')
+        .replace(/_/g, '\\_')
+        .replace(/\[/g, '\\[')
+        .replace(/\]/g, '\\]')
+        .replace(/\(/g, '\\(')
+        .replace(/\)/g, '\\)')
+        .replace(/`/g, '\\`');
+}
+//# sourceMappingURL=markdown-exporter.js.map

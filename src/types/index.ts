@@ -1,0 +1,138 @@
+// SPDX-License-Identifier: MIT
+
+/**
+ * Fonte única de exportação de tipos
+ * Apenas re-exports limpos - toda lógica fica nos arquivos dedicados
+ */
+
+// Analistas
+export * from './analistas/contexto.js';
+export type {
+  ASTNode,
+  CorrecaoConfig,
+  CorrecaoResult,
+  ResultadoAnaliseEstrutural,
+} from './analistas/corrections.js';
+export * from './analistas/corrections/type-safety.js';
+export * from './analistas/detectores.js';
+export * from './analistas/estrategistas.js';
+export * from './analistas/handlers.js';
+export * from './analistas/metricas.js';
+export * from './analistas/modulos-dinamicos.js';
+export * from './analistas/pontuacao.js';
+
+// CLI
+export * from './cli/comandos.js';
+export * from './cli/diagnostico.js';
+export * from './cli/diagnostico-handlers.js';
+export * from './cli/exporters.js';
+export * from './cli/handlers.js';
+export * from './cli/log-extensions.js';
+export * from './cli/metricas.js';
+export * from './cli/metricas-analistas.js';
+export type {
+  FiltrosProcessados,
+  FixTypesOptions,
+  FlagsBrutas,
+  FlagsNormalizadas,
+  FormatoSaida,
+  ModoAutoFix,
+  ModoOperacao,
+  NivelLog,
+  OpcoesProcessamentoFiltros,
+  OraculoGlobalFlags,
+  OtimizarSvgOptions,
+  ResultadoValidacao,
+  TipoLinguagemProjeto,
+} from './cli/options.js';
+export * from './cli/processamento-diagnostico.js';
+
+// Comum
+export * from './comum/analistas.js';
+export * from './comum/file-entries.js';
+export * from './comum/ocorrencias.js';
+export * from './comum/package-json.js';
+export * from './comum/utils.js';
+
+// Estrutura
+export * from './estrutura/arquetipos.js';
+export * from './estrutura/plano-estrutura.js';
+
+// Guardian
+export * from './guardian/baseline.js';
+export * from './guardian/integridade.js';
+export * from './guardian/registros.js';
+export * from './guardian/resultado.js';
+export * from './guardian/snapshot.js';
+
+// Core - Re-export via core/index.ts para paths reorganizados
+export type { QuickFix } from './core/corrections/auto-fix.js';
+export type {
+  MetricasGlobais,
+  SimbolosLog,
+} from './core/execution/inquisidor.js';
+export * from './core/execution/registry.js';
+export * from './core/execution/schema.js';
+export * from './core/execution/workers.js';
+export * from './core/parsing/parser.js';
+export * from './core/utils/chalk.js';
+
+// Core Messages (tipos que não conflitam com relatorios)
+export type {
+  AgrupamentoConfig,
+  ConfigPrioridade,
+  FiltrosConfig,
+  MetadadosRelatorioEstendido,
+} from './core/messages.js';
+export * from './core/messages/index.js';
+export * from './core/messages/log.js';
+
+// Core Execution
+export * from './core/execution/ambiente.js';
+export * from './core/execution/estrutura-json.js';
+export type {
+  CacheValor,
+  EstadoIncremental,
+  MetricasGlobaisExecutor,
+  RegistroHistorico,
+} from './core/execution/executor.js';
+export type {
+  EstadoIncArquivo,
+  EstadoIncrementalInquisidor,
+} from './core/execution/inquisidor.js';
+export * from './core/execution/linguagens.js';
+export * from './core/execution/parse-erros.js';
+export * from './core/execution/resultados.js';
+
+// Core Parsing
+export * from './core/parsing/babel-narrow.js';
+export * from './core/parsing/plugins.js';
+
+// Core Config
+export * from './core/config/config.js';
+export * from './core/config/filtros.js';
+
+// Projeto
+export type { TipoProjeto } from './projeto/deteccao.js';
+export * from './projeto/deteccao.js';
+
+// Relatorios
+export * from './relatorios/index.js';
+
+// Shared - exportação centralizada
+export * from './shared/index.js';
+// Contexto movido para projeto/
+export * from './projeto/contexto.js';
+// Fragmentação e Leitor movidos para relatorios/
+export type {
+  FragmentOptions,
+  ManifestPart,
+  RelatorioCompleto,
+} from './relatorios/fragmentacao.js';
+export * from './relatorios/leitor.js';
+
+// Zeladores
+export * from './zeladores/imports.js';
+export * from './zeladores/mapa-reversao.js';
+export * from './zeladores/poda.js';
+export * from './zeladores/pontuacao.js';

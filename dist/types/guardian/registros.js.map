@@ -1,0 +1,1 @@
+{"version":3,"file":"registros.js","sourceRoot":"","sources":["../../../src/types/guardian/registros.ts"],"names":[],"mappings":"","sourcesContent":["// SPDX-License-Identifier: MIT\n\nexport interface RegistroIntegridade {\n  arquivo: string;\n  hash: string;\n}\n"]}

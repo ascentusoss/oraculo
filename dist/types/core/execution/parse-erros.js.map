@@ -1,0 +1,1 @@
+{"version":3,"file":"parse-erros.js","sourceRoot":"","sources":["../../../../src/types/core/execution/parse-erros.ts"],"names":[],"mappings":"","sourcesContent":["// SPDX-License-Identifier: MIT\n\nexport interface ParseErrosJson {\n  totalOriginais: number;\n  totalExibidos: number;\n  agregados: number;\n}\n"]}

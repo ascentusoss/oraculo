@@ -1,0 +1,1 @@
+{"version":3,"file":"types.js","sourceRoot":"","sources":["../../src/types/types.ts"],"names":[],"mappings":"AAKA,cAAc,YAAY,CAAC","sourcesContent":["// SPDX-License-Identifier: MIT\n/**\n * Re-export de todos os tipos para compatibilidade\n * Este arquivo permite imports do tipo: import { X } from '@types/types'\n */\nexport * from './index.js';\n"]}

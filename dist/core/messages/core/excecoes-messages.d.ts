@@ -1,0 +1,35 @@
+export declare const ExcecoesMessages: {
+    readonly exit1: "exit:1";
+    readonly requireMutateFsAutoFix: "Auto-fix indisponível";
+    readonly autoFixTimeout: (timeoutMs: number) => string;
+    readonly pluginsDesabilitadosSafeMode: "Carregamento de plugins desabilitado em SAFE_MODE. Defina ORACULO_ALLOW_PLUGINS=1 para permitir.";
+    readonly pluginBloqueado: (erro: string) => string;
+    readonly caminhoPluginNaoResolvido: "Caminho de plugin não resolvido";
+    readonly pluginRegistradoNaoPodeSerObtido: (name: string) => string;
+    readonly pluginCarregandoPromiseNaoPodeSerObtida: (name: string) => string;
+    readonly naoFoiPossivelCarregarPlugin: (name: string, errMsg: string) => string;
+    readonly pluginDeveTerNomeValido: "Plugin deve ter um nome válido";
+    readonly pluginDeveTerVersaoValida: "Plugin deve ter uma versão válida";
+    readonly pluginDeveDefinirPeloMenosUmaExtensao: "Plugin deve definir pelo menos uma extensão";
+    readonly pluginDeveImplementarMetodoParse: "Plugin deve implementar método parse()";
+    readonly definicaoAnalistaInvalida: "Definição de analista inválida";
+    readonly analistaSemFuncaoAplicar: (nome: string) => string;
+    readonly caminhoForaDaCwdNaoPermitido: (p: string) => string;
+    readonly persistenciaNegadaForaRaizProjeto: (caminho: string) => string;
+    readonly fsWriteFileBinaryIndisponivel: "fs.writeFile (binary) indisponível no ambiente atual";
+    readonly fsReadFileIndisponivel: "fs.readFile indisponível no ambiente atual";
+    readonly fsWriteFileIndisponivel: "fs.writeFile indisponível no ambiente atual";
+    readonly fsRenameIndisponivel: "fs.rename indisponível no ambiente atual";
+    readonly fsMkdirIndisponivel: "fs.mkdir indisponível no ambiente atual";
+    readonly versaoSchemaDesconhecida: (versao: string) => string;
+    readonly relatorioSchemaInvalido: (erros: string) => string;
+    readonly arquivoNaoEncontrado: (filePath: string) => string;
+    readonly validacaoFalhouPara: (filePath: string) => string;
+    readonly erroAoLer: (filePath: string, errMsg: string) => string;
+    readonly erroAoEscrever: (filePath: string, errMsg: string) => string;
+    readonly erroAoDeletar: (filePath: string, errMsg: string) => string;
+    readonly statIndefinidoPara: (fullPath: string) => string;
+    readonly mapaReversaoCorrompido: "Mapa de reversão corrompido";
+    readonly semPkg: "sem pkg";
+};
+//# sourceMappingURL=excecoes-messages.d.ts.map

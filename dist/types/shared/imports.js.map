@@ -1,0 +1,1 @@
+{"version":3,"file":"imports.js","sourceRoot":"","sources":["../../../src/types/shared/imports.ts"],"names":[],"mappings":"","sourcesContent":["// SPDX-License-Identifier: MIT\n/**\n * Tipos para helpers de manipulação de imports\n * Originalmente em: src/shared/helpers/imports.ts\n */\n\nexport interface ImportReescrito {\n  from: string;\n  to: string;\n}\n"]}

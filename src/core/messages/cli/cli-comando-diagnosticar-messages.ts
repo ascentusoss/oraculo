@@ -1,0 +1,53 @@
+// SPDX-License-Identifier: MIT
+
+export const CliComandoDiagnosticarMessages = {
+  linhaEmBranco: '',
+
+  fastModeTipo: 'diagnostico',
+
+  sugestoesHeader:
+    '┌── Sugestões rápidas ─────────────────────────────────────────',
+  sugestoesFooter:
+    '└───────────────────────────────────────────────────────────────',
+  nenhumaFlagRelevante:
+    'Nenhuma flag relevante detectada — execute com --help para ver todas.',
+
+  detalheLinha: (texto: string) => `  ${texto}`,
+
+  detalheSaidaEstruturada:
+    'Saída estruturada: imprime JSON (útil para CI). Combine com --export para salvar arquivo.',
+  detalheGuardian:
+    'Guardian: executa verificação de integridade (recomendado para deploys).',
+  detalheExecutive:
+    'Executive: mostra apenas problemas críticos (ideal para reuniões executivas).',
+  detalheFull: 'Full: gera relatório detalhado localmente (pode ser verboso).',
+  detalheFast:
+    'Fast: processamento paralelo com Workers (ideal para projetos grandes e CI).',
+  detalheCompact: 'Compact: consolida progresso e mostra apenas o essencial.',
+  detalheAutoFix: 'Auto-fix: aplica correções rápidas. Use com cautela.',
+  detalheAutoFixConservative:
+    'Atalho: equivalente a --auto-fix --auto-fix-mode conservative',
+
+  detalheIncludePatterns: (count: number, joined: string) =>
+    `Include patterns: ${count} (${joined})`,
+  detalheExcludePatterns: (count: number, joined: string) =>
+    `Exclude patterns: ${count} (${joined})`,
+
+  detalheExport: (relDir: string) =>
+    `Export: summary salvo em ./${relDir} (padrão).`,
+  detalheExportFull:
+    'Export-full: gera shards gzip e um manifest (pode ser grande). Use apenas quando precisar do dump completo.',
+
+  detalheLogLevel: (logLevel: string) =>
+    `log-level: ${String(logLevel)} (use --log-level debug para mais verbosidade)`,
+
+  dicaPrefiraLogLevelDebug:
+    'Dica: prefira --log-level debug ao invés de --debug/--dev legados.',
+  dicaAutoFixConservative:
+    'Dica: --auto-fix-conservative é um atalho; prefira usar explicitamente --auto-fix --auto-fix-mode conservative para clareza.',
+
+  spinnerExecutando: '[SCAN] Diagnóstico em execução...',
+  spinnerFase: (titulo: string) => `[SCAN] ${titulo}...`,
+  spinnerConcluido: 'Diagnóstico concluído.',
+  spinnerFalhou: 'Diagnóstico falhou.',
+} as const;
