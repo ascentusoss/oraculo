@@ -15,7 +15,7 @@ import type { AutoFixOptions, AutoFixResult, FileEntryWithAst } from '@';
 // Re-export para compatibilidade
 export type { AutoFixOptions, AutoFixResult };
 
-/* -------------------------- Handler Principal -------------------------- */
+  /* -------------------------- Handler Principal -------------------------- */
 
 /**
  * Executa o sistema de auto-fix com timeout e validação
@@ -141,7 +141,7 @@ async function executarAutoFixInterno(
   };
 }
 
-/* -------------------------- Formatação para JSON -------------------------- */
+  /* -------------------------- Formatação para JSON -------------------------- */
 
 /**
  * Formata resultado do auto-fix para saída JSON
@@ -161,7 +161,7 @@ export function formatarAutoFixParaJson(
   };
 }
 
-/* -------------------------- Helpers de Confiança -------------------------- */
+  /* -------------------------- Helpers de Confiança -------------------------- */
 
 /**
  * Calcula limiar de confiança baseado no modo
@@ -198,7 +198,7 @@ export function deveAplicarCorrecao(
   return confianca >= limiar * 0.75;
 }
 
-/* -------------------------- Exit Code Helper -------------------------- */
+  /* -------------------------- Exit Code Helper -------------------------- */
 
 /**
  * Determina exit code baseado no resultado do auto-fix

@@ -20,7 +20,7 @@ import type { GuardianResult } from '../handlers/guardian-handler.js';
 // Re-export para compatibilidade
 export type { DadosRelatorioMarkdown, MarkdownExportOptions };
 
-/* -------------------------- Função Principal -------------------------- */
+  /* -------------------------- Função Principal -------------------------- */
 
 /**
  * Gera relatório Markdown formatado
@@ -98,7 +98,7 @@ export function gerarRelatorioMarkdown(
   return secoes.join('\n\n---\n\n');
 }
 
-/* -------------------------- Seções do Relatório -------------------------- */
+  /* -------------------------- Seções do Relatório -------------------------- */
 
 function gerarCabecalho(
   titulo: string,
@@ -380,7 +380,7 @@ function gerarRodape(): string {
   return `---\n\n*Gerado por Oráculo v0.2.0 em ${new Date().toLocaleString('pt-BR')}*`;
 }
 
-/* -------------------------- Helpers -------------------------- */
+  /* -------------------------- Helpers -------------------------- */
 
 function getNivelIcon(nivel: string): string {
   switch (nivel) {

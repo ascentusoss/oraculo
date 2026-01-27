@@ -174,7 +174,7 @@ const ANALISTA: Analista = {
       });
     }
 
-    /* -------------------------- DETECTAR TYPE ASSERTIONS (as any) -------------------------- */
+  /* -------------------------- DETECTAR TYPE ASSERTIONS (as any) -------------------------- */
     const asAnyPattern = /\b(as\s+any)\b/g;
     let asAnyMatch: RegExpMatchArray | null;
 
@@ -231,7 +231,7 @@ const ANALISTA: Analista = {
       });
     }
 
-    /* -------------------------- DETECTAR ANGLE BRACKET CASTING (<any>) -------------------------- */
+  /* -------------------------- DETECTAR ANGLE BRACKET CASTING (<any>) -------------------------- */
     const angleBracketPattern = /<any>/g;
     let angleBracketMatch: RegExpMatchArray | null;
 

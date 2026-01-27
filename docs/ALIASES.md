@@ -4,7 +4,7 @@ Arquivo gerado/atualizado automaticamente via `scripts/add-disclaimer-md.js`.
 
 # Sistema de Aliases do Oráculo
 
-> **ARQUIVO GERADO AUTOMATICAMENTE**  
+> **ARQUIVO GERADO AUTOMATICAMENTE**
 > Use `npm run sync-aliases` para atualizar
 
 ## Visão Geral

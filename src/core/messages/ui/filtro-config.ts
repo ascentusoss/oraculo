@@ -15,7 +15,7 @@ import {
 // Re-exporta os tipos para compatibilidade
 export type { AgrupamentoConfig, ConfigPrioridade, PrioridadeNivel };
 
-/* -------------------------- PRIORIDADES POR TIPO DE PROBLEMA -------------------------- */
+  /* -------------------------- PRIORIDADES POR TIPO DE PROBLEMA -------------------------- */
 
 export const PRIORIDADES: Record<string, ConfigPrioridade> = {
   // Críticos - Segurança e dados
@@ -137,7 +137,7 @@ export const PRIORIDADES: Record<string, ConfigPrioridade> = {
   },
 };
 
-/* -------------------------- AGRUPAMENTOS INTELIGENTES POR PADRÃO DE MENSAGEM -------------------------- */
+  /* -------------------------- AGRUPAMENTOS INTELIGENTES POR PADRÃO DE MENSAGEM -------------------------- */
 
 export const AGRUPAMENTOS_MENSAGEM: AgrupamentoConfig[] = [
   // Segurança Crítica
@@ -256,7 +256,7 @@ export const AGRUPAMENTOS_MENSAGEM: AgrupamentoConfig[] = [
   },
 ];
 
-/* -------------------------- HELPERS -------------------------- */
+  /* -------------------------- HELPERS -------------------------- */
 
 /**
  * Obtém a prioridade de um tipo de problema

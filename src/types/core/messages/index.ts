@@ -3,7 +3,7 @@
  * Tipos centralizados para mensagens JSON
  */
 
-/* -------------------------- ESTRUTURAS DE MENSAGENS -------------------------- */
+  /* -------------------------- ESTRUTURAS DE MENSAGENS -------------------------- */
 
 /**
  * Estrutura de campo de mensagem JSON

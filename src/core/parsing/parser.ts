@@ -4,7 +4,7 @@ import { parse as babelParse } from '@babel/parser';
 import type { File as BabelFile } from '@babel/types';
 import { log, logCore } from '@core/messages/index.js';
 import { initializeDefaultPlugins } from '@shared/plugins/init.js';
-/* -------------------------- SISTEMA DE PLUGINS - Novo sistema de parsers modular (Fase 1) -------------------------- */
+  /* -------------------------- SISTEMA DE PLUGINS - Novo sistema de parsers modular (Fase 1) -------------------------- */
 import { getGlobalRegistry } from '@shared/plugins/registry.js';
 import * as csstree from 'css-tree';
 import { XMLParser } from 'fast-xml-parser';

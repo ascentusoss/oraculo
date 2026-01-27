@@ -11,7 +11,7 @@
  * - Python
  */
 
-/* -------------------------- MENSAGENS REACT -------------------------- */
+  /* -------------------------- MENSAGENS REACT -------------------------- */
 
 export const ReactMessages = {
   linkTargetBlank: 'Link com target="_blank" sem rel="noreferrer"/"noopener".',
@@ -29,7 +29,7 @@ export const ReactMessages = {
     'Handler inline detectado em JSX; prefira funções estáveis (useCallback) ou extrair fora do render.',
 } as const;
 
-/* -------------------------- MENSAGENS REACT HOOKS -------------------------- */
+  /* -------------------------- MENSAGENS REACT HOOKS -------------------------- */
 
 export const ReactHooksMessages = {
   useEffectNoDeps:
@@ -39,7 +39,7 @@ export const ReactHooksMessages = {
     'Hook declarado dentro de condicional (quebra Rules of Hooks).',
 } as const;
 
-/* -------------------------- MENSAGENS TAILWIND -------------------------- */
+  /* -------------------------- MENSAGENS TAILWIND -------------------------- */
 
 export const TailwindMessages = {
   conflictingClasses: (key: string, tokens: string[]) =>
@@ -56,7 +56,7 @@ export const TailwindMessages = {
     `Classe com valor arbitrário (${token}). Confirme se está alinhada ao design.`,
 } as const;
 
-/* -------------------------- MENSAGENS CSS -------------------------- */
+  /* -------------------------- MENSAGENS CSS -------------------------- */
 
 export const CssMessages = {
   duplicatePropertySame: (prop: string) =>
@@ -82,7 +82,7 @@ export const CssMessages = {
     `Hack CSS detectado (${hack}). Considere abordagens modernas ou feature queries.`,
 } as const;
 
-/* -------------------------- MENSAGENS HTML -------------------------- */
+  /* -------------------------- MENSAGENS HTML -------------------------- */
 
 export const HtmlMessages = {
   // Estrutura
@@ -140,7 +140,7 @@ export const HtmlMessages = {
     'Múltiplos <h1> detectados. Use apenas um por página para SEO/acessibilidade.',
 } as const;
 
-/* -------------------------- MENSAGENS XML -------------------------- */
+  /* -------------------------- MENSAGENS XML -------------------------- */
 
 export const XmlMessages = {
   xmlPrologAusente:
@@ -168,7 +168,7 @@ export const XmlMessages = {
   cdataInAttribute: 'CDATA detectado em valor de atributo (inválido em XML).',
 } as const;
 
-/* -------------------------- MENSAGENS FORMATADOR (MIN) -------------------------- */
+  /* -------------------------- MENSAGENS FORMATADOR (MIN) -------------------------- */
 
 export const FormatadorMessages = {
   naoFormatado: (parser: string, detalhes?: string) => {
@@ -180,7 +180,7 @@ export const FormatadorMessages = {
     `Falha ao validar formatação interna (parser: ${parser}): ${err}`,
 } as const;
 
-/* -------------------------- MENSAGENS SVG (OTIMIZAÇÃO) -------------------------- */
+  /* -------------------------- MENSAGENS SVG (OTIMIZAÇÃO) -------------------------- */
 
 export const SvgMessages = {
   naoPareceSvg: 'Arquivo .svg não contém uma tag <svg> válida.',
@@ -198,7 +198,7 @@ export const SvgMessages = {
     `SVG pode ser otimizado (${originalBytes}B → ${optimizedBytes}B). Mudanças: ${mudancas.join(', ')}.`,
 } as const;
 
-/* -------------------------- MENSAGENS CSS-IN-JS -------------------------- */
+  /* -------------------------- MENSAGENS CSS-IN-JS -------------------------- */
 
 export const CssInJsMessages = {
   detectedStyledComponents:
@@ -211,7 +211,7 @@ export const CssInJsMessages = {
   httpUrl: 'Recurso externo via HTTP em url(); prefira HTTPS.',
 } as const;
 
-/* -------------------------- MENSAGENS PYTHON -------------------------- */
+  /* -------------------------- MENSAGENS PYTHON -------------------------- */
 
 export const PythonMessages = {
   // Imports & Dependencies
@@ -253,7 +253,7 @@ export const PythonMessages = {
   loopingOverDict: 'Iteração sobre dict sem .items(); considere usar .items().',
 } as const;
 
-/* -------------------------- Nivéis de Severidade -------------------------- */
+  /* -------------------------- Nivéis de Severidade -------------------------- */
 
 export const SeverityLevels = {
   error: 'erro',
@@ -262,7 +262,7 @@ export const SeverityLevels = {
   suggestion: 'sugestao',
 } as const;
 
-/* -------------------------- Categorias/Tipos de Analistas -------------------------- */
+  /* -------------------------- Categorias/Tipos de Analistas -------------------------- */
 
 export const AnalystTypes = {
   react: 'react/regra',

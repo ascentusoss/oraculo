@@ -69,7 +69,12 @@
     "arquivo-orfao": {
       "severity": "warning",
       "allowTestFiles": true,
-      "exclude": ["test/**/*", "tests/**/*", "**/*.test.ts", "**/*.spec.ts"]
+      "exclude": [
+        "test/**/*",
+        "tests/**/*",
+        "**/*.test.ts",
+        "**/*.spec.ts"
+      ]
     },
     "dependencia-circular": {
       "severity": "error",

@@ -15,7 +15,7 @@ import type { JsonExportOptions, Ocorrencia, RelatorioJson } from '@';
 // Re-export para compatibilidade
 export type { JsonExportOptions, RelatorioJson };
 
-/* -------------------------- Função Principal -------------------------- */
+  /* -------------------------- Função Principal -------------------------- */
 
 /**
  * Gera relatório JSON a partir dos dados do diagnóstico
@@ -100,7 +100,7 @@ export function gerarRelatorioJson(
   return json;
 }
 
-/* -------------------------- Helpers de Escape -------------------------- */
+  /* -------------------------- Helpers de Escape -------------------------- */
 
 /**
  * Escapa caracteres não-ASCII como \uXXXX
@@ -156,7 +156,7 @@ export function validarJson(json: string): { valido: boolean; erro?: string } {
   }
 }
 
-/* -------------------------- Helpers de Construção -------------------------- */
+  /* -------------------------- Helpers de Construção -------------------------- */
 
 /**
  * Cria objeto de metadata para o relatório

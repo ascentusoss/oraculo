@@ -9,7 +9,7 @@ import type { Ocorrencia } from '@';
 // PrioridadeNivel é definido em filtro-config, mas vamos duplicar aqui para evitar dependência circular
 export type PrioridadeNivel = 'critica' | 'alta' | 'media' | 'baixa';
 
-/* -------------------------- ANÁLISE ASYNC PATTERNS -------------------------- */
+  /* -------------------------- ANÁLISE ASYNC PATTERNS -------------------------- */
 
 export type {
   AsyncAnalysisOptions,
@@ -21,15 +21,15 @@ export type {
   AsyncIssuesArquivo,
 } from './async-analysis.js';
 
-/* -------------------------- CONSELHEIRO ORACULAR -------------------------- */
+  /* -------------------------- CONSELHEIRO ORACULAR -------------------------- */
 
 export type { ConselhoContextoOracular } from './conselheiro.js';
 
-/* -------------------------- ESTRUTURA -------------------------- */
+  /* -------------------------- ESTRUTURA -------------------------- */
 
 export type { AlinhamentoItemDiagnostico } from './estrutura.js';
 
-/* -------------------------- FRAGMENTAÇÃO (movido de shared/) -------------------------- */
+  /* -------------------------- FRAGMENTAÇÃO (movido de shared/) -------------------------- */
 
 export type {
   FileEntryFragmentacao,
@@ -39,15 +39,15 @@ export type {
   RelatorioCompleto as RelatorioCompletoFragmentacao,
 } from './fragmentacao.js';
 
-/* -------------------------- LEITOR (movido de shared/) -------------------------- */
+  /* -------------------------- LEITOR (movido de shared/) -------------------------- */
 
 export type { LeitorRelatorioOptions } from './leitor.js';
 
-/* -------------------------- PROCESSAMENTO -------------------------- */
+  /* -------------------------- PROCESSAMENTO -------------------------- */
 
 export * from './processamento.js';
 
-/* -------------------------- FILTRO INTELIGENTE -------------------------- */
+  /* -------------------------- FILTRO INTELIGENTE -------------------------- */
 
 /**
  * Problema agrupado com priorização inteligente
@@ -96,7 +96,7 @@ export interface ResumoExecutivo {
   detalhes: ProblemaAgrupado[];
 }
 
-/* -------------------------- GERADOR DE RELATÓRIO -------------------------- */
+  /* -------------------------- GERADOR DE RELATÓRIO -------------------------- */
 
 /**
  * Opções para geração de relatório Markdown
@@ -127,7 +127,7 @@ export interface GuardianInfo {
   totalArquivos: string;
 }
 
-/* -------------------------- REESTRUTURAÇÃO -------------------------- */
+  /* -------------------------- REESTRUTURAÇÃO -------------------------- */
 
 /**
  * Movimento estrutural de arquivo/diretório
@@ -147,7 +147,7 @@ export interface OpcoesRelatorioReestruturar {
   conflitos?: number;
 }
 
-/* -------------------------- PODA -------------------------- */
+  /* -------------------------- PODA -------------------------- */
 
 /**
  * Opções para relatório de poda
@@ -156,7 +156,7 @@ export interface OpcoesRelatorioPoda {
   simulado?: boolean;
 }
 
-/* -------------------------- ALINHAMENTO -------------------------- */
+  /* -------------------------- ALINHAMENTO -------------------------- */
 
 /**
  * Item de alinhamento estrutural
@@ -169,7 +169,7 @@ export interface AlinhamentoItem {
   razao?: string;
 }
 
-/* -------------------------- CONSELHEIRO ORACULAR -------------------------- */
+  /* -------------------------- CONSELHEIRO ORACULAR -------------------------- */
 
 /**
  * Contexto para geração de conselhos

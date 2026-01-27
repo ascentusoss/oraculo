@@ -21,7 +21,7 @@ import type {
 // Re-export para compatibilidade
 export type { ResultadoSharding, ShardInfo, ShardingOptions };
 
-/* -------------------------- Função Principal -------------------------- */
+  /* -------------------------- Função Principal -------------------------- */
 
 /**
  * Fragmenta relatório em múltiplos arquivos
@@ -97,7 +97,7 @@ export async function fragmentarRelatorio(
   };
 }
 
-/* -------------------------- Helpers de Fragmentação -------------------------- */
+  /* -------------------------- Helpers de Fragmentação -------------------------- */
 
 /**
  * Divide array de ocorrências em chunks
@@ -197,7 +197,7 @@ export function gerarIndiceConsolidado(
   return md;
 }
 
-/* -------------------------- Validação -------------------------- */
+  /* -------------------------- Validação -------------------------- */
 
 /**
  * Valida options de fragmentação

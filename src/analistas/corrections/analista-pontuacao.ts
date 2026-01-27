@@ -15,7 +15,7 @@ import type {
 } from '@';
 import { criarOcorrencia } from '@';
 
-/* -------------------------- Helpers / Config -------------------------- */
+  /* -------------------------- Helpers / Config -------------------------- */
 
 // Constantes de limites e valores de threshold
 const ASCII_EXTENDED_MIN = 128;
@@ -243,7 +243,7 @@ function calcularLinha(
   return 1;
 }
 
-/* -------------------------- analistaQuickFixes -------------------------- */
+  /* -------------------------- analistaQuickFixes -------------------------- */
 
 export const analistaQuickFixes: Analista = {
   nome: 'quick-fixes',
@@ -345,7 +345,7 @@ export const analistaQuickFixes: Analista = {
   },
 };
 
-/* -------------------------- analistaPontuacao -------------------------- */
+  /* -------------------------- analistaPontuacao -------------------------- */
 
 export const analistaPontuacao: Analista = {
   nome: 'pontuacao-fix',
@@ -393,6 +393,6 @@ export const analistaPontuacao: Analista = {
   },
 };
 
-/* -------------------------- Exports adicionais -------------------------- */
+  /* -------------------------- Exports adicionais -------------------------- */
 
 export const analistas: Analista[] = [analistaQuickFixes, analistaPontuacao];

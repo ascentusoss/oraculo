@@ -13,7 +13,7 @@
  * - zeladores/ - Mensagens de zeladores
  */
 
-/* -------------------------- SISTEMA DE LOG -------------------------- */
+  /* -------------------------- SISTEMA DE LOG -------------------------- */
 
 export {
   log,
@@ -35,7 +35,7 @@ export {
   logSistema,
 } from './log/index.js';
 
-/* -------------------------- MENSAGENS DE RELATÓRIOS -------------------------- */
+  /* -------------------------- MENSAGENS DE RELATÓRIOS -------------------------- */
 
 export {
   escreverRelatorioMarkdown,
@@ -57,7 +57,7 @@ export {
   wrapComMetadados,
 } from './relatorios/index.js';
 
-/* -------------------------- FILTRO INTELIGENTE E UI -------------------------- */
+  /* -------------------------- FILTRO INTELIGENTE E UI -------------------------- */
 
 export {
   type AgrupamentoConfig,
@@ -107,10 +107,10 @@ export {
   suportaCores,
 } from './ui/index.js';
 
-/* -------------------------- MENSAGENS CORE (DIAGNÓSTICO, CORREÇÕES, FIX-TYPES, ETC.) -------------------------- */
+  /* -------------------------- MENSAGENS CORE (DIAGNÓSTICO, CORREÇÕES, FIX-TYPES, ETC.) -------------------------- */
 
 export * from './core/index.js';
-/* -------------------------- MENSAGENS DE ZELADORES -------------------------- */
+  /* -------------------------- MENSAGENS DE ZELADORES -------------------------- */
 
 export {
   ERROS_IMPORTS,
@@ -129,10 +129,10 @@ export {
   TEMPLATES_SAIDA,
 } from './zeladores/index.js';
 
-/* -------------------------- MENSAGENS DE CLI (COMANDOS E HANDLERS) -------------------------- */
+  /* -------------------------- MENSAGENS DE CLI (COMANDOS E HANDLERS) -------------------------- */
 
 export * from './cli/index.js';
 
-/* -------------------------- MENSAGENS DE ANALISTAS E DETECTORES -------------------------- */
+  /* -------------------------- MENSAGENS DE ANALISTAS E DETECTORES -------------------------- */
 
 export * from './analistas/index.js';

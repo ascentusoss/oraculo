@@ -21,7 +21,7 @@ import type {
   TipoLinguagemProjeto,
 } from '@';
 
-/* -------------------------- PROCESSAMENTO DE PADRÕES -------------------------- */
+  /* -------------------------- PROCESSAMENTO DE PADRÕES -------------------------- */
 
 /**
  * Processa lista de padrões achatada (vírgulas, espaços)
@@ -101,7 +101,7 @@ export function expandIncludes(list: string[]): string[] {
   return Array.from(out);
 }
 
-/* -------------------------- DETECÇÃO DE TIPO DE PROJETO -------------------------- */
+  /* -------------------------- DETECÇÃO DE TIPO DE PROJETO -------------------------- */
 
 /**
  * Detecta tipo de projeto baseado em arquivos presentes
@@ -156,7 +156,7 @@ export function detectarTipoProjeto(
   }
 }
 
-/* -------------------------- PADRÕES DE EXCLUSÃO -------------------------- */
+  /* -------------------------- PADRÕES DE EXCLUSÃO -------------------------- */
 
 /**
  * Obtém padrões de exclusão padrão baseados em configuração e tipo de projeto
@@ -181,7 +181,7 @@ export function getDefaultExcludes(
   return mesclarConfigExcludes(null, tipo);
 }
 
-/* -------------------------- CONFIGURAÇÃO DE FILTROS -------------------------- */
+  /* -------------------------- CONFIGURAÇÃO DE FILTROS -------------------------- */
 
 /**
  * Processa e aplica filtros CLI
