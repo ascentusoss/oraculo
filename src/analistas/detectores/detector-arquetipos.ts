@@ -2,17 +2,17 @@
 // Nota: manter ARQUETIPOS importado visível como lembrete para integração futura
 import path from 'node:path';
 
-import { extrairSinaisAvancados } from '@analistas/arquitetos/sinais-projeto-avancados.js';
-import { ARQUETIPOS } from '@analistas/estrategistas/arquetipos-defs.js';
-import { OperarioEstrutura } from '@analistas/estrategistas/operario-estrutura.js';
+import { extrairSinaisAvancados } from '/arquitetos/sinais-projeto-avancados.js';
+import { ARQUETIPOS } from '/estrategistas/arquetipos-defs.js';
+import { OperarioEstrutura } from '/estrategistas/operario-estrutura.js';
 import {
   carregarArquetipoPersonalizado,
   integrarArquetipos,
   obterArquetipoOficial,
-} from '@analistas/js-ts/arquetipos-personalizados.js';
-import { scoreArquetipoAvancado } from '@analistas/pontuadores/pontuador.js';
-import { config } from '@core/config/config.js';
-import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
+} from '/js-ts/arquetipos-personalizados.js';
+import { scoreArquetipoAvancado } from '/pontuadores/pontuador.js';
+import { config } from '/config/config.js';
+import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
 
 import type {
   ArquetipoDrift,

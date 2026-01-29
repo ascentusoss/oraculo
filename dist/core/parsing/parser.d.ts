@@ -1,4 +1,4 @@
-import type { File as BabelFile } from '@babel/types';
+import type { File as BabelFile } from '/types';
 import type { DecifrarSintaxeOpts, ParserFunc, ParserOptions as PluginParserOptions } from '../../types/index.js';
 export declare function getCurrentParsingFile(): string;
 export declare const PARSERS: Map<string, ParserFunc>;

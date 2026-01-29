@@ -4,8 +4,8 @@ import {
   AnalystTypes,
   SeverityLevels,
   TailwindMessages,
-} from '@core/messages/core/plugin-messages.js';
-import { createLineLookup } from '@shared/helpers/line-lookup.js';
+} from '/messages/core/plugin-messages.js';
+import { createLineLookup } from '/helpers/line-lookup.js';
 
 import { criarAnalista, criarOcorrencia } from '@';
 

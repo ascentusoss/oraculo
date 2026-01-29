@@ -11,7 +11,7 @@
 //   --check          Não altera arquivos; sai com código 2 se houver mudanças necessárias
 //
 // Evoluções 2025-09-09:
-//   * Suporte a relativos que sobem para src (../../nucleo/constelacao/log.js → @nucleo/constelacao/log.ts)
+//   * Suporte a relativos que sobem para src (../../nucleo/constelacao/log.js → /constelacao/log.ts)
 //   * Resolução baseada no caminho real + existência do arquivo
 //   * Mantém relativos que não caem em src/<dominio>/... (helpers locais de teste)
 //   * Opção --check para uso em CI.
@@ -45,37 +45,37 @@ const TOP_DIRS = new Set([
 ]);
 
 // Remapeamentos de aliases legados -> atuais (base sem extensão)
-// Ex.: '@analistas/plano-reorganizacao' => '@analistas/estrategistas/plano-sugestao'
+// Ex.: '/plano-reorganizacao' => '/estrategistas/plano-sugestao'
 const LEGACY_ALIAS_MAP = new Map([
-  ['@analistas/plano-reorganizacao', '@analistas/estrategistas/plano-sugestao'],
-  ['@analistas/deteccao/pontuador', '@analistas/pontuadores/pontuador'],
-  ['@analistas/pontuador', '@analistas/pontuadores/pontuador'],
-  ['@analistas/registry', '@analistas/registry/registry'],
-  ['@analistas/detector-dependencias', '@analistas/detectores/detector-dependencias'],
-  ['@analistas/detector-arquetipos', '@analistas/detectores/detector-arquetipos'],
-  ['@analistas/detector-node', '@analistas/detectores/detector-node'],
-  ['@analistas/arquetipos-defs', '@analistas/estrategistas/arquetipos-defs'],
-  // Mapeamentos @mdo herdados que apontavam para src/cli/*
-  // Normalizar para @mdo/<arquivo> em vez de @mdo/src/cli/<arquivo>
-  ['@mdo/src/cli/comando-diagnosticar', '@mdo/comando-diagnosticar'],
-  ['@mdo/src/cli/comando-guardian', '@mdo/comando-guardian'],
-  ['@mdo/src/cli/comando-podar', '@mdo/comando-podar'],
-  ['@mdo/src/cli/comando-perf', '@mdo/comando-perf'],
-  ['@mdo/src/cli/comando-reestruturar', '@mdo/comando-reestruturar'],
-  ['@mdo/src/cli/comando-analistas', '@mdo/comando-analistas'],
-  ['@mdo/src/cli/comando-metricas', '@mdo/comando-metricas'],
-  ['@mdo/src/cli/processamento-diagnostico', '@mdo/processamento-diagnostico'],
-  // Mapeamentos diretos @mdo/cli/* → @mdo/* (casos conhecidos)
-  ['@mdo/cli/comando-diagnosticar', '@mdo/comando-diagnosticar'],
-  ['@mdo/cli/comando-guardian', '@mdo/comando-guardian'],
-  ['@mdo/cli/comando-podar', '@mdo/comando-podar'],
-  ['@mdo/cli/comando-perf', '@mdo/comando-perf'],
-  ['@mdo/cli/comando-reestruturar', '@mdo/comando-reestruturar'],
-  ['@mdo/cli/comando-analistas', '@mdo/comando-analistas'],
-  ['@mdo/cli/comando-metricas', '@mdo/comando-metricas'],
-  ['@mdo/cli/processamento-diagnostico', '@mdo/processamento-diagnostico'],
-  ['@mdo/cli/comandos', '@mdo/comandos'],
-  // fallback genérico @mdo/src/* → @mdo/* (aplicado via lógica abaixo)
+  ['/plano-reorganizacao', '/estrategistas/plano-sugestao'],
+  ['/deteccao/pontuador', '/pontuadores/pontuador'],
+  ['/pontuador', '/pontuadores/pontuador'],
+  ['/registry', '/registry/registry'],
+  ['/detector-dependencias', '/detectores/detector-dependencias'],
+  ['/detector-arquetipos', '/detectores/detector-arquetipos'],
+  ['/detector-node', '/detectores/detector-node'],
+  ['/arquetipos-defs', '/estrategistas/arquetipos-defs'],
+  // Mapeamentos  herdados que apontavam para src/cli/*
+  // Normalizar para /<arquivo> em vez de /src/cli/<arquivo>
+  ['/src/cli/comando-diagnosticar', '/comando-diagnosticar'],
+  ['/src/cli/comando-guardian', '/comando-guardian'],
+  ['/src/cli/comando-podar', '/comando-podar'],
+  ['/src/cli/comando-perf', '/comando-perf'],
+  ['/src/cli/comando-reestruturar', '/comando-reestruturar'],
+  ['/src/cli/comando-analistas', '/comando-analistas'],
+  ['/src/cli/comando-metricas', '/comando-metricas'],
+  ['/src/cli/processamento-diagnostico', '/processamento-diagnostico'],
+  // Mapeamentos diretos /cli/* → /* (casos conhecidos)
+  ['/cli/comando-diagnosticar', '/comando-diagnosticar'],
+  ['/cli/comando-guardian', '/comando-guardian'],
+  ['/cli/comando-podar', '/comando-podar'],
+  ['/cli/comando-perf', '/comando-perf'],
+  ['/cli/comando-reestruturar', '/comando-reestruturar'],
+  ['/cli/comando-analistas', '/comando-analistas'],
+  ['/cli/comando-metricas', '/comando-metricas'],
+  ['/cli/processamento-diagnostico', '/processamento-diagnostico'],
+  ['/cli/comandos', '/comandos'],
+  // fallback genérico /src/* → /* (aplicado via lógica abaixo)
 ]);
 
 function toPosix(p) {
@@ -118,7 +118,7 @@ function detectScopeFromTestPath(fileAbs) {
 }
 
 function pathFromAlias(aliasSpec) {
-  // '@analistas/foo/bar.ts' => <ROOT>/src/analistas/foo/bar.ts
+  // '/foo/bar.ts' => <ROOT>/src/analistas/foo/bar.ts
   const spec = aliasSpec.replace(/^@/, '');
   const parts = spec.split('/');
   const top = parts.shift();
@@ -139,23 +139,11 @@ function pickExtForAlias(aliasBase) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} fileAbs - TODO: Descrever parâmetro
+ *  {*} fileAbs - TODO: Descrever parâmetro
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} fileAbs - TODO: Descrever parâmetro
-
- * @param {*} spec - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -163,23 +151,11 @@ function pickExtForAlias(aliasBase) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} fileAbs - TODO: Descrever parâmetro
+ *  {*} fileAbs - TODO: Descrever parâmetro
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} fileAbs - TODO: Descrever parâmetro
-
- * @param {*} spec - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -187,11 +163,35 @@ function pickExtForAlias(aliasBase) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} fileAbs - TODO: Descrever parâmetro
+ *  {*} fileAbs - TODO: Descrever parâmetro
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} fileAbs - TODO: Descrever parâmetro
+
+ *  {*} spec - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} fileAbs - TODO: Descrever parâmetro
+
+ *  {*} spec - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -222,23 +222,11 @@ function resolveRelativeIntoSrc(fileAbs, spec) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @param {*} ctx - TODO: Descrever parâmetro
+ *  {*} ctx - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} spec - TODO: Descrever parâmetro
-
- * @param {*} ctx - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -246,23 +234,11 @@ function resolveRelativeIntoSrc(fileAbs, spec) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @param {*} ctx - TODO: Descrever parâmetro
+ *  {*} ctx - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} spec - TODO: Descrever parâmetro
-
- * @param {*} ctx - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -270,11 +246,35 @@ function resolveRelativeIntoSrc(fileAbs, spec) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @param {*} ctx - TODO: Descrever parâmetro
+ *  {*} ctx - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} spec - TODO: Descrever parâmetro
+
+ *  {*} ctx - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} spec - TODO: Descrever parâmetro
+
+ *  {*} ctx - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -285,13 +285,13 @@ function rewriteToAlias(spec, ctx) {
     if (!posixSpec.startsWith('@')) return { changed: false, value: spec };
     const withoutExt = posixSpec.replace(/\.(ts|js|mjs|cjs|tsx|jsx)$/i, '');
     let mapped = LEGACY_ALIAS_MAP.get(withoutExt);
-    // Regra genérica: @mdo/src/* → @mdo/*
-    if (!mapped && withoutExt.startsWith('@mdo/src/')) {
-      mapped = withoutExt.replace(/^@mdo\/src\//, '@mdo/');
+    // Regra genérica: /src/* → /*
+    if (!mapped && withoutExt.startsWith('/src/')) {
+      mapped = withoutExt.replace(/^\/src\//, '/');
     }
-    // Regra genérica: @mdo/cli/* → @mdo/*
-    if (!mapped && withoutExt.startsWith('@mdo/cli/')) {
-      mapped = withoutExt.replace(/^@mdo\/cli\//, '@mdo/');
+    // Regra genérica: /cli/* → /*
+    if (!mapped && withoutExt.startsWith('/cli/')) {
+      mapped = withoutExt.replace(/^\/cli\//, '/');
     }
     if (mapped) {
       const withExt = pickExtForAlias(mapped);
@@ -364,23 +364,11 @@ function buildCtx(fileAbs) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} code - TODO: Descrever parâmetro
+ *  {*} code - TODO: Descrever parâmetro
 
- * @param {*} ctx - TODO: Descrever parâmetro
+ *  {*} ctx - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} code - TODO: Descrever parâmetro
-
- * @param {*} ctx - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -388,23 +376,11 @@ function buildCtx(fileAbs) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} code - TODO: Descrever parâmetro
+ *  {*} code - TODO: Descrever parâmetro
 
- * @param {*} ctx - TODO: Descrever parâmetro
+ *  {*} ctx - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} code - TODO: Descrever parâmetro
-
- * @param {*} ctx - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -412,11 +388,35 @@ function buildCtx(fileAbs) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} code - TODO: Descrever parâmetro
+ *  {*} code - TODO: Descrever parâmetro
 
- * @param {*} ctx - TODO: Descrever parâmetro
+ *  {*} ctx - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} code - TODO: Descrever parâmetro
+
+ *  {*} ctx - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} code - TODO: Descrever parâmetro
+
+ *  {*} ctx - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 

@@ -10,7 +10,7 @@ export function getAvailablePlugins() {
 export const DEFAULT_PLUGIN_CONFIG = {
     enabled: ['core'],
     autoload: true,
-    registry: '@oraculo/plugins',
+    registry: '/plugins',
 };
 export const DEFAULT_LANGUAGE_SUPPORT = {
     javascript: {

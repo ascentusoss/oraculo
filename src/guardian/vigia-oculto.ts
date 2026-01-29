@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import { log } from '@core/messages/index.js';
+import { log } from '/messages/index.js';
 
 import type { FileEntry } from '@';
 

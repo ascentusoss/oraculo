@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- * @fileoverview Detector de problemas em arquivos Markdown
+ *  Detector de problemas em arquivos Markdown
  *
  * Verifica compliance de licenças, proveniência e referências em documentação.
  * Migrado de: scripts/scan-markdown.mjs
@@ -15,8 +15,8 @@
 
 import { promises as fs } from 'node:fs';
 
-import { config } from '@core/config/config.js';
-import { log } from '@core/messages/index.js';
+import { config } from '/config/config.js';
+import { log } from '/messages/index.js';
 
 import type { Ocorrencia } from '@';
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-import type { File } from '@babel/types';
+import type { File } from '/types';
 
 // Re-export do tipo comum para compatibilidade
 

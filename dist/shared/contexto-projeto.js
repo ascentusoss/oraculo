@@ -52,7 +52,7 @@ export function detectarContextoProjeto(opcoes) {
             /(monitor|watch|observer|scanner)/i.test(p);
     const importMatches = conteudo.match(/import.*from.*['"`]([^'"`]+)['"`]|require\(['"`]([^'"`]+)['"`]\)/g) || [];
     const allImports = importMatches.join(' ').toLowerCase();
-    if (/discord\.js|@discordjs|eris/.test(allImports)) {
+    if (/discord\.js||eris/.test(allImports)) {
         contexto.frameworks.push('discord.js');
         contexto.isBot = true;
     }
@@ -119,7 +119,7 @@ export function detectarContextoProjeto(opcoes) {
             ...(packageJson.devDependencies || {}),
         };
         Object.keys(deps).forEach((dep) => {
-            if (/discord\.js|eris|@discordjs/.test(dep)) {
+            if (/discord\.js|eris|/.test(dep)) {
                 contexto.isBot = true;
                 contexto.frameworks.push('discord.js');
             }

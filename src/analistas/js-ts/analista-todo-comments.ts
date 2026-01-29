@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
-import type { Comment } from '@babel/types';
-import { TodoCommentsMessages } from '@core/messages/analistas/analista-todo-comments-messages.js';
-import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
+import type { NodePath } from '/traverse';
+import type { Comment } from '/types';
+import { TodoCommentsMessages } from '/messages/analistas/analista-todo-comments-messages.js';
+import { detectarContextoProjeto } from '/contexto-projeto.js';
 
 import type { Analista, TecnicaAplicarResultado } from '@';
 import { criarOcorrencia } from '@';
@@ -62,8 +62,8 @@ export const analistaTodoComments: Analista = {
       // Padrões típicos de JSDoc templates automáticos
       const templatePatterns = [
         /\*\s*TODO:\s*Adicionar descrição da função\s*$/i,
-        /\*\s*@param\s+\{[^}]*\}\s+\w+\s*-\s*TODO:\s*Descrever parâmetro\s*$/i,
-        /\*\s*@returns\s+\{[^}]*\}\s*TODO:\s*Descrever retorno\s*$/i,
+        /\*\s*\s+\{[^}]*\}\s+\w+\s*-\s*TODO:\s*Descrever parâmetro\s*$/i,
+        /\*\s*\s+\{[^}]*\}\s*TODO:\s*Descrever retorno\s*$/i,
       ];
 
       return templatePatterns.some((pattern) => pattern.test(linha));

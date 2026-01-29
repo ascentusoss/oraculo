@@ -1,4 +1,4 @@
-import type { Node } from '@babel/types';
+import type { Node } from '/types';
 export interface ASTNode {
     type?: string;
     name?: string;

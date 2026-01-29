@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 import path from 'node:path';
 
-import { lerArquivoTexto } from '@shared/persistence/persistencia.js';
+import { lerArquivoTexto } from '/persistence/persistencia.js';
 
 import type { IncludeExcludeConfig } from '@';
 
@@ -379,7 +379,7 @@ function converterConfigSimplificada(
     resultado.plugins = {
       enabled: enabledPlugins,
       autoload: true,
-      registry: '@oraculo/plugins',
+      registry: '/plugins',
     };
 
     delete resultado.languages;

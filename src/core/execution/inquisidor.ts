@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 import { promises as fs } from 'node:fs';
 
-import { registroAnalistas } from '@analistas/registry/registry.js';
-import { config } from '@core/config/config.js';
-import { isMetaPath } from '@core/config/paths.js';
-import { InquisidorMessages } from '@core/messages/core/inquisidor-messages.js';
-import { log } from '@core/messages/index.js';
-import { lerEstado } from '@shared/persistence/persistencia.js';
+import { registroAnalistas } from '/registry/registry.js';
+import { config } from '/config/config.js';
+import { isMetaPath } from '/config/paths.js';
+import { InquisidorMessages } from '/messages/core/inquisidor-messages.js';
+import { log } from '/messages/index.js';
+import { lerEstado } from '/persistence/persistencia.js';
 import * as path from 'path';
 
 import type {
@@ -71,7 +71,7 @@ export async function prepararComAst(
   baseDir: string,
 ): Promise<FileEntryWithAst[]> {
   // Cache em memória (process-level). Chave: relPath
-  // Guarda: { mtimeMs, size, ast } - tipo importado de @types
+  // Guarda: { mtimeMs, size, ast } - tipo importado de
   const globalStore = globalThis as unknown as Record<string, unknown>;
   const cache: Map<string, CacheValor> =
     (globalStore.__ORACULO_AST_CACHE__ as Map<string, CacheValor>) || new Map();
@@ -92,7 +92,7 @@ export async function prepararComAst(
   return Promise.all(
     entries.map(async (entry): Promise<FileEntryWithAst> => {
       let ast:
-        | import('@babel/traverse').NodePath<import('@babel/types').Node>
+        | import('/traverse').NodePath<import('/types').Node>
         | undefined = undefined;
       const ext = path.extname(entry.relPath);
       const absPath =
@@ -132,7 +132,7 @@ export async function prepararComAst(
           if (!ast) {
             const inicioParse = performance.now();
             // Usa a API decifrarSintaxe esperada pelos testes (com spies)
-            const parsed = await import('@core/parsing/parser.js').then((m) =>
+            const parsed = await import('/parsing/parser.js').then((m) =>
               m.decifrarSintaxe(entry.content || '', extEfetiva, {
                 relPath: entry.relPath,
               }),
@@ -144,8 +144,8 @@ export async function prepararComAst(
                   .length > 0
               ) {
                 // Sentinel convertida para o tipo NodePath via unknown cast – suficiente para diferenciar truthy
-                ast = {} as unknown as import('@babel/traverse').NodePath<
-                  import('@babel/types').Node
+                ast = {} as unknown as import('/traverse').NodePath<
+                  import('/types').Node
                 >;
               }
             } else if (parsed == null) {
@@ -155,8 +155,8 @@ export async function prepararComAst(
                 entry.relPath,
               );
               if (inNodeModules) {
-                ast = {} as unknown as import('@babel/traverse').NodePath<
-                  import('@babel/types').Node
+                ast = {} as unknown as import('/traverse').NodePath<
+                  import('/types').Node
                 >;
               } else {
                 // Tentar extrair linha/coluna do parser executando uma parse rápida
@@ -171,7 +171,7 @@ export async function prepararComAst(
                     | undefined) || [];
                 try {
                   // Importar babel parser diretamente e forçar parse para capturar erro com loc
-                  const babel = await import('@babel/parser');
+                  const babel = await import('/parser');
                   try {
                     // tentativa intencional para capturar a exceção com posição
                     const parseOpts = {
@@ -185,7 +185,7 @@ export async function prepararComAst(
                     };
                     babel.parse(
                       entry.content || '',
-                      parseOpts as unknown as import('@babel/parser').ParserOptions,
+                      parseOpts as unknown as import('/parser').ParserOptions,
                     );
                     // se por algum motivo não lançar, registra erro genérico
                     lista.push(

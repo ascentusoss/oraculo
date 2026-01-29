@@ -1,4 +1,4 @@
-import type { File } from '@babel/types';
+import type { File } from '/types';
 export interface ParserBabelFileExtra extends File {
     oraculoExtra?: {
         lang: string;

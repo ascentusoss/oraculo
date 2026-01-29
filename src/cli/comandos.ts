@@ -11,7 +11,7 @@ import {
   comandoReestruturar,
   criarComandoFixTypes,
   registrarComandoReverter,
-} from '@cli/commands/index.js';
+} from '/commands/index.js';
 import type { Command } from 'commander';
 
 export function registrarComandos(

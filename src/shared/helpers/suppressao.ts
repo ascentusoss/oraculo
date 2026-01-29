@@ -4,9 +4,9 @@
  * Permite desabilitar regras específicas usando comentários no código
  *
  * Formatos suportados (qualquer sintaxe de comentário inline, ex.: //, #, --, ;, <!-- -->, blocos /* ... * /):
- * - @oraculo-disable-next-line nome-da-regra
- * - @oraculo-disable nome-da-regra
- * - @oraculo-enable nome-da-regra
+ * -  nome-da-regra
+ * -  nome-da-regra
+ * -  nome-da-regra
  */
 
 import type { RegrasSuprimidas, SupressaoInfo } from '@';
@@ -48,8 +48,8 @@ export function extrairSupressoes(src: string): RegrasSuprimidas {
     const linhaNorm = normalizarLinha(linha);
     const numeroLinha = i + 1;
 
-    // @oraculo-disable-next-line regra1 regra2
-    const matchNextLine = linhaNorm.match(/@oraculo-disable-next-line\s+(.+)/);
+    //  regra1 regra2
+    const matchNextLine = linhaNorm.match(/\s+(.+)/);
     if (matchNextLine) {
       const regras = matchNextLine[1].trim().split(/\s+/);
       const linhaAfetada = numeroLinha + 1;
@@ -65,8 +65,8 @@ export function extrairSupressoes(src: string): RegrasSuprimidas {
       continue;
     }
 
-    // @oraculo-disable regra1 regra2
-    const matchDisable = linhaNorm.match(/@oraculo-disable\s+(.+)/);
+    //  regra1 regra2
+    const matchDisable = linhaNorm.match(/\s+(.+)/);
     if (matchDisable) {
       const regras = matchDisable[1].trim().split(/\s+/);
       regras.forEach((regra) => {
@@ -75,8 +75,8 @@ export function extrairSupressoes(src: string): RegrasSuprimidas {
       continue;
     }
 
-    // @oraculo-enable regra1 regra2
-    const matchEnable = linhaNorm.match(/@oraculo-enable\s+(.+)/);
+    //  regra1 regra2
+    const matchEnable = linhaNorm.match(/\s+(.+)/);
     if (matchEnable) {
       const regras = matchEnable[1].trim().split(/\s+/);
       regras.forEach((regra) => {
@@ -85,14 +85,14 @@ export function extrairSupressoes(src: string): RegrasSuprimidas {
       continue;
     }
 
-    // @oraculo-disable (desabilita todas as regras)
-    if (linhaNorm.includes('@oraculo-disable-all')) {
+    //  (desabilita todas as regras)
+    if (linhaNorm.includes('')) {
       blocosAtivos.add('*');
       continue;
     }
 
-    // @oraculo-enable (reabilita todas as regras)
-    if (linhaNorm.includes('@oraculo-enable-all')) {
+    //  (reabilita todas as regras)
+    if (linhaNorm.includes('')) {
       blocosAtivos.clear();
       continue;
     }

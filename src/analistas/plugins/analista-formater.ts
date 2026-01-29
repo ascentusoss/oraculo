@@ -4,8 +4,8 @@ import {
   AnalystTypes,
   FormatadorMessages,
   SeverityLevels,
-} from '@core/messages/core/plugin-messages.js';
-import { formatarPrettierMinimo } from '@shared/impar/formater.js';
+} from '/messages/core/plugin-messages.js';
+import { formatarPrettierMinimo } from '/impar/formater.js';
 
 import { criarAnalista, criarOcorrencia } from '@';
 

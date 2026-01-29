@@ -2,13 +2,13 @@
 import type { Dirent, Stats } from 'node:fs';
 import { promises as fs } from 'node:fs';
 
-import { config } from '@core/config/config.js';
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
-import { logScanner } from '@core/messages/log/log-helper.js';
+import { config } from '/config/config.js';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
+import { logScanner } from '/messages/log/log-helper.js';
 import {
   lerArquivoTexto,
   lerEstado,
-} from '@shared/persistence/persistencia.js';
+} from '/persistence/persistencia.js';
 import micromatch from 'micromatch';
 import path from 'path';
 

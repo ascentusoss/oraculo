@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 import path from 'node:path';
 
-import type { NodePath } from '@babel/traverse';
-import type * as t from '@babel/types';
-import { config } from '@core/config/config.js';
-import { traverse } from '@core/config/traverse.js';
-import { DetectorDependenciasMessages } from '@core/messages/analistas/detector-dependencias-messages.js';
+import type { NodePath } from '/traverse';
+import type * as t from '/types';
+import { config } from '/config/config.js';
+import { traverse } from '/config/traverse.js';
+import { DetectorDependenciasMessages } from '/messages/analistas/detector-dependencias-messages.js';
 
 import type { ContextoExecucao, Ocorrencia, TecnicaAplicarResultado } from '@';
 
@@ -159,10 +159,10 @@ function verificarCicloConfirmado(
  * - Valida que o ciclo é real (todos os nós existem no grafo)
  * - Retorna caminho completo e limpo do ciclo
  *
- * @param inicio - Arquivo inicial para busca
- * @param grafo - Grafo de dependências completo
- * @param maxProfundidade - Profundidade máxima de busca (evita loops infinitos)
- * @returns Array com caminho do ciclo, ou vazio se não houver ciclo
+ *  inicio - Arquivo inicial para busca
+ *  grafo - Grafo de dependências completo
+ *  maxProfundidade - Profundidade máxima de busca (evita loops infinitos)
+ *  Array com caminho do ciclo, ou vazio se não houver ciclo
  */
 function detectarCicloComplexo(
   inicio: string,
@@ -293,7 +293,7 @@ function detectarCicloComplexo(
  * - client.on('event', handler)
  * - app.get/post(path, handler)
  *
- * @public Exportada para reuso em outros detectores
+ *  Exportada para reuso em outros detectores
  */
 export function isUsadoEmRegistroDinamico(
   src: string,

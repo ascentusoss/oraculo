@@ -43,23 +43,11 @@ async function main() {
 
      * TODO: Adicionar descrição da função
 
-     * @param {*} c - TODO: Descrever parâmetro
+     *  {*} c - TODO: Descrever parâmetro
 
-     * @param {*} t - TODO: Descrever parâmetro
+     *  {*} t - TODO: Descrever parâmetro
 
-     * @returns {*} TODO: Descrever retorno
-
-     */
-
-    /**
-
-     * TODO: Adicionar descrição da função
-
-     * @param {*} c - TODO: Descrever parâmetro
-
-     * @param {*} t - TODO: Descrever parâmetro
-
-     * @returns {*} TODO: Descrever retorno
+     *  {*} TODO: Descrever retorno
 
      */
 
@@ -67,23 +55,11 @@ async function main() {
 
      * TODO: Adicionar descrição da função
 
-     * @param {*} c - TODO: Descrever parâmetro
+     *  {*} c - TODO: Descrever parâmetro
 
-     * @param {*} t - TODO: Descrever parâmetro
+     *  {*} t - TODO: Descrever parâmetro
 
-     * @returns {*} TODO: Descrever retorno
-
-     */
-
-    /**
-
-     * TODO: Adicionar descrição da função
-
-     * @param {*} c - TODO: Descrever parâmetro
-
-     * @param {*} t - TODO: Descrever parâmetro
-
-     * @returns {*} TODO: Descrever retorno
+     *  {*} TODO: Descrever retorno
 
      */
 
@@ -91,11 +67,35 @@ async function main() {
 
      * TODO: Adicionar descrição da função
 
-     * @param {*} c - TODO: Descrever parâmetro
+     *  {*} c - TODO: Descrever parâmetro
 
-     * @param {*} t - TODO: Descrever parâmetro
+     *  {*} t - TODO: Descrever parâmetro
 
-     * @returns {*} TODO: Descrever retorno
+     *  {*} TODO: Descrever retorno
+
+     */
+
+    /**
+
+     * TODO: Adicionar descrição da função
+
+     *  {*} c - TODO: Descrever parâmetro
+
+     *  {*} t - TODO: Descrever parâmetro
+
+     *  {*} TODO: Descrever retorno
+
+     */
+
+    /**
+
+     * TODO: Adicionar descrição da função
+
+     *  {*} c - TODO: Descrever parâmetro
+
+     *  {*} t - TODO: Descrever parâmetro
+
+     *  {*} TODO: Descrever retorno
 
      */
     

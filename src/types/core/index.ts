@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- * @fileoverview Exportações centralizadas de tipos do core
+ *  Exportações centralizadas de tipos do core
  */
 
 // Auto-Fix (Corrections)

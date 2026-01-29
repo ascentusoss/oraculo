@@ -24,10 +24,10 @@ async function getSalvarEstado() {
         return salvarEstado;
     const candidates = process.env.VITEST
         ? [
-            '@shared/persistence/persistencia.js',
-            '@shared/persistence/persistencia.ts',
+            '/persistence/persistencia.js',
+            '/persistence/persistencia.ts',
         ]
-        : ['@shared/persistence/persistencia.js'];
+        : ['/persistence/persistencia.js'];
     for (const p of candidates) {
         try {
             const mod = await import(p).catch(() => undefined);

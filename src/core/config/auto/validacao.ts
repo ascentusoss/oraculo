@@ -4,7 +4,7 @@
  * Integra com o sistema existente de detectores do Oráculo
  */
 
-import { log } from '@core/messages/index.js';
+import { log } from '/messages/index.js';
 
 import type { ValidationResult } from '@';
 

@@ -7,9 +7,9 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { config } from '@core/config/config.js';
-import { CliExportersMessages } from '@core/messages/cli/cli-exporters-messages.js';
-import { log } from '@core/messages/index.js';
+import { config } from '/config/config.js';
+import { CliExportersMessages } from '/messages/cli/cli-exporters-messages.js';
+import { log } from '/messages/index.js';
 
 import type {
   GuardianBaseline,
@@ -160,8 +160,8 @@ async function gerarRelatorioMarkdown(
 /**
  * Exporta relatórios do Guardian (Markdown e JSON)
  *
- * @param options - Opções de exportação
- * @returns Caminhos dos arquivos gerados ou null em caso de erro
+ *  options - Opções de exportação
+ *  Caminhos dos arquivos gerados ou null em caso de erro
  */
 export async function exportarRelatoriosGuardian(
   options: GuardianExportOptions,

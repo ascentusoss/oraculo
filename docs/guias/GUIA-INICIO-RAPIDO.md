@@ -30,7 +30,7 @@ O projeto também inclui um arquivo `.nvmrc` com o valor `25`. Ao clonar, execut
 
 ```bash
 # Clone o repositório
-git clone https://github.com/ossmoralus/oraculo.git
+git clone https://github.com/ascentusoss/oraculo.git
 cd oraculo
 
 # Instale as dependências e compile
@@ -189,10 +189,10 @@ EOF
 Use comentários inline para suprimir ocorrências específicas:
 
 ```typescript
-// @oraculo-disable-next-line tipo-inseguro-any
+//  tipo-inseguro-any
 const dados: any = respostaExterna;
 
-// @oraculo-disable hardcoded-secrets
+//  hardcoded-secrets
 const configKey = "chave_configuracao_publica";
 ```
 
@@ -251,8 +251,8 @@ jobs:
   diagnostico:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout
+      - uses: actions/setup-node
         with:
           node-version: "20"
 
@@ -332,7 +332,7 @@ npx oraculo diagnosticar
 
 1. Use `--exclude` para filtrar arquivos de teste
 2. Configure `testPatterns.allowAnyType: true` para testes
-3. Use `// @oraculo-disable-next-line` para casos específicos
+3. Use `// ` para casos específicos
 
 ### "Análise muito lenta"
 

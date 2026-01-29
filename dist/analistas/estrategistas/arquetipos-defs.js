@@ -103,7 +103,7 @@ export const ARQUETIPOS = [
             'telegraf',
             'discord.js',
             'grammy',
-            '@discordjs/builders',
+            '/builders',
         ],
         rootFilesAllowed: [
             'package.json',
@@ -185,7 +185,7 @@ export const ARQUETIPOS = [
             'src/assets',
             'public',
         ],
-        dependencyHints: ['vue', 'vue-router', 'vuex', 'pinia', '@vue/cli-service'],
+        dependencyHints: ['vue', 'vue-router', 'vuex', 'pinia', '/cli-service'],
         rootFilesAllowed: [
             'package.json',
             'tsconfig.json',

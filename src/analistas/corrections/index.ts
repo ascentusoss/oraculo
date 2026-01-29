@@ -2,9 +2,9 @@
 import {
   analistaPontuacao,
   analistaQuickFixes,
-} from '@analistas/corrections/analista-pontuacao.js';
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
+} from '/corrections/analista-pontuacao.js';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
 
 import type { Analista, Ocorrencia } from '@';
 

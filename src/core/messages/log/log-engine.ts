@@ -4,13 +4,13 @@
  * Detecta automaticamente complexidade e adapta verbosidade
  */
 
-import { config } from '@core/config/config.js';
+import { config } from '/config/config.js';
 import {
   LogContextConfig,
   LogMessages,
-} from '@core/messages/log/log-messages.js';
-import { ICONES_FEEDBACK } from '@core/messages/ui/icons.js';
-import { isJsonMode } from '@shared/helpers/json-mode.js';
+} from '/messages/log/log-messages.js';
+import { ICONES_FEEDBACK } from '/messages/ui/icons.js';
+import { isJsonMode } from '/helpers/json-mode.js';
 
 import type {
   FileMap,

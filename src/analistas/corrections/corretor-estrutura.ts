@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable tipo-inseguro-unknown tipo-literal-inline-complexo
+//  tipo-inseguro-unknown tipo-literal-inline-complexo
 // Justificativa: unknown é usado para tipagem defensiva de erros e módulos dinâmicos
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { mapaReversao } from '@analistas/corrections/mapa-reversao.js';
-import { config } from '@core/config/config.js';
-import { resolverPluginSeguro } from '@core/config/seguranca.js';
-import { log, logAuto } from '@core/messages/index.js';
-import { importarModuloSeguro } from '@core/utils/import-safe.js';
-import { reescreverImports } from '@shared/helpers/imports.js';
+import { mapaReversao } from '/corrections/mapa-reversao.js';
+import { config } from '/config/config.js';
+import { resolverPluginSeguro } from '/config/seguranca.js';
+import { log, logAuto } from '/messages/index.js';
+import { importarModuloSeguro } from '/utils/import-safe.js';
+import { reescreverImports } from '/helpers/imports.js';
 import pLimit from 'p-limit';
 
 import type {

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-import type { ParserOptions as BabelParserOptions } from '@babel/parser';
-import { parse as babelParse } from '@babel/parser';
-import type { File as BabelFile } from '@babel/types';
-import { log, logCore } from '@core/messages/index.js';
-import { getCurrentParsingFile } from '@core/parsing/parser.js';
+import type { ParserOptions as BabelParserOptions } from '/parser';
+import { parse as babelParse } from '/parser';
+import type { File as BabelFile } from '/types';
+import { log, logCore } from '/messages/index.js';
+import { getCurrentParsingFile } from '/parsing/parser.js';
 import * as csstree from 'css-tree';
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
 import { parseDocument } from 'htmlparser2';
@@ -90,7 +90,7 @@ export class CorePlugin implements ParserPlugin {
     if (result === null) {
       // Heurística Flow
       const pareceFlow =
-        /@flow\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
+        /\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
       if (pareceFlow) {
         const flowPlugins = [
           'flow',

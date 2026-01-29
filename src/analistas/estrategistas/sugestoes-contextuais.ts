@@ -10,11 +10,11 @@
  * - Melhores práticas por tecnologia
  */
 
-import { detectarContextoInteligente } from '@analistas/detectores/detector-contexto-inteligente.js';
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
-import { log } from '@core/messages/index.js';
-import { SugestoesContextuaisMessages } from '@core/messages/ui/sugestoes-contextuais-messages.js';
+import { detectarContextoInteligente } from '/detectores/detector-contexto-inteligente.js';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
+import { log } from '/messages/index.js';
+import { SugestoesContextuaisMessages } from '/messages/ui/sugestoes-contextuais-messages.js';
 
 import type { Analista, ContextoExecucao, Ocorrencia, PackageJson } from '@';
 

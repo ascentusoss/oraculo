@@ -1,5 +1,5 @@
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
 import type { ContextoExecucao, SinaisProjeto, TecnicaAplicarResultado } from '../../types/index.js';
 export declare const sinaisDetectados: SinaisProjeto;
 export declare const detectorEstrutura: {

@@ -214,8 +214,8 @@ export const EXCLUDES_PADRAO: ConfigExcludesPadrao = {
 /**
  * Função para obter os padrões de exclusão recomendados baseado no tipo de projeto
  *
- * @param tipoProjeto Tipo de projeto detectado ou 'generico' para padrões gerais
- * @returns Array de padrões de exclusão recomendados
+ *  tipoProjeto Tipo de projeto detectado ou 'generico' para padrões gerais
+ *  Array de padrões de exclusão recomendados
  */
 
 export function getExcludesRecomendados(
@@ -259,8 +259,8 @@ export function getExcludesRecomendados(
 /**
  * Função para validar se um padrão de exclusão é seguro
  *
- * @param padrao Padrão a ser validado
- * @returns true se o padrão é considerado seguro
+ *  padrao Padrão a ser validado
+ *  true se o padrão é considerado seguro
  */
 
 export function isPadraoExclusaoSeguro(padrao: string): boolean {
@@ -293,9 +293,9 @@ export function isPadraoExclusaoSeguro(padrao: string): boolean {
  * 2. Padrões recomendados baseados no tipo de projeto
  * 3. Padrões do sistema
  *
- * @param configUsuario Configuração do usuário (pode ser null/undefined)
- * @param tipoProjeto Tipo de projeto para padrões recomendados
- * @returns Array consolidado de padrões de exclusão
+ *  configUsuario Configuração do usuário (pode ser null/undefined)
+ *  tipoProjeto Tipo de projeto para padrões recomendados
+ *  Array consolidado de padrões de exclusão
  */
 
 export function mesclarConfigExcludes(

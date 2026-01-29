@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 import path from 'node:path';
 
-import { detectarFantasmas } from '@analistas/detectores/detector-fantasmas.js';
-import { config } from '@core/config/config.js';
-import { log, logAuto } from '@core/messages/index.js';
+import { detectarFantasmas } from '/detectores/detector-fantasmas.js';
+import { config } from '/config/config.js';
+import { log, logAuto } from '/messages/index.js';
 import {
   gerarRelatorioPodaJson,
   gerarRelatorioPodaMarkdown,
-} from '@relatorios/relatorio-poda.js';
-import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
+} from '/relatorio-poda.js';
+import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
 import pLimit from 'p-limit';
 
 import type {

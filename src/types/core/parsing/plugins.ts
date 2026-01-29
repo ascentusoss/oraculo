@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-import type { File as BabelFile, Node } from '@babel/types';
+import type { File as BabelFile, Node } from '/types';
 
 /**
  * AST genérico de diferentes parsers (Python, PHP, XML, HTML, CSS, etc)

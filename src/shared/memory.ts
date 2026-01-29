@@ -38,7 +38,7 @@ export class ConversationMemory {
   }
 
   getSummary(): {
-    // @oraculo-disable: tipo-literal-inline-complexo
+    // : tipo-literal-inline-complexo
     totalMessages: number;
     userMessages: number;
     assistantMessages: number;
@@ -94,7 +94,7 @@ export class OraculoContextMemory {
       const parsed = JSON.parse(raw) as Partial<OraculoContextState>;
       if (parsed && parsed.schemaVersion === 1) {
         this.state = {
-          // @oraculo-disable: tipo-literal-inline-complexo
+          // : tipo-literal-inline-complexo
           schemaVersion: 1,
           lastRuns: Array.isArray(parsed.lastRuns)
             ? (parsed.lastRuns as OraculoRunRecord[])
@@ -112,7 +112,7 @@ export class OraculoContextMemory {
 
   getState(): OraculoContextState {
     return {
-      // @oraculo-disable: tipo-literal-inline-complexo
+      // : tipo-literal-inline-complexo
       schemaVersion: 1,
       lastRuns: [...this.state.lastRuns],
       preferences: { ...this.state.preferences },
@@ -133,7 +133,7 @@ export class OraculoContextMemory {
   }
 
   async recordRunStart(
-    // @oraculo-disable: tipo-literal-inline-complexo
+    // : tipo-literal-inline-complexo
     input: {
       cwd: string;
       argv: string[];
@@ -161,7 +161,7 @@ export class OraculoContextMemory {
 
   async recordRunEnd(
     id: string,
-    // @oraculo-disable: tipo-literal-inline-complexo
+    // : tipo-literal-inline-complexo
     update: {
       ok: boolean;
       exitCode?: number;

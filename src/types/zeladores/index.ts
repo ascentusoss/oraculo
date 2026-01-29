@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- * @fileoverview Exportações centralizadas de tipos de zeladores
+ *  Exportações centralizadas de tipos de zeladores
  *
  * Re-exporta todos os tipos relacionados a zeladores e suas operações.
  */

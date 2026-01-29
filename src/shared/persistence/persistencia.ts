@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable tipo-inseguro-unknown
+//  tipo-inseguro-unknown
 // Justificativa: unknown é usado para serialização genérica que aceita qualquer entrada
 import { promises as fs } from 'node:fs';
 import * as fsCb from 'node:fs';
 import path from 'node:path';
 
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
 
 import type {
   GlobalComVitest,
@@ -22,7 +22,7 @@ function safeGet<T extends object, K extends PropertyKey>(
   key: K,
 ): unknown {
   try {
-    // @ts-expect-error acesso dinâmico protegido
+    //  acesso dinâmico protegido
     return obj[key];
   } catch {
     return undefined;

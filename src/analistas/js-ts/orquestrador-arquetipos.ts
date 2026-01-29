@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-import { ARQUETIPOS } from '@analistas/estrategistas/arquetipos-defs.js';
-import { detectarArquetipoNode } from '@analistas/plugins/detector-node.js';
-import { detectarArquetipoXML } from '@analistas/plugins/detector-xml.js';
-import { pontuarTodos } from '@analistas/pontuadores/pontuador.js';
-import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
+import { ARQUETIPOS } from '/estrategistas/arquetipos-defs.js';
+import { detectarArquetipoNode } from '/plugins/detector-node.js';
+import { detectarArquetipoXML } from '/plugins/detector-xml.js';
+import { pontuarTodos } from '/pontuadores/pontuador.js';
+import { detectarContextoProjeto } from '/contexto-projeto.js';
 
 import type {
   ArquetipoDeteccaoAnomalia,
@@ -52,8 +52,8 @@ function criarResultadoDesconhecido(
  * Orquestrador central de detecção de arquétipos
  * Agrega votos dos detectores especializados e decide o arquétipo final
  *
- * @param arquivos Lista de arquivos do projeto para análise
- * @returns Melhor arquétipo detectado ou 'desconhecido' se não identificado
+ *  arquivos Lista de arquivos do projeto para análise
+ *  Melhor arquétipo detectado ou 'desconhecido' se não identificado
  */
 
 export function detectarArquetipo(

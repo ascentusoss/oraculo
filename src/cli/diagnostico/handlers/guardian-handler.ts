@@ -9,9 +9,9 @@
  * - Formata resultados
  */
 
-import { MENSAGENS_GUARDIAN } from '@core/messages/core/diagnostico-messages.js';
-import { logGuardian } from '@core/messages/log/log-helper.js';
-import { scanSystemIntegrity } from '@guardian/sentinela.js';
+import { MENSAGENS_GUARDIAN } from '/messages/core/diagnostico-messages.js';
+import { logGuardian } from '/messages/log/log-helper.js';
+import { scanSystemIntegrity } from '/sentinela.js';
 
 import type {
   FileEntry,

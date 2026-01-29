@@ -9,10 +9,10 @@
  * Normaliza entrada de usuário removendo duplicatas e espaços vazios.
  * Aceita padrões separados por vírgulas ou espaços.
  *
- * @param raw - Array de strings raw do usuário
- * @returns Array normalizado sem duplicatas e vazio
+ *  raw - Array de strings raw do usuário
+ *  Array normalizado sem duplicatas e vazio
  *
- * @example
+ *
  * ```typescript
  * processPatternList(['*.ts, *.js', '  *.md  '])
  * // ['*.ts', '*.js', '*.md']
@@ -38,10 +38,10 @@ export function processPatternList(raw: string[] | undefined): string[] {
  * - `pattern/**` - Todos os arquivos dentro
  * - `** /pattern/**` - Pattern em qualquer nível (se não tiver `/` ou `\`)
  *
- * @param list - Lista de padrões processados
- * @returns Lista expandida com variações
+ *  list - Lista de padrões processados
+ *  Lista expandida com variações
  *
- * @example
+ *
  * ```typescript
  * expandIncludePatterns(['src', '*.ts'])
  * // ['src', 'src/**', '** /src/**', '*.ts']

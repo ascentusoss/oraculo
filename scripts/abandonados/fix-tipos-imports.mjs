@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Script pequeno para normalizar imports de tipos:
-// Troca importações que começam com @tipos/<subpath> para @tipos/tipos
+// Troca importações que começam com /<subpath> para /tipos
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -24,14 +24,14 @@ async function fixFile(file) {
     const raw = await fs.readFile(file, 'utf8');
     let updated = raw;
 
-    // Replace imports like: from '@tipos/whatever' or '@tipos/whatever.js' to '@tipos/tipos'
+    // Replace imports like: from '/whatever' or '/whatever.js' to '/tipos'
     // Keep import type vs value intact; only change module specifier.
-    updated = updated.replace(/(['\"])@tipos\/(?:[^'"\n]+?)\1/g, (m) => {
+    updated = updated.replace(/(['\"])\/(?:[^'"\n]+?)\1/g, (m) => {
         const quote = m[0];
-        return `${quote}@tipos/tipos${quote}`;
+        return `${quote}/tipos${quote}`;
     });
 
-    // Also replace occurrences in .js.map or generated headers that may include @tipos/...
+    // Also replace occurrences in .js.map or generated headers that may include /...
     // but limit to files inside src only (we walk src)
 
     if (updated !== raw) {

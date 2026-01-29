@@ -60,7 +60,7 @@ function isJsTsFile(relPath) {
 function getProtectedLinesFromTemplateLiterals(code, relPath) {
     try {
         const req = createRequire(import.meta.url);
-        const parser = req('@babel/parser');
+        const parser = req('/parser');
         const rp = (relPath ?? '').toLowerCase();
         const plugins = [
             'importMeta',
@@ -447,7 +447,7 @@ function normalizarSeparadoresDeSecao(code, opts = {}) {
         return null;
     };
     const parseNovoSeparadorComMarcacao = (line) => {
-        const m = line.match(/^\s*\/\*\s*-{10,}\s*substituir\s+por\s+titulo\s+@oraculo-secao(?:\((.+?)\))?\s*-{10,}\s*\*\/\s*$/i);
+        const m = line.match(/^\s*\/\*\s*-{10,}\s*substituir\s+por\s+titulo\s+(?:\((.+?)\))?\s*-{10,}\s*\*\/\s*$/i);
         if (!m)
             return null;
         const raw = (m[1] ?? '').trim();
@@ -456,7 +456,7 @@ function normalizarSeparadoresDeSecao(code, opts = {}) {
     const isSeparadorSemTitulo = (line) => {
         return (/^\s*\/\*\s*-{10,}\s*substituir\s+por\s+titulo\s*-{10,}\s*\*\/\s*$/i.test(line) ||
             /^\s*\/\*\s*-{10,}\s*-\s*-{10,}\s*\*\/\s*$/.test(line) ||
-            /^\s*\/\*\s*-{10,}\s*@oraculo-secao\s*-{10,}\s*\*\/\s*$/i.test(line));
+            /^\s*\/\*\s*-{10,}\s*\s*-{10,}\s*\*\/\s*$/i.test(line));
     };
     const buildSeparatorWithTitle = (title) => {
         return `  /* -------------------------- ${title} -------------------------- */`;

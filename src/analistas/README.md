@@ -10,7 +10,7 @@ Este diretório concentra as técnicas de análise ("analistas") executadas pelo
 ## O que é um Analista?
 
 - Um analista é uma função (ou objeto com metadados) que inspeciona arquivos e produz ocorrências.
-- Implementa o contrato definido em `@types/types` (default: `src/types/`, configurável via `conventions.typesDirectory`).
+- Implementa o contrato definido em `/types` (default: `src/types/`, configurável via `conventions.typesDirectory`).
 - Não modifica arquivos (somente leitura). Correções vivem em `src/zeladores/`.
 
 ## Analistas Registrados (v0.3.0)
@@ -81,10 +81,10 @@ Escopo de arquivos: os analistas respeitam exatamente o conjunto de arquivos for
 ## Convenções e boas práticas
 
 - ESM puro (imports/exports), sem `require`.
-- Tipos importados de `@types/types` (default: `src/types/`, configurável via `conventions.typesDirectory`); evite duplicar contratos.
+- Tipos importados de `/types` (default: `src/types/`, configurável via `conventions.typesDirectory`); evite duplicar contratos.
 - Preferir funções puras; efeitos colaterais devem ser documentados e isolados.
 - Logs: use o `log` central. Para molduras, gere o bloco com `log.bloco`/`imprimirBloco` (não prefixe com `log.info`).
-- Persistência: nunca use `fs.*` direto — utilize `lerEstado`/`salvarEstado` de `@shared/persistence/persistencia.js`.
+- Persistência: nunca use `fs.*` direto — utilize `lerEstado`/`salvarEstado` de `/persistence/persistencia.js`.
 
 ### Nota sobre testes e mocks
 

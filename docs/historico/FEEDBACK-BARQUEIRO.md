@@ -47,7 +47,7 @@ const configKey = `squad_role_${squadType.toLowerCase()}`;
 
 - Adicionar heurística: se a string está em template literal com interpolação, reduzir severidade
 - Ignorar padrões como `${variavel}` que claramente são dinâmicos
-- Comentário `@oraculo-disable-next-line` deveria funcionar (não funcionou no teste)
+- Comentário `` deveria funcionar (não funcionou no teste)
 
 ---
 
@@ -165,7 +165,7 @@ npm run diagnosticar -- --interactive
 
 ### 3. **Integração com TSConfig/ESLint**
 
-- Ler `tsconfig.json` para entender aliases (`@/`, `@barqueiro/`)
+- Ler `tsconfig.json` para entender aliases (`@/`, `/`)
 - Ler `.eslintrc` para respeitar regras já configuradas
 - Não reportar problemas que ESLint já pega
 
@@ -183,7 +183,7 @@ Sugestão melhorada:
 💡 Magic constant: 25
    → Extrair para: const DISCORD_SELECT_MAX_OPTIONS = 25
    → Ou adicionar comentário: .slice(0, 25) // Discord API limit
-   → Ou ignorar: // @oraculo-ignore magic-constants
+   → Ou ignorar: //  magic-constants
 ```
 
 ### 5. **Detecção de Contexto de Framework**
@@ -286,12 +286,12 @@ const key = "squad*role*"
 
 ## 🔧 Bugs e Inconsistências
 
-### 1. **Comentário `@oraculo-disable-next-line` não funciona**
+### 1. **Comentário `` não funciona**
 
 Testamos:
 
 ```typescript
-// @oraculo-disable-next-line hardcoded-secrets
+//  hardcoded-secrets
 const configKey = `squad_role_${squadType.toLowerCase()}`;
 ```
 
@@ -332,7 +332,7 @@ Output tem linhas `INFO` antes do JSON válido, quebrando parse:
 ### Alta Prioridade:
 
 1. ⭐⭐⭐ Configuração via `.oraculorc.json`
-2. ⭐⭐⭐ Corrigir `@oraculo-disable-next-line`
+2. ⭐⭐⭐ Corrigir ``
 3. ⭐⭐⭐ Modo `--json` puro (sem logs)
 4. ⭐⭐ Reduzir falsos positivos de `unhandled-async` em event handlers
 
@@ -365,6 +365,6 @@ Apesar dos pontos de melhoria, o Oráculo **já é uma ferramenta valiosa**. Con
 
 ## 📞 Contato
 
-- **Projeto:** [github.com/ossmoralus/barqueiro](https://github.com/ossmoralus/barqueiro)
+- **Projeto:** [github.com/ossmoralus/barqueiro](https://github.com/ascentusoss/barqueiro)
 - **Feedback gerado em:** 01/12/2025
 - **Versão analisada:** Oráculo CLI v0.2.0

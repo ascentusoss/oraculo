@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-import { grafoDependencias } from '@analistas/detectores/detector-dependencias.js';
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
-import { config } from '@core/config/config.js';
-import { isInsideSrc } from '@core/config/paths.js';
-import { DetectorEstruturaMessages } from '@core/messages/analistas/detector-estrutura-messages.js';
-import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
+import { grafoDependencias } from '/detectores/detector-dependencias.js';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
+import { config } from '/config/config.js';
+import { isInsideSrc } from '/config/paths.js';
+import { DetectorEstruturaMessages } from '/messages/analistas/detector-estrutura-messages.js';
+import { detectarContextoProjeto } from '/contexto-projeto.js';
 import micromatch from 'micromatch';
 
 import type {

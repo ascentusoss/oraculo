@@ -19,9 +19,9 @@ O Oráculo utiliza um sistema centralizado de aliases TypeScript para simplifica
 
 ```typescript
 // ✅ Correto - usar aliases
-import { executar } from "@nucleo/executor";
-import { analisarPadroes } from "@analistas/javascript-typescript/analista-padroes-uso";
-import { salvarEstado } from "@shared/persistence/persistencia";
+import { executar } from "/executor";
+import { analisarPadroes } from "/javascript-typescript/analista-padroes-uso";
+import { salvarEstado } from "/persistence/persistencia";
 
 // ❌ Incorreto - imports relativos longos
 import { executar } from "../../../nucleo/executor";
@@ -32,7 +32,7 @@ import { executar } from "../../../nucleo/executor";
 ```typescript
 // ✅ Correto - mesmos aliases funcionam nos testes
 import { describe, it, expect } from "vitest";
-import { JavaPlugin } from "@shared/plugins/java/java-plugin";
+import { JavaPlugin } from "/plugins/java/java-plugin";
 ```
 
 ## Configuração Automática
@@ -58,7 +58,7 @@ O sistema sincroniza automaticamente:
 export const ALIASES: AliasConfig[] = [
   // ...aliases existentes...
   {
-    alias: "@novo-modulo/",
+    alias: "/",
     srcPath: "novo-modulo/",
     description: "Descrição do novo módulo",
   },

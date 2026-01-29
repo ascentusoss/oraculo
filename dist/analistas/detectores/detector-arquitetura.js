@@ -206,15 +206,15 @@ function detectarPadraoArquitetural(estatisticas) {
     for (const stats of estatisticas) {
         if (stats.aliases) {
             Object.keys(stats.aliases).forEach((alias) => aliases.add(alias));
-            if (stats.aliases['@nucleo'])
+            if (stats.aliases[''])
                 temNucleo = true;
-            if (stats.aliases['@analistas'])
+            if (stats.aliases[''])
                 temAnalistas = true;
-            if (stats.aliases['@cli'])
+            if (stats.aliases[''])
                 _temCLI = true;
-            if (stats.aliases['@shared'])
+            if (stats.aliases[''])
                 temShared = true;
-            if (stats.aliases['@types'])
+            if (stats.aliases[''])
                 temTipos = true;
         }
     }

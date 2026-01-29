@@ -15,7 +15,7 @@ export const fixUnknownToSpecificType = {
         if (isInStringOrComment(fullCode, match.index || 0)) {
             return false;
         }
-        if (filePath?.includes('.d.ts') || filePath?.includes('/@types/')) {
+        if (filePath?.includes('.d.ts') || filePath?.includes('//')) {
             return false;
         }
         if (isLegacyOrVendorFile(filePath)) {

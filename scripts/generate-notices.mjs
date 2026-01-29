@@ -43,27 +43,13 @@ function nl(txt) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} { projectName - TODO: Descrever parâmetro
+ *  {*} { projectName - TODO: Descrever parâmetro
 
- * @param {*} license - TODO: Descrever parâmetro
+ *  {*} license - TODO: Descrever parâmetro
 
- * @param {*} ptBr } - TODO: Descrever parâmetro
+ *  {*} ptBr } - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} { projectName - TODO: Descrever parâmetro
-
- * @param {*} license - TODO: Descrever parâmetro
-
- * @param {*} ptBr } - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -71,27 +57,13 @@ function nl(txt) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} { projectName - TODO: Descrever parâmetro
+ *  {*} { projectName - TODO: Descrever parâmetro
 
- * @param {*} license - TODO: Descrever parâmetro
+ *  {*} license - TODO: Descrever parâmetro
 
- * @param {*} ptBr } - TODO: Descrever parâmetro
+ *  {*} ptBr } - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} { projectName - TODO: Descrever parâmetro
-
- * @param {*} license - TODO: Descrever parâmetro
-
- * @param {*} ptBr } - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -99,13 +71,41 @@ function nl(txt) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} { projectName - TODO: Descrever parâmetro
+ *  {*} { projectName - TODO: Descrever parâmetro
 
- * @param {*} license - TODO: Descrever parâmetro
+ *  {*} license - TODO: Descrever parâmetro
 
- * @param {*} ptBr } - TODO: Descrever parâmetro
+ *  {*} ptBr } - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} { projectName - TODO: Descrever parâmetro
+
+ *  {*} license - TODO: Descrever parâmetro
+
+ *  {*} ptBr } - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} { projectName - TODO: Descrever parâmetro
+
+ *  {*} license - TODO: Descrever parâmetro
+
+ *  {*} ptBr } - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -150,23 +150,11 @@ function header({ projectName, license, ptBr }) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} pkgId - TODO: Descrever parâmetro
+ *  {*} pkgId - TODO: Descrever parâmetro
 
- * @param {*} meta - TODO: Descrever parâmetro
+ *  {*} meta - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} pkgId - TODO: Descrever parâmetro
-
- * @param {*} meta - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -174,23 +162,11 @@ function header({ projectName, license, ptBr }) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} pkgId - TODO: Descrever parâmetro
+ *  {*} pkgId - TODO: Descrever parâmetro
 
- * @param {*} meta - TODO: Descrever parâmetro
+ *  {*} meta - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} pkgId - TODO: Descrever parâmetro
-
- * @param {*} meta - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -198,11 +174,35 @@ function header({ projectName, license, ptBr }) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} pkgId - TODO: Descrever parâmetro
+ *  {*} pkgId - TODO: Descrever parâmetro
 
- * @param {*} meta - TODO: Descrever parâmetro
+ *  {*} meta - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} pkgId - TODO: Descrever parâmetro
+
+ *  {*} meta - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} pkgId - TODO: Descrever parâmetro
+
+ *  {*} meta - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -317,7 +317,7 @@ async function main() {
     await fs.writeFile(path.join(dir, 'licenses.json'), JSON.stringify(results, null, 2), 'utf-8');
   } catch {}
 
-  // Ordena por id (nome@versão) e remove o próprio projeto
+  // Ordena por id (nomeão) e remove o próprio projeto
   const entries = Object.entries(results)
     .filter(([id]) => !id.startsWith(`${pkg.name}@`))
     .sort(([a], [b]) => a.localeCompare(b));

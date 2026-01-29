@@ -1,4 +1,4 @@
-import { parse as babelParse } from '@babel/parser';
+import { parse as babelParse } from '/parser';
 import { log, logCore } from '../messages/index.js';
 import { initializeDefaultPlugins } from '../../shared/plugins/init.js';
 import { getGlobalRegistry } from '../../shared/plugins/registry.js';
@@ -226,7 +226,7 @@ export async function decifrarSintaxe(codigo, ext, opts = {}) {
     if (parseResult == null &&
         (ext === '.js' || ext === '.mjs' || ext === '.cjs')) {
         try {
-            const pareceFlow = /@flow\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
+            const pareceFlow = /\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
             if (pareceFlow) {
                 const flowPlugins = [
                     'flow',

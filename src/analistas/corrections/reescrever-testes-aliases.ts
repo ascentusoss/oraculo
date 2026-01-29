@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable tipo-literal-inline-complexo
+//  tipo-literal-inline-complexo
 // Justificativa: tipos locais usados internamente para parsing de caminhos
 import fsSync from 'node:fs';
 import path from 'node:path';
@@ -60,7 +60,7 @@ export function rewriteToAlias(
     if (!posixSpec.startsWith('@')) return { changed: false, value: spec };
     const withoutExt = posixSpec.replace(/\.(ts|js|mjs|cjs|tsx|jsx)$/i, '');
     let mapped = LEGACY_ALIAS_MAP.get(withoutExt);
-    if (!mapped && withoutExt.startsWith('@cli/src/')) mapped = withoutExt;
+    if (!mapped && withoutExt.startsWith('/src/')) mapped = withoutExt;
     if (mapped) {
       const withExt = pickExtForAlias(mapped, ctx.srcRoot);
       return { changed: true, value: withExt };

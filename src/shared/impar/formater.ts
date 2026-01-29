@@ -101,7 +101,7 @@ function getProtectedLinesFromTemplateLiterals(
   // Isso evita quebrar strings multilinha que pareçam comentários/divisores.
   try {
     const req = createRequire(import.meta.url);
-    const parser = req('@babel/parser') as {
+    const parser = req('/parser') as {
       parse: (src: string, opts: Record<string, unknown>) => unknown;
     };
 
@@ -580,7 +580,7 @@ function normalizarSeparadoresDeSecao(
   ): { titulo: string | null } | null => {
     // Formato legado aceito (compat): /* -------------------------- substituir por titulo (opcionalmente com um título embutido) -------------------------- */
     const m = line.match(
-      /^\s*\/\*\s*-{10,}\s*substituir\s+por\s+titulo\s+@oraculo-secao(?:\((.+?)\))?\s*-{10,}\s*\*\/\s*$/i,
+      /^\s*\/\*\s*-{10,}\s*substituir\s+por\s+titulo\s+(?:\((.+?)\))?\s*-{10,}\s*\*\/\s*$/i,
     );
     if (!m) return null;
     const raw = (m[1] ?? '').trim();
@@ -595,7 +595,7 @@ function normalizarSeparadoresDeSecao(
         line,
       ) ||
       /^\s*\/\*\s*-{10,}\s*-\s*-{10,}\s*\*\/\s*$/.test(line) ||
-      /^\s*\/\*\s*-{10,}\s*@oraculo-secao\s*-{10,}\s*\*\/\s*$/i.test(line)
+      /^\s*\/\*\s*-{10,}\s*\s*-{10,}\s*\*\/\s*$/i.test(line)
     );
   };
 

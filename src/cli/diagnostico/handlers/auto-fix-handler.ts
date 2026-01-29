@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2025 Oráculo Contributors
 
 /**
- * @module cli/diagnostico/handlers/auto-fix-handler
- * @description Handler modular para execução de auto-fix com validação de options
- * @see docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
+ *  cli/diagnostico/handlers/auto-fix-handler
+ *  Handler modular para execução de auto-fix com validação de options
+ *  docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
  */
 
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
-import { log, MENSAGENS_AUTOFIX } from '@core/messages/index.js';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
+import { log, MENSAGENS_AUTOFIX } from '/messages/index.js';
 
 import type { AutoFixOptions, AutoFixResult, FileEntryWithAst } from '@';
 
@@ -20,9 +20,9 @@ export type { AutoFixOptions, AutoFixResult };
 /**
  * Executa o sistema de auto-fix com timeout e validação
  *
- * @param entries - Lista de arquivos para processar
- * @param options - Opções de execução
- * @returns Resultado da execução
+ *  entries - Lista de arquivos para processar
+ *  options - Opções de execução
+ *  Resultado da execução
  */
 export async function executarAutoFix(
   entries: FileEntryWithAst[],

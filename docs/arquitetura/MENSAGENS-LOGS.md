@@ -22,14 +22,14 @@ Este guia documenta como produzir saídas consistentes no Oráculo usando os mó
 - Saídas JSON: use `console.log(JSON.stringify(...))` apenas quando a CLI tem flag JSON; não prefixe com `log.*`.
 - Saídas não-JSON: sempre use `log.*`.
 - Ícones e textos: prefira `ICONES_DIAGNOSTICO` e `CABECALHOS` em vez de strings embutidas.
-- Importações: importe sempre de `@core/messages/index.js` para evitar ciclos.
+- Importações: importe sempre de `/messages/index.js` para evitar ciclos.
 
 ## Exemplos
 
 ### Importação
 
 ```ts
-import { log, ICONES_DIAGNOSTICO, CABECALHOS } from "@core/messages/index.js";
+import { log, ICONES_DIAGNOSTICO, CABECALHOS } from "/messages/index.js";
 ```
 
 ### Emissão não-JSON
@@ -53,7 +53,7 @@ if (opts.json) {
 import {
   MENSAGENS_ERRO,
   MENSAGENS_SUCESSO,
-} from "@core/messages/fix-types-messages.js";
+} from "/messages/fix-types-messages.js";
 
 log.sucesso(MENSAGENS_SUCESSO.analiseConcluida);
 log.erro(MENSAGENS_ERRO.modulosNaoEncontrados(modulos));
@@ -64,7 +64,7 @@ log.erro(MENSAGENS_ERRO.modulosNaoEncontrados(modulos));
 - [ ] Trocar `console.log` por `log.*` em não-JSON
 - [ ] Manter `console.log(JSON.stringify(...))` em JSON
 - [ ] Substituir strings por `CABECALHOS`/catálogos
-- [ ] Importar via `@core/messages/index.js`
+- [ ] Importar via `/messages/index.js`
 - [ ] Validar build e rodar lint (idealmente com `--fix`)
 
 ## Próximos passos

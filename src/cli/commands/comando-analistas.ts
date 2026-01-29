@@ -4,12 +4,12 @@ import path from 'node:path';
 import {
   listarAnalistas,
   registroAnalistas,
-} from '@analistas/registry/registry.js';
-import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
-import { config } from '@core/config/config.js';
-import { CliComandoAnalistasMessages } from '@core/messages/cli/cli-comando-analistas-messages.js';
-import { ICONES_DIAGNOSTICO, log } from '@core/messages/index.js';
-import { salvarEstado } from '@shared/persistence/persistencia.js';
+} from '/registry/registry.js';
+import { ExitCode, sair } from '/helpers/exit-codes.js';
+import { config } from '/config/config.js';
+import { CliComandoAnalistasMessages } from '/messages/cli/cli-comando-analistas-messages.js';
+import { ICONES_DIAGNOSTICO, log } from '/messages/index.js';
+import { salvarEstado } from '/persistence/persistencia.js';
 import { Command } from 'commander';
 
 export function comandoAnalistas(): Command {

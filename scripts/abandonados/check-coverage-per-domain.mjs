@@ -27,23 +27,11 @@ const multiSegmentDomains = [
 
  * TODO: Adicionar descrição da função
 
- * @param {*} filePath - TODO: Descrever parâmetro
+ *  {*} filePath - TODO: Descrever parâmetro
 
- * @param {*} patterns - TODO: Descrever parâmetro
+ *  {*} patterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} filePath - TODO: Descrever parâmetro
-
- * @param {*} patterns - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -51,23 +39,11 @@ const multiSegmentDomains = [
 
  * TODO: Adicionar descrição da função
 
- * @param {*} filePath - TODO: Descrever parâmetro
+ *  {*} filePath - TODO: Descrever parâmetro
 
- * @param {*} patterns - TODO: Descrever parâmetro
+ *  {*} patterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} filePath - TODO: Descrever parâmetro
-
- * @param {*} patterns - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -75,11 +51,35 @@ const multiSegmentDomains = [
 
  * TODO: Adicionar descrição da função
 
- * @param {*} filePath - TODO: Descrever parâmetro
+ *  {*} filePath - TODO: Descrever parâmetro
 
- * @param {*} patterns - TODO: Descrever parâmetro
+ *  {*} patterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} filePath - TODO: Descrever parâmetro
+
+ *  {*} patterns - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} filePath - TODO: Descrever parâmetro
+
+ *  {*} patterns - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -106,31 +106,19 @@ function matchesAnyPattern(filePath, patterns) {
 
 /**
  * Calcula porcentagem baseada em contagem e total
- * @param {number} c - Contagem atual
- * @param {number} t - Total
- * @returns {number} Porcentagem (0-100)
+ *  {number} c - Contagem atual
+ *  {number} t - Total
+ *  {number} Porcentagem (0-100)
  */
 /**
 
  * TODO: Adicionar descrição da função
 
- * @param {*} c - TODO: Descrever parâmetro
+ *  {*} c - TODO: Descrever parâmetro
 
- * @param {*} t - TODO: Descrever parâmetro
+ *  {*} t - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} c - TODO: Descrever parâmetro
-
- * @param {*} t - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -138,23 +126,11 @@ function matchesAnyPattern(filePath, patterns) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} c - TODO: Descrever parâmetro
+ *  {*} c - TODO: Descrever parâmetro
 
- * @param {*} t - TODO: Descrever parâmetro
+ *  {*} t - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} c - TODO: Descrever parâmetro
-
- * @param {*} t - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -162,11 +138,35 @@ function matchesAnyPattern(filePath, patterns) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} c - TODO: Descrever parâmetro
+ *  {*} c - TODO: Descrever parâmetro
 
- * @param {*} t - TODO: Descrever parâmetro
+ *  {*} t - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} c - TODO: Descrever parâmetro
+
+ *  {*} t - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} c - TODO: Descrever parâmetro
+
+ *  {*} t - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -174,8 +174,8 @@ function pct(c, t) { return t === 0 ? 100 : (c / t) * 100; }
 
 /**
  * Resolve o domínio baseado no caminho relativo do arquivo
- * @param {string} relPath - Caminho relativo do arquivo
- * @returns {string} Nome do domínio identificado
+ *  {string} relPath - Caminho relativo do arquivo
+ *  {string} Nome do domínio identificado
  */
 
 function resolveDomain(relPath) {
@@ -198,23 +198,11 @@ async function loadExclude() {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} data - TODO: Descrever parâmetro
+ *  {*} data - TODO: Descrever parâmetro
 
- * @param {*} excludePatterns - TODO: Descrever parâmetro
+ *  {*} excludePatterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} data - TODO: Descrever parâmetro
-
- * @param {*} excludePatterns - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -222,23 +210,11 @@ async function loadExclude() {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} data - TODO: Descrever parâmetro
+ *  {*} data - TODO: Descrever parâmetro
 
- * @param {*} excludePatterns - TODO: Descrever parâmetro
+ *  {*} excludePatterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} data - TODO: Descrever parâmetro
-
- * @param {*} excludePatterns - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -246,11 +222,35 @@ async function loadExclude() {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} data - TODO: Descrever parâmetro
+ *  {*} data - TODO: Descrever parâmetro
 
- * @param {*} excludePatterns - TODO: Descrever parâmetro
+ *  {*} excludePatterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} data - TODO: Descrever parâmetro
+
+ *  {*} excludePatterns - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} data - TODO: Descrever parâmetro
+
+ *  {*} excludePatterns - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -331,23 +331,11 @@ async function loadThresholds(currentDomains) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} domains - TODO: Descrever parâmetro
+ *  {*} domains - TODO: Descrever parâmetro
 
- * @param {*} thresholds - TODO: Descrever parâmetro
+ *  {*} thresholds - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} domains - TODO: Descrever parâmetro
-
- * @param {*} thresholds - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -355,23 +343,11 @@ async function loadThresholds(currentDomains) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} domains - TODO: Descrever parâmetro
+ *  {*} domains - TODO: Descrever parâmetro
 
- * @param {*} thresholds - TODO: Descrever parâmetro
+ *  {*} thresholds - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} domains - TODO: Descrever parâmetro
-
- * @param {*} thresholds - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -379,11 +355,35 @@ async function loadThresholds(currentDomains) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} domains - TODO: Descrever parâmetro
+ *  {*} domains - TODO: Descrever parâmetro
 
- * @param {*} thresholds - TODO: Descrever parâmetro
+ *  {*} thresholds - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} domains - TODO: Descrever parâmetro
+
+ *  {*} thresholds - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} domains - TODO: Descrever parâmetro
+
+ *  {*} thresholds - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 

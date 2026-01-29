@@ -4,12 +4,12 @@ import {
   AnalystTypes,
   PythonMessages,
   SeverityLevels,
-} from '@core/messages/core/plugin-messages.js';
-import { createLineLookup } from '@shared/helpers/line-lookup.js';
+} from '/messages/core/plugin-messages.js';
+import { createLineLookup } from '/helpers/line-lookup.js';
 import {
   maskPythonComments,
   maskPythonStringsAndComments,
-} from '@shared/helpers/masking.js';
+} from '/helpers/masking.js';
 
 import { criarAnalista, criarOcorrencia } from '@';
 

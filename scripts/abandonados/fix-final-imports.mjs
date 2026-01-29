@@ -10,8 +10,8 @@ const fixes = [
     // comando-perf
     {
         file: 'src/cli/commands/comando-perf.ts',
-        from: "from '@core/util/exec-safe.js'",
-        to: "from '@core/utils/exec-safe.js'",
+        from: "from '/util/exec-safe.js'",
+        to: "from '/utils/exec-safe.js'",
     },
     // config.ts
     {
@@ -22,8 +22,8 @@ const fixes = [
     // inquisidor.ts
     {
         file: 'src/core/execution/inquisidor.ts',
-        from: "from '@core/parser.js'",
-        to: "from '@core/parsing/parser.js'",
+        from: "from '/parser.js'",
+        to: "from '/parsing/parser.js'",
     },
     // file-registry.ts
     {
@@ -34,26 +34,26 @@ const fixes = [
     // gerador-relatorio.ts
     {
         file: 'src/relatorios/gerador-relatorio.ts',
-        from: "from '@core/schema-versao.js'",
-        to: "from '@core/schema/version.js'",
+        from: "from '/schema-versao.js'",
+        to: "from '/schema/version.js'",
     },
     // relatorio-arquetipos.ts
     {
         file: 'src/relatorios/relatorio-arquetipos.ts',
-        from: "from '@core/schema-versao.js'",
-        to: "from '@core/schema/version.js'",
+        from: "from '/schema-versao.js'",
+        to: "from '/schema/version.js'",
     },
     // leitor-relatorio.ts
     {
         file: 'src/shared/helpers/leitor-relatorio.ts',
-        from: "from '@core/schema-versao.js'",
-        to: "from '@core/schema/version.js'",
+        from: "from '/schema-versao.js'",
+        to: "from '/schema/version.js'",
     },
     // core-plugin.ts
     {
         file: 'src/shared/plugins/core-plugin.ts',
-        from: "from '@core/parser.js'",
-        to: "from '@core/parsing/parser.js'",
+        from: "from '/parser.js'",
+        to: "from '/parsing/parser.js'",
     },
     // ambiente.ts
     {

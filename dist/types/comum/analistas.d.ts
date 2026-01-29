@@ -1,5 +1,5 @@
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
 import type { ContextoExecucao, Ocorrencia } from '../index.js';
 export type TecnicaAplicarResultado = Ocorrencia | Ocorrencia[] | null | undefined;
 export interface Tecnica {

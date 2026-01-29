@@ -266,7 +266,7 @@ export const RelatorioMessages = {
 
 /**
  * Helper para formatar mensagens com variáveis
- * @example
+ *
  * formatMessage(RelatorioMessages.principal.secoes.metadados.arquivos, { count: 42 })
  * // => "Arquivos escaneados: 42"
  */

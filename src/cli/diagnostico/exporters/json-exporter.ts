@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2025 Oráculo Contributors
 
 /**
- * @module cli/diagnostico/exporters/json-exporter
- * @description Exportador JSON com suporte a ASCII escape e fragmentação
- * @see docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
+ *  cli/diagnostico/exporters/json-exporter
+ *  Exportador JSON com suporte a ASCII escape e fragmentação
+ *  docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
  */
 
 import fs from 'node:fs';
@@ -20,9 +20,9 @@ export type { JsonExportOptions, RelatorioJson };
 /**
  * Gera relatório JSON a partir dos dados do diagnóstico
  *
- * @param dados - Dados do diagnóstico
- * @param options - Opções de exportação
- * @returns String JSON formatada
+ *  dados - Dados do diagnóstico
+ *  options - Opções de exportação
+ *  String JSON formatada
  */
 export function gerarRelatorioJson(
   dados: Partial<RelatorioJson>,

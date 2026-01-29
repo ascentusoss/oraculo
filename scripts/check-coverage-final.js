@@ -12,23 +12,11 @@ const CONFIG_PATH = path.resolve(process.cwd(), 'oraculo.config.json');
 
  * TODO: Adicionar descrição da função
 
- * @param {*} covered - TODO: Descrever parâmetro
+ *  {*} covered - TODO: Descrever parâmetro
 
- * @param {*} total - TODO: Descrever parâmetro
+ *  {*} total - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} covered - TODO: Descrever parâmetro
-
- * @param {*} total - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -36,23 +24,11 @@ const CONFIG_PATH = path.resolve(process.cwd(), 'oraculo.config.json');
 
  * TODO: Adicionar descrição da função
 
- * @param {*} covered - TODO: Descrever parâmetro
+ *  {*} covered - TODO: Descrever parâmetro
 
- * @param {*} total - TODO: Descrever parâmetro
+ *  {*} total - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} covered - TODO: Descrever parâmetro
-
- * @param {*} total - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -60,11 +36,35 @@ const CONFIG_PATH = path.resolve(process.cwd(), 'oraculo.config.json');
 
  * TODO: Adicionar descrição da função
 
- * @param {*} covered - TODO: Descrever parâmetro
+ *  {*} covered - TODO: Descrever parâmetro
 
- * @param {*} total - TODO: Descrever parâmetro
+ *  {*} total - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} covered - TODO: Descrever parâmetro
+
+ *  {*} total - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} covered - TODO: Descrever parâmetro
+
+ *  {*} total - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -208,23 +208,11 @@ main();
 
  * TODO: Adicionar descrição da função
 
- * @param {*} filePath - TODO: Descrever parâmetro
+ *  {*} filePath - TODO: Descrever parâmetro
 
- * @param {*} patterns - TODO: Descrever parâmetro
+ *  {*} patterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} filePath - TODO: Descrever parâmetro
-
- * @param {*} patterns - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -232,23 +220,11 @@ main();
 
  * TODO: Adicionar descrição da função
 
- * @param {*} filePath - TODO: Descrever parâmetro
+ *  {*} filePath - TODO: Descrever parâmetro
 
- * @param {*} patterns - TODO: Descrever parâmetro
+ *  {*} patterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} filePath - TODO: Descrever parâmetro
-
- * @param {*} patterns - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -256,11 +232,35 @@ main();
 
  * TODO: Adicionar descrição da função
 
- * @param {*} filePath - TODO: Descrever parâmetro
+ *  {*} filePath - TODO: Descrever parâmetro
 
- * @param {*} patterns - TODO: Descrever parâmetro
+ *  {*} patterns - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} filePath - TODO: Descrever parâmetro
+
+ *  {*} patterns - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} filePath - TODO: Descrever parâmetro
+
+ *  {*} patterns - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -350,23 +350,11 @@ async function resolveThresholds() {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} n - TODO: Descrever parâmetro
+ *  {*} n - TODO: Descrever parâmetro
 
- * @param {*} fallback - TODO: Descrever parâmetro
+ *  {*} fallback - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} n - TODO: Descrever parâmetro
-
- * @param {*} fallback - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -374,23 +362,11 @@ async function resolveThresholds() {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} n - TODO: Descrever parâmetro
+ *  {*} n - TODO: Descrever parâmetro
 
- * @param {*} fallback - TODO: Descrever parâmetro
+ *  {*} fallback - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} n - TODO: Descrever parâmetro
-
- * @param {*} fallback - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -398,11 +374,35 @@ async function resolveThresholds() {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} n - TODO: Descrever parâmetro
+ *  {*} n - TODO: Descrever parâmetro
 
- * @param {*} fallback - TODO: Descrever parâmetro
+ *  {*} fallback - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} n - TODO: Descrever parâmetro
+
+ *  {*} fallback - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} n - TODO: Descrever parâmetro
+
+ *  {*} fallback - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 

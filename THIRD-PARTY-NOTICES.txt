@@ -1,9 +1,9 @@
 THIRD-PARTY NOTICES
 ====================
 
-oraculo@0.3.0 — Project license: MIT
+oraculo.3.7 — Project license: MIT
 This file lists third-party components included (production) and their notices/licenses.
-Generated at: 2026-01-15T17:01:52.249Z
+Generated at: 2026-01-29T23:03:29.890Z
 
 Notes:
 - This file is generated automatically; do not edit manually.
@@ -11,10 +11,10 @@ Notes:
 - Third-party license texts are reproduced in their original language to preserve legal validity.
 
 ----------------------------------------------------------------
-Pacote: @babel/code-frame@7.28.6
+Pacote: /code-frame.28.6
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -42,10 +42,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/generator@7.28.6
+Pacote: /generator.28.6
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -73,10 +73,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/helper-globals@7.28.0
+Pacote: /helper-globals.28.0
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -104,10 +104,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/helper-string-parser@7.27.1
+Pacote: /helper-string-parser.27.1
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -135,10 +135,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/helper-validator-identifier@7.28.5
+Pacote: /helper-validator-identifier.28.5
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -166,10 +166,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/parser@7.28.6
+Pacote: /parser.28.6
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 Copyright (C) 2012-2014 by various contributors (see AUTHORS)
@@ -194,10 +194,10 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/template@7.28.6
+Pacote: /template.28.6
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -225,10 +225,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/traverse@7.28.6
+Pacote: /traverse.28.6
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -256,10 +256,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @babel/types@7.28.6
+Pacote: /types.28.6
 Licenças: MIT
 Publicador: The Babel Team
-Repositório: https://github.com/babel/babel
+Repositório: https://github.com/ascentusoss/babel
 
 --- Início do texto de licença ---
 MIT License
@@ -287,9 +287,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @chevrotain/cst-dts-gen@11.0.3
+Pacote: /cst-dts-gen.0.3
 Licenças: Apache-2.0
-Repositório: https://github.com/Chevrotain/chevrotain
+Repositório: https://github.com/ascentusoss/chevrotain
 
 --- Início do texto de licença ---
 Apache License
@@ -496,9 +496,9 @@ Apache License
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @chevrotain/gast@11.0.3
+Pacote: /gast.0.3
 Licenças: Apache-2.0
-Repositório: https://github.com/Chevrotain/chevrotain
+Repositório: https://github.com/ascentusoss/chevrotain
 
 --- Início do texto de licença ---
 Apache License
@@ -705,9 +705,9 @@ Apache License
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @chevrotain/regexp-to-ast@11.0.3
+Pacote: /regexp-to-ast.0.3
 Licenças: Apache-2.0
-Repositório: https://github.com/Chevrotain/chevrotain
+Repositório: https://github.com/ascentusoss/chevrotain
 
 --- Início do texto de licença ---
 Apache License
@@ -914,10 +914,10 @@ Apache License
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @chevrotain/types@11.0.3
+Pacote: /types.0.3
 Licenças: Apache-2.0
 Publicador: Shahar Soel
-Repositório: https://github.com/Chevrotain/chevrotain
+Repositório: https://github.com/ascentusoss/chevrotain
 
 --- Início do texto de licença ---
 Apache License
@@ -1124,10 +1124,10 @@ Apache License
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @chevrotain/utils@11.0.3
+Pacote: /utils.0.3
 Licenças: Apache-2.0
 Publicador: Shahar Soel
-Repositório: https://github.com/Chevrotain/chevrotain
+Repositório: https://github.com/ascentusoss/chevrotain
 
 --- Início do texto de licença ---
 Apache License
@@ -1334,14 +1334,14 @@ Apache License
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @jridgewell/gen-mapping@0.3.13
+Pacote: /gen-mapping.3.13
 Licenças: MIT
 Publicador: Justin Ridgewell
-Contato: justin@ridgewell.name
-Repositório: https://github.com/jridgewell/sourcemaps
+Contato: justin.name
+Repositório: https://github.com/ascentusoss/sourcemaps
 
 --- Início do texto de licença ---
-Copyright 2024 Justin Ridgewell <justin@ridgewell.name>
+Copyright 2024 Justin Ridgewell <justin.name>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1363,14 +1363,14 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @jridgewell/resolve-uri@3.1.2
+Pacote: /resolve-uri.1.2
 Licenças: MIT
 Publicador: Justin Ridgewell
-Contato: justin@ridgewell.name
-Repositório: https://github.com/jridgewell/resolve-uri
+Contato: justin.name
+Repositório: https://github.com/ascentusoss/resolve-uri
 
 --- Início do texto de licença ---
-Copyright 2019 Justin Ridgewell <jridgewell@google.com>
+Copyright 2019 Justin Ridgewell <jridgewell.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1392,14 +1392,14 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @jridgewell/sourcemap-codec@1.5.5
+Pacote: /sourcemap-codec.5.5
 Licenças: MIT
 Publicador: Justin Ridgewell
-Contato: justin@ridgewell.name
-Repositório: https://github.com/jridgewell/sourcemaps
+Contato: justin.name
+Repositório: https://github.com/ascentusoss/sourcemaps
 
 --- Início do texto de licença ---
-Copyright 2024 Justin Ridgewell <justin@ridgewell.name>
+Copyright 2024 Justin Ridgewell <justin.name>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1421,14 +1421,14 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: @jridgewell/trace-mapping@0.3.31
+Pacote: /trace-mapping.3.31
 Licenças: MIT
 Publicador: Justin Ridgewell
-Contato: justin@ridgewell.name
-Repositório: https://github.com/jridgewell/sourcemaps
+Contato: justin.name
+Repositório: https://github.com/ascentusoss/sourcemaps
 
 --- Início do texto de licença ---
-Copyright 2024 Justin Ridgewell <justin@ridgewell.name>
+Copyright 2024 Justin Ridgewell <justin.name>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1450,16 +1450,16 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: ansi-regex@6.2.2
+Pacote: ansi-regex.2.2
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/chalk/ansi-regex
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/ansi-regex
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -1469,10 +1469,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: braces@3.0.3
+Pacote: braces.0.3
 Licenças: MIT
 Publicador: Jon Schlinkert
-Repositório: https://github.com/micromatch/braces
+Repositório: https://github.com/ascentusoss/braces
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -1499,14 +1499,14 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: chalk@5.6.2
+Pacote: chalk.6.2
 Licenças: MIT
-Repositório: https://github.com/chalk/chalk
+Repositório: https://github.com/ascentusoss/chalk
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -1516,10 +1516,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: chevrotain-allstar@0.3.1
+Pacote: chevrotain-allstar.3.1
 Licenças: MIT
 Publicador: TypeFox
-Repositório: https://github.com/langium/chevrotain-allstar
+Repositório: https://github.com/ascentusoss/chevrotain-allstar
 
 --- Início do texto de licença ---
 Copyright 2022 TypeFox GmbH
@@ -1541,10 +1541,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: chevrotain@11.0.3
+Pacote: chevrotain.0.3
 Licenças: Apache-2.0
 Publicador: Shahar Soel
-Repositório: https://github.com/Chevrotain/chevrotain
+Repositório: https://github.com/ascentusoss/chevrotain
 
 --- Início do texto de licença ---
 Apache License
@@ -1751,16 +1751,16 @@ Apache License
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: cli-cursor@5.0.0
+Pacote: cli-cursor.0.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/cli-cursor
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/cli-cursor
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -1770,16 +1770,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: cli-spinners@3.4.0
+Pacote: cli-spinners.4.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/cli-spinners
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/cli-spinners
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -1789,16 +1789,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: commander@14.0.2
+Pacote: commander.0.2
 Licenças: MIT
 Publicador: TJ Holowaychuk
-Contato: tj@vision-media.ca
-Repositório: https://github.com/tj/commander.js
+Contato: tj.ca
+Repositório: https://github.com/ascentusoss/commander.js
 
 --- Início do texto de licença ---
 (The MIT License)
 
-Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+Copyright (c) 2011 TJ Holowaychuk <tj.ca>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -1821,14 +1821,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: css-tree@2.3.1
+Pacote: css-tree.1.0
 Licenças: MIT
 Publicador: Roman Dvornov
-Contato: rdvornov@gmail.com
-Repositório: https://github.com/csstree/csstree
+Contato: rdvornov.com
+Repositório: https://github.com/ascentusoss/csstree
 
 --- Início do texto de licença ---
-Copyright (C) 2016-2022 by Roman Dvornov
+Copyright (C) 2016-2024 by Roman Dvornov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1850,10 +1850,10 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: cuint@0.2.2
+Pacote: cuint.2.2
 Licenças: MIT
 Publicador: Pierre Curto
-Repositório: https://github.com/pierrec/js-cuint
+Repositório: https://github.com/ascentusoss/js-cuint
 
 --- Início do texto de licença ---
 # C-like unsigned integers for Javascript
@@ -2064,15 +2064,15 @@ MIT
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: debug@4.4.3
+Pacote: debug.4.3
 Licenças: MIT
 Publicador: Josh Junon
-Repositório: https://github.com/debug-js/debug
+Repositório: https://github.com/ascentusoss/debug
 
 --- Início do texto de licença ---
 (The MIT License)
 
-Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
+Copyright (c) 2014-2017 TJ Holowaychuk <tj.ca>
 Copyright (c) 2018-2021 Josh Junon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software
@@ -2092,11 +2092,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: dom-serializer@2.0.0
+Pacote: dom-serializer.0.0
 Licenças: MIT
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/cheeriojs/dom-serializer
+Contato: me.com
+Repositório: https://github.com/ascentusoss/dom-serializer
 
 --- Início do texto de licença ---
 License
@@ -2113,11 +2113,11 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: domelementtype@2.3.0
+Pacote: domelementtype.3.0
 Licenças: BSD-2-Clause
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/fb55/domelementtype
+Contato: me.com
+Repositório: https://github.com/ascentusoss/domelementtype
 
 --- Início do texto de licença ---
 Copyright (c) Felix Böhm
@@ -2134,11 +2134,11 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: domhandler@5.0.3
+Pacote: domhandler.0.3
 Licenças: BSD-2-Clause
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/fb55/domhandler
+Contato: me.com
+Repositório: https://github.com/ascentusoss/domhandler
 
 --- Início do texto de licença ---
 Copyright (c) Felix Böhm
@@ -2155,11 +2155,11 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: domutils@3.2.2
+Pacote: domutils.2.2
 Licenças: BSD-2-Clause
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/fb55/domutils
+Contato: me.com
+Repositório: https://github.com/ascentusoss/domutils
 
 --- Início do texto de licença ---
 Copyright (c) Felix Böhm
@@ -2176,11 +2176,11 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: entities@4.5.0
+Pacote: entities.5.0
 Licenças: BSD-2-Clause
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/fb55/entities
+Contato: me.com
+Repositório: https://github.com/ascentusoss/entities
 
 --- Início do texto de licença ---
 Copyright (c) Felix Böhm
@@ -2197,11 +2197,11 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: entities@6.0.1
+Pacote: entities.0.1
 Licenças: BSD-2-Clause
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/fb55/entities
+Contato: me.com
+Repositório: https://github.com/ascentusoss/entities
 
 --- Início do texto de licença ---
 Copyright (c) Felix Böhm
@@ -2218,10 +2218,10 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: fast-xml-parser@5.3.3
+Pacote: fast-xml-parser.3.3
 Licenças: MIT
 Publicador: Amit Gupta
-Repositório: https://github.com/NaturalIntelligence/fast-xml-parser
+Repositório: https://github.com/ascentusoss/fast-xml-parser
 
 --- Início do texto de licença ---
 MIT License
@@ -2248,10 +2248,10 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: fill-range@7.1.1
+Pacote: fill-range.1.1
 Licenças: MIT
 Publicador: Jon Schlinkert
-Repositório: https://github.com/jonschlinkert/fill-range
+Repositório: https://github.com/ascentusoss/fill-range
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -2278,16 +2278,16 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: get-east-asian-width@1.4.0
+Pacote: get-east-asian-width.4.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/get-east-asian-width
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/get-east-asian-width
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -2297,14 +2297,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: htmlparser2@10.0.0
+Pacote: htmlparser2.1.0
 Licenças: MIT
 Publicador: Felix Boehm
-Contato: me@feedic.com
-Repositório: https://github.com/fb55/htmlparser2
+Contato: me.com
+Repositório: https://github.com/ascentusoss/htmlparser2
 
 --- Início do texto de licença ---
-Copyright 2010, 2011, Chris Winberry <chris@winberry.net>. All rights reserved.
+Copyright 2010, 2011, Chris Winberry <chris.net>. All rights reserved.
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
 deal in the Software without restriction, including without limitation the
@@ -2325,16 +2325,16 @@ IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: is-interactive@2.0.0
+Pacote: is-interactive.0.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/is-interactive
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/is-interactive
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -2344,10 +2344,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: is-number@7.0.0
+Pacote: is-number.0.0
 Licenças: MIT
 Publicador: Jon Schlinkert
-Repositório: https://github.com/jonschlinkert/is-number
+Repositório: https://github.com/ascentusoss/is-number
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -2374,16 +2374,16 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: is-unicode-supported@2.1.0
+Pacote: is-unicode-supported.1.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/is-unicode-supported
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/is-unicode-supported
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -2393,9 +2393,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: java-parser@3.0.1
+Pacote: java-parser.0.1
 Licenças: Apache-2.0
-Repositório: https://github.com/jhipster/prettier-java.git#main
+Repositório: https://github.com/ascentusoss/prettier-java.git#main
 
 --- Início do texto de licença ---
 Copyright 2018-2025 the original author or authors from the JHipster project
@@ -2604,10 +2604,10 @@ Copyright 2018-2025 the original author or authors from the JHipster project
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: js-tokens@4.0.0
+Pacote: js-tokens.0.0
 Licenças: MIT
 Publicador: Simon Lydell
-Repositório: https://github.com/lydell/js-tokens
+Repositório: https://github.com/ascentusoss/js-tokens
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -2634,10 +2634,10 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: jsesc@3.1.0
+Pacote: jsesc.1.0
 Licenças: MIT
 Publicador: Mathias Bynens
-Repositório: https://github.com/mathiasbynens/jsesc
+Repositório: https://github.com/ascentusoss/jsesc
 
 --- Início do texto de licença ---
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -2663,11 +2663,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: lodash-es@4.17.21
+Pacote: lodash-es.17.23
 Licenças: MIT
 Publicador: John-David Dalton
-Contato: john.david.dalton@gmail.com
-Repositório: https://github.com/lodash/lodash
+Contato: john.david.dalton.com
+Repositório: https://github.com/ascentusoss/lodash
 
 --- Início do texto de licença ---
 Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
@@ -2677,7 +2677,7 @@ DocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>
 
 This software consists of voluntary contributions made by many
 individuals. For exact contribution history, see the revision history
-available at https://github.com/lodash/lodash
+available at https://github.com/ascentusoss/lodash
 
 The following license applies to all parts of this software except as
 documented below:
@@ -2720,11 +2720,11 @@ terms above.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: lodash@4.17.21
+Pacote: lodash.17.23
 Licenças: MIT
 Publicador: John-David Dalton
-Contato: john.david.dalton@gmail.com
-Repositório: https://github.com/lodash/lodash
+Contato: john.david.dalton.com
+Repositório: https://github.com/ascentusoss/lodash
 
 --- Início do texto de licença ---
 Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
@@ -2734,7 +2734,7 @@ DocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>
 
 This software consists of voluntary contributions made by many
 individuals. For exact contribution history, see the revision history
-available at https://github.com/lodash/lodash
+available at https://github.com/ascentusoss/lodash
 
 The following license applies to all parts of this software except as
 documented below:
@@ -2777,16 +2777,16 @@ terms above.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: log-symbols@7.0.1
+Pacote: log-symbols.0.1
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/log-symbols
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/log-symbols
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -2796,10 +2796,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: mdn-data@2.0.30
+Pacote: mdn-data.12.2
 Licenças: CC0-1.0
 Publicador: Mozilla Developer Network
-Repositório: https://github.com/mdn/data
+Repositório: https://github.com/ascentusoss/data
 
 --- Início do texto de licença ---
 CC0 1.0 Universal
@@ -2921,10 +2921,10 @@ For more information, please see
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: micromatch@4.0.8
+Pacote: micromatch.0.8
 Licenças: MIT
 Publicador: Jon Schlinkert
-Repositório: https://github.com/micromatch/micromatch
+Repositório: https://github.com/ascentusoss/micromatch
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -2951,16 +2951,16 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: mimic-function@5.0.1
+Pacote: mimic-function.0.1
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/mimic-function
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/mimic-function
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -2970,9 +2970,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: ms@2.1.3
+Pacote: ms.1.3
 Licenças: MIT
-Repositório: https://github.com/vercel/ms
+Repositório: https://github.com/ascentusoss/ms
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -2999,16 +2999,16 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: onetime@7.0.0
+Pacote: onetime.0.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/onetime
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/onetime
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3018,16 +3018,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: ora@9.0.0
+Pacote: ora.1.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/ora
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/ora
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3037,16 +3037,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: p-limit@7.2.0
+Pacote: p-limit.2.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/p-limit
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/p-limit
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3056,10 +3056,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: picocolors@1.1.1
+Pacote: picocolors.1.1
 Licenças: ISC
 Publicador: Alexey Raspopov
-Repositório: https://github.com/alexeyraspopov/picocolors
+Repositório: https://github.com/ascentusoss/picocolors
 
 --- Início do texto de licença ---
 ISC License
@@ -3080,10 +3080,10 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: picomatch@2.3.1
+Pacote: picomatch.3.1
 Licenças: MIT
 Publicador: Jon Schlinkert
-Repositório: https://github.com/micromatch/picomatch
+Repositório: https://github.com/ascentusoss/picomatch
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -3110,16 +3110,16 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: restore-cursor@5.1.0
+Pacote: restore-cursor.1.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/restore-cursor
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/restore-cursor
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3129,11 +3129,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: signal-exit@4.1.0
+Pacote: signal-exit.1.0
 Licenças: ISC
 Publicador: Ben Coe
-Contato: ben@npmjs.com
-Repositório: https://github.com/tapjs/signal-exit
+Contato: ben.com
+Repositório: https://github.com/ascentusoss/signal-exit
 
 --- Início do texto de licença ---
 The ISC License
@@ -3155,11 +3155,11 @@ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: source-map-js@1.2.1
+Pacote: source-map-js.2.1
 Licenças: BSD-3-Clause
 Publicador: Valentin 7rulnik Semirulnik
-Contato: v7rulnik@gmail.com
-Repositório: https://github.com/7rulnik/source-map-js
+Contato: v7rulnik.com
+Repositório: https://github.com/ascentusoss/source-map-js
 
 --- Início do texto de licença ---
 Copyright (c) 2009-2011, Mozilla Foundation and contributors
@@ -3192,16 +3192,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: stdin-discarder@0.2.2
+Pacote: stdin-discarder.2.2
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/stdin-discarder
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/stdin-discarder
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3211,16 +3211,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: string-width@8.1.0
+Pacote: string-width.1.0
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/string-width
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/string-width
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3230,16 +3230,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: strip-ansi@7.1.2
+Pacote: strip-ansi.1.2
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/chalk/strip-ansi
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/strip-ansi
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3249,10 +3249,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: strnum@2.1.2
+Pacote: strnum.1.2
 Licenças: MIT
 Publicador: Amit Gupta
-Repositório: https://github.com/NaturalIntelligence/strnum
+Repositório: https://github.com/ascentusoss/strnum
 
 --- Início do texto de licença ---
 MIT License
@@ -3279,10 +3279,10 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: to-regex-range@5.0.1
+Pacote: to-regex-range.0.1
 Licenças: MIT
 Publicador: Jon Schlinkert
-Repositório: https://github.com/micromatch/to-regex-range
+Repositório: https://github.com/ascentusoss/to-regex-range
 
 --- Início do texto de licença ---
 The MIT License (MIT)
@@ -3309,10 +3309,10 @@ THE SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: xxhashjs@0.2.2
+Pacote: xxhashjs.2.2
 Licenças: MIT
 Publicador: Pierre Curto
-Repositório: https://github.com/pierrec/js-xxhash
+Repositório: https://github.com/ascentusoss/js-xxhash
 
 --- Início do texto de licença ---
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -3335,16 +3335,16 @@ SOFTWARE.
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: yocto-queue@1.2.2
+Pacote: yocto-queue.2.2
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/yocto-queue
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/yocto-queue
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -3354,16 +3354,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --- Fim do texto de licença ---
 
 ----------------------------------------------------------------
-Pacote: yoctocolors@2.1.2
+Pacote: yoctocolors.1.2
 Licenças: MIT
 Publicador: Sindre Sorhus
-Contato: sindresorhus@gmail.com
-Repositório: https://github.com/sindresorhus/yoctocolors
+Contato: sindresorhus.com
+Repositório: https://github.com/ascentusoss/yoctocolors
 
 --- Início do texto de licença ---
 MIT License
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus.com> (https://sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
