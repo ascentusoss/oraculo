@@ -8,7 +8,7 @@ import type {
   TSInterfaceDeclaration,
   TSTypeAliasDeclaration,
   VariableDeclaration,
-} from '@babel/types';
+} from '/types';
 
 import type {
   ArquetipoEstruturaDef,
@@ -138,7 +138,7 @@ export function extrairSinaisAvancados(
 
     // Funções
     sinais.funcoes += body.filter(
-      (n): n is import('@babel/types').FunctionDeclaration =>
+      (n): n is import('/types').FunctionDeclaration =>
         n.type === 'FunctionDeclaration',
     ).length;
 

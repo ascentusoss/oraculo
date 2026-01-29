@@ -1,4 +1,4 @@
-import * as t from '@babel/types';
+import * as t from '/types';
 import { traverse } from '../../core/config/traverse.js';
 import { ComandosCliMessages } from '../../core/messages/analistas/analista-comandos-cli-messages.js';
 import { detectarContextoProjeto, isRelevanteParaAnalise, } from '../../shared/contexto-projeto.js';

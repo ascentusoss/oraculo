@@ -12,31 +12,31 @@ const ROOT_DIR = resolve(import.meta.dirname, '..');
 
 // Mapeamento de imports antigos para novos
 const MIGRATION_MAP = {
-    "import { logAnalistas } from '@messages/log-helpers.js';": "import { logAnalistas } from '@messages';",
-    "import { logAnalistas } from '@messages/log-helpers-inteligente.js';": "import { logAnalistas } from '@messages';",
-    "import { logScanner } from '@messages/log-helpers.js';": "import { logScanner } from '@messages';",
-    "import { logScanner } from '@messages/log-helpers-inteligente.js';": "import { logScanner } from '@messages';",
-    "import { logSistema } from '@messages/log-helpers.js';": "import { logSistema } from '@messages';",
-    "import { logSistema } from '@messages/log-helpers-inteligente.js';": "import { logSistema } from '@messages';",
-    "import { logFiltros } from '@messages/log-helpers.js';": "import { logFiltros } from '@messages';",
-    "import { logFiltros } from '@messages/log-helpers-inteligente.js';": "import { logFiltros } from '@messages';",
-    "import { logProjeto } from '@messages/log-helpers.js';": "import { logProjeto } from '@messages';",
-    "import { logProjeto } from '@messages/log-helpers-inteligente.js';": "import { logProjeto } from '@messages';",
-    "import { logOcorrencias } from '@messages/log-helpers.js';": "import { logOcorrencias } from '@messages';",
-    "import { logOcorrencias } from '@messages/log-helpers-inteligente.js';": "import { logOcorrencias } from '@messages';",
-    "import { logRelatorio } from '@messages/log-helpers.js';": "import { logRelatorio } from '@messages';",
-    "import { logRelatorio } from '@messages/log-helpers-inteligente.js';": "import { logRelatorio } from '@messages';",
+    "import { logAnalistas } from '/log-helpers.js';": "import { logAnalistas } from '';",
+    "import { logAnalistas } from '/log-helpers-inteligente.js';": "import { logAnalistas } from '';",
+    "import { logScanner } from '/log-helpers.js';": "import { logScanner } from '';",
+    "import { logScanner } from '/log-helpers-inteligente.js';": "import { logScanner } from '';",
+    "import { logSistema } from '/log-helpers.js';": "import { logSistema } from '';",
+    "import { logSistema } from '/log-helpers-inteligente.js';": "import { logSistema } from '';",
+    "import { logFiltros } from '/log-helpers.js';": "import { logFiltros } from '';",
+    "import { logFiltros } from '/log-helpers-inteligente.js';": "import { logFiltros } from '';",
+    "import { logProjeto } from '/log-helpers.js';": "import { logProjeto } from '';",
+    "import { logProjeto } from '/log-helpers-inteligente.js';": "import { logProjeto } from '';",
+    "import { logOcorrencias } from '/log-helpers.js';": "import { logOcorrencias } from '';",
+    "import { logOcorrencias } from '/log-helpers-inteligente.js';": "import { logOcorrencias } from '';",
+    "import { logRelatorio } from '/log-helpers.js';": "import { logRelatorio } from '';",
+    "import { logRelatorio } from '/log-helpers-inteligente.js';": "import { logRelatorio } from '';",
 
     // Imports combinados
-    "from '@messages/log-helpers.js'": "from '@messages'",
-    "from '@messages/log-helpers-inteligente.js'": "from '@messages'",
+    "from '/log-helpers.js'": "from ''",
+    "from '/log-helpers-inteligente.js'": "from ''",
 };
 
 // Padrões a atualizar usando regex
 const REGEX_PATTERNS = [
     {
-        pattern: /import\s*\{([^}]+)\}\s*from\s*['"]@messages\/log-helpers(?:-inteligente)?\.js['"]/g,
-        replacement: "import { $1 } from '@messages'"
+        pattern: /import\s*\{([^}]+)\}\s*from\s*['"]\/log-helpers(?:-inteligente)?\.js['"]/g,
+        replacement: "import { $1 } from ''"
     }
 ];
 

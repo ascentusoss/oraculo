@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
-import type { ParserPlugin as BabelParserPlugin } from '@babel/parser';
-import { parse as babelParse } from '@babel/parser';
-import type { NodePath, Visitor } from '@babel/traverse';
-import traverse from '@babel/traverse';
-import * as t from '@babel/types';
+import type { ParserPlugin as BabelParserPlugin } from '/parser';
+import { parse as babelParse } from '/parser';
+import type { NodePath, Visitor } from '/traverse';
+import traverse from '/traverse';
+import * as t from '/types';
 import {
   AnalystOrigins,
   AnalystTypes,
   ReactMessages,
   SeverityLevels,
-} from '@core/messages/core/plugin-messages.js';
-import { createLineLookup } from '@shared/helpers/line-lookup.js';
-import { maskJsComments } from '@shared/helpers/masking.js';
+} from '/messages/core/plugin-messages.js';
+import { createLineLookup } from '/helpers/line-lookup.js';
+import { maskJsComments } from '/helpers/masking.js';
 
 import { criarAnalista, criarOcorrencia } from '@';
 
@@ -29,7 +29,7 @@ function hasJSX(src: string): boolean {
 }
 
 const traverseFn =
-  traverse as unknown as typeof import('@babel/traverse').default;
+  traverse as unknown as typeof import('/traverse').default;
 
 function warn(
   message: string,

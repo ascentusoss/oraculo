@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
-import chalk from '@core/config/chalk-safe.js';
-import { config } from '@core/config/config.js';
-import { iniciarInquisicao } from '@core/execution/inquisidor.js';
-import { ICONES_DIAGNOSTICO, log, logSistema } from '@core/messages/index.js';
-import { executarShellSeguro } from '@core/utils/exec-safe.js';
-import { scanSystemIntegrity } from '@guardian/sentinela.js';
+import { ExitCode, sair } from '/helpers/exit-codes.js';
+import chalk from '/config/chalk-safe.js';
+import { config } from '/config/config.js';
+import { iniciarInquisicao } from '/execution/inquisidor.js';
+import { ICONES_DIAGNOSTICO, log, logSistema } from '/messages/index.js';
+import { executarShellSeguro } from '/utils/exec-safe.js';
+import { scanSystemIntegrity } from '/sentinela.js';
 import { Command } from 'commander';
 
 import type { FileEntryWithAst } from '@';
@@ -63,8 +63,8 @@ export function comandoAtualizar(
         }
 
         const cmd = opts.global
-          ? 'npm install -g oraculo@latest'
-          : 'npm install oraculo@latest';
+          ? 'npm install -g oraculo'
+          : 'npm install oraculo';
 
         logSistema.atualizacaoExecutando(cmd);
         executarShellSeguro(cmd, { stdio: 'inherit' });

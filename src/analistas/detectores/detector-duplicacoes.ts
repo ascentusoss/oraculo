@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
+import type { NodePath } from '/traverse';
 import type {
   ArrowFunctionExpression,
   ClassMethod,
@@ -7,9 +7,9 @@ import type {
   FunctionExpression,
   Node,
   ObjectMethod,
-} from '@babel/types';
-import { traverse } from '@core/config/traverse.js';
-import { DetectorAgregadosMessages } from '@core/messages/analistas/detector-agregados-messages.js';
+} from '/types';
+import { traverse } from '/config/traverse.js';
+import { DetectorAgregadosMessages } from '/messages/analistas/detector-agregados-messages.js';
 import { createHash } from 'crypto';
 
 import type {

@@ -18,7 +18,7 @@ export type CacheValor = {
   mtimeMs: number;
   size: number;
   ast:
-    | import('@babel/traverse').NodePath<import('@babel/types').Node>
+    | import('/traverse').NodePath<import('/types').Node>
     | undefined;
 };
 

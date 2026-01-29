@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
 
-import { removerArquivosOrfaos } from '@analistas/corrections/poda.js';
-import { exportarRelatoriosPoda } from '@cli/handlers/poda-exporter.js';
-import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
+import { removerArquivosOrfaos } from '/corrections/poda.js';
+import { exportarRelatoriosPoda } from '/handlers/poda-exporter.js';
+import { ExitCode, sair } from '/helpers/exit-codes.js';
 import {
   expandIncludePatterns,
   processPatternList,
-} from '@cli/helpers/pattern-helpers.js';
-import chalk from '@core/config/chalk-safe.js';
-import { config } from '@core/config/config.js';
-import { iniciarInquisicao } from '@core/execution/inquisidor.js';
-import { CliComandoPodarMessages } from '@core/messages/cli/cli-comando-podar-messages.js';
-import { ICONES_DIAGNOSTICO, log, logSistema } from '@core/messages/index.js';
+} from '/helpers/pattern-helpers.js';
+import chalk from '/config/chalk-safe.js';
+import { config } from '/config/config.js';
+import { iniciarInquisicao } from '/execution/inquisidor.js';
+import { CliComandoPodarMessages } from '/messages/cli/cli-comando-podar-messages.js';
+import { ICONES_DIAGNOSTICO, log, logSistema } from '/messages/index.js';
 import { Command } from 'commander';
 
 import type { ArquivoFantasma, ResultadoPoda } from '@';

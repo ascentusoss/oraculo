@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-// import { log } from '@nucleo/constelacao/log.js';
+// import { log } from '/constelacao/log.js';
 
 import {
   log,
   logRelatorio,
   MENSAGENS_RELATORIOS_ANALISE,
-} from '@core/messages/index.js';
+} from '/messages/index.js';
 
 import type { LogComBloco } from '@';
 

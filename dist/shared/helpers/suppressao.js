@@ -23,7 +23,7 @@ export function extrairSupressoes(src) {
         const linha = linhas[i];
         const linhaNorm = normalizarLinha(linha);
         const numeroLinha = i + 1;
-        const matchNextLine = linhaNorm.match(/@oraculo-disable-next-line\s+(.+)/);
+        const matchNextLine = linhaNorm.match(/\s+(.+)/);
         if (matchNextLine) {
             const regras = matchNextLine[1].trim().split(/\s+/);
             const linhaAfetada = numeroLinha + 1;
@@ -35,7 +35,7 @@ export function extrairSupressoes(src) {
             });
             continue;
         }
-        const matchDisable = linhaNorm.match(/@oraculo-disable\s+(.+)/);
+        const matchDisable = linhaNorm.match(/\s+(.+)/);
         if (matchDisable) {
             const regras = matchDisable[1].trim().split(/\s+/);
             regras.forEach((regra) => {
@@ -43,7 +43,7 @@ export function extrairSupressoes(src) {
             });
             continue;
         }
-        const matchEnable = linhaNorm.match(/@oraculo-enable\s+(.+)/);
+        const matchEnable = linhaNorm.match(/\s+(.+)/);
         if (matchEnable) {
             const regras = matchEnable[1].trim().split(/\s+/);
             regras.forEach((regra) => {
@@ -51,11 +51,11 @@ export function extrairSupressoes(src) {
             });
             continue;
         }
-        if (linhaNorm.includes('@oraculo-disable-all')) {
+        if (linhaNorm.includes('')) {
             blocosAtivos.add('*');
             continue;
         }
-        if (linhaNorm.includes('@oraculo-enable-all')) {
+        if (linhaNorm.includes('')) {
             blocosAtivos.clear();
             continue;
         }

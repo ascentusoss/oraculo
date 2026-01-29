@@ -1,4 +1,4 @@
-import { parse as babelParse } from '@babel/parser';
+import { parse as babelParse } from '/parser';
 import { log, logCore } from '../../core/messages/index.js';
 import { getCurrentParsingFile } from '../../core/parsing/parser.js';
 import * as csstree from 'css-tree';
@@ -56,7 +56,7 @@ export class CorePlugin {
     parseJavaScript(codigo, opts) {
         let result = this.parseComBabel(codigo, opts?.plugins);
         if (result === null) {
-            const pareceFlow = /@flow\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
+            const pareceFlow = /\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
             if (pareceFlow) {
                 const flowPlugins = [
                     'flow',

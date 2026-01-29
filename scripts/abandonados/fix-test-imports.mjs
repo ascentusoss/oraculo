@@ -4,7 +4,7 @@
 // - Qualquer import/dynamic import/vi.mock/vi.doMock com spec iniciando por './' ou '../'
 //   será reescrito para '../../src/<caminho normalizado a partir de tests/src>'
 // - Mantém a extensão conforme no teste (normalmente .js para compat NodeNext/ESM)
-// - Não altera imports bare (ex.: 'chalk', 'node:fs', '@alias/...') nem caminhos já em '../../src/'
+// - Não altera imports bare (ex.: 'chalk', 'node:fs', '/...') nem caminhos já em '../../src/'
 // - Funciona com Windows e POSIX; sempre emite separadores POSIX ('/')
 
 import { promises as fs } from 'node:fs';
@@ -54,23 +54,11 @@ function subpastaTests(file) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @param {*} fileDirSubpath - TODO: Descrever parâmetro
+ *  {*} fileDirSubpath - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} spec - TODO: Descrever parâmetro
-
- * @param {*} fileDirSubpath - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -78,23 +66,11 @@ function subpastaTests(file) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @param {*} fileDirSubpath - TODO: Descrever parâmetro
+ *  {*} fileDirSubpath - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} spec - TODO: Descrever parâmetro
-
- * @param {*} fileDirSubpath - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -102,11 +78,35 @@ function subpastaTests(file) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} spec - TODO: Descrever parâmetro
+ *  {*} spec - TODO: Descrever parâmetro
 
- * @param {*} fileDirSubpath - TODO: Descrever parâmetro
+ *  {*} fileDirSubpath - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} spec - TODO: Descrever parâmetro
+
+ *  {*} fileDirSubpath - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} spec - TODO: Descrever parâmetro
+
+ *  {*} fileDirSubpath - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -127,27 +127,13 @@ function rewriteRelative(spec, fileDirSubpath) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} codigo - TODO: Descrever parâmetro
+ *  {*} codigo - TODO: Descrever parâmetro
 
- * @param {*} fileSubpath - TODO: Descrever parâmetro
+ *  {*} fileSubpath - TODO: Descrever parâmetro
 
- * @param {*} fileAbsDir - TODO: Descrever parâmetro
+ *  {*} fileAbsDir - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} codigo - TODO: Descrever parâmetro
-
- * @param {*} fileSubpath - TODO: Descrever parâmetro
-
- * @param {*} fileAbsDir - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -155,27 +141,13 @@ function rewriteRelative(spec, fileDirSubpath) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} codigo - TODO: Descrever parâmetro
+ *  {*} codigo - TODO: Descrever parâmetro
 
- * @param {*} fileSubpath - TODO: Descrever parâmetro
+ *  {*} fileSubpath - TODO: Descrever parâmetro
 
- * @param {*} fileAbsDir - TODO: Descrever parâmetro
+ *  {*} fileAbsDir - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} codigo - TODO: Descrever parâmetro
-
- * @param {*} fileSubpath - TODO: Descrever parâmetro
-
- * @param {*} fileAbsDir - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -183,13 +155,41 @@ function rewriteRelative(spec, fileDirSubpath) {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} codigo - TODO: Descrever parâmetro
+ *  {*} codigo - TODO: Descrever parâmetro
 
- * @param {*} fileSubpath - TODO: Descrever parâmetro
+ *  {*} fileSubpath - TODO: Descrever parâmetro
 
- * @param {*} fileAbsDir - TODO: Descrever parâmetro
+ *  {*} fileAbsDir - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} codigo - TODO: Descrever parâmetro
+
+ *  {*} fileSubpath - TODO: Descrever parâmetro
+
+ *  {*} fileAbsDir - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} codigo - TODO: Descrever parâmetro
+
+ *  {*} fileSubpath - TODO: Descrever parâmetro
+
+ *  {*} fileAbsDir - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 

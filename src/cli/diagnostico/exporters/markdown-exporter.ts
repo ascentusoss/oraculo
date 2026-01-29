@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2025 Oráculo Contributors
 
 /**
- * @module cli/diagnostico/exporters/markdown-exporter
- * @description Exportador Markdown com formatação rica e tabelas
- * @see docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
+ *  cli/diagnostico/exporters/markdown-exporter
+ *  Exportador Markdown com formatação rica e tabelas
+ *  docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
  */
 
 import type {

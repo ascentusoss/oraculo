@@ -16,19 +16,9 @@ const PATTERNS = [
 
  * TODO: Adicionar descrição da função
 
- * @param {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
+ *  {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -36,19 +26,9 @@ const PATTERNS = [
 
  * TODO: Adicionar descrição da função
 
- * @param {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
+ *  {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -56,9 +36,29 @@ const PATTERNS = [
 
  * TODO: Adicionar descrição da função
 
- * @param {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
+ *  {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} { maxCommits = 800 } = {} - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 

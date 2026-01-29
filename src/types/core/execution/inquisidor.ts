@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import type { Node } from '@babel/types';
+import type { Node } from '/types';
 
 import type { FileEntryWithAst, Ocorrencia } from '@';
 

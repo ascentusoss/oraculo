@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable problema-documentacao
+//  problema-documentacao
 // Justificativa: funções estão tipadas, detector está identificando falsos positivos
 /**
  * Analisador de contexto para Type Safety Auto-Fix
@@ -413,8 +413,8 @@ export function categorizarUnknown(
     return {
       categoria: 'melhoravel',
       confianca: 80,
-      motivo: 'AST deveria ser tipado com Node do @babel/types',
-      sugestao: 'import type { Node } from "@babel/types"; usar Node | null',
+      motivo: 'AST deveria ser tipado com Node do /types',
+      sugestao: 'import type { Node } from "/types"; usar Node | null',
       variantes: [
         'Node (AST node genérico do Babel)',
         'NodePath<Node> (para traverse)',

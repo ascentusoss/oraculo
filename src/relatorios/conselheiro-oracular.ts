@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import { logConselheiro } from '@core/messages/index.js';
+import { logConselheiro } from '/messages/index.js';
 
 import type { ConselhoContextoOracular } from '@';
 

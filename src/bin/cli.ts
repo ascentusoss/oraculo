@@ -3,19 +3,19 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { registrarComandos } from '@cli/comandos.js';
-import { comandoPerf } from '@cli/commands/index.js';
-import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
-import chalk from '@core/config/chalk-safe.js';
+import { registrarComandos } from '/comandos.js';
+import { comandoPerf } from '/commands/index.js';
+import { ExitCode, sair } from '/helpers/exit-codes.js';
+import chalk from '/config/chalk-safe.js';
 import {
   aplicarConfigParcial,
   config,
   inicializarConfigDinamica,
-} from '@core/config/config.js';
-import { ICONES_NIVEL } from '@core/messages/index.js';
-import type { ConversationMemory } from '@shared/memory.js';
-import { getDefaultMemory } from '@shared/memory.js';
-import { lerArquivoTexto } from '@shared/persistence/persistencia.js';
+} from '/config/config.js';
+import { ICONES_NIVEL } from '/messages/index.js';
+import type { ConversationMemory } from '/memory.js';
+import { getDefaultMemory } from '/memory.js';
+import { lerArquivoTexto } from '/persistence/persistencia.js';
 import type { CommanderError } from 'commander';
 import { Command } from 'commander';
 
@@ -50,7 +50,7 @@ async function aplicarFlagsGlobais(opts: unknown) {
   // Sanitização e normalização (pode lançar)
   try {
     // lazy import para não criar ciclo
-    const { sanitizarFlags } = await import('@shared/validation/validacao.js');
+    const { sanitizarFlags } = await import('/validation/validacao.js');
     sanitizarFlags(flags as Record<string, unknown>);
   } catch (e) {
     console.error(

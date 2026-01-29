@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- * @fileoverview Registry centralizado para operações de leitura/escrita de arquivos JSON
+ *  Registry centralizado para operações de leitura/escrita de arquivos JSON
  *
  * Este módulo fornece uma camada de abstração sobre a persistência,
  * gerenciando migrações automáticas de arquivos legados e garantindo
@@ -15,7 +15,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
 
 import type { MigrationResult } from '@';
 
@@ -120,11 +120,11 @@ async function tryMigrate(targetPath: string): Promise<MigrationResult> {
 /**
  * Lê arquivo JSON do registry
  *
- * @param filePath Caminho do arquivo (use ORACULO_FILES.*)
- * @param options Opções de leitura
- * @returns Conteúdo parseado do JSON
+ *  filePath Caminho do arquivo (use ORACULO_FILES.*)
+ *  options Opções de leitura
+ *  Conteúdo parseado do JSON
  *
- * @example
+ *
  * ```ts
  * const config = await readJSON(ORACULO_FILES.CONFIG, {
  *   default: {}
@@ -179,11 +179,11 @@ export async function readJSON<T = unknown>(
 /**
  * Escreve arquivo JSON no registry
  *
- * @param filePath Caminho do arquivo (use ORACULO_FILES.*)
- * @param data Dados a serem salvos
- * @param options Opções de escrita
+ *  filePath Caminho do arquivo (use ORACULO_FILES.*)
+ *  data Dados a serem salvos
+ *  options Opções de escrita
  *
- * @example
+ *
  * ```ts
  * await writeJSON(ORACULO_FILES.GUARDIAN_BASELINE, snapshot, {
  *   createDirs: true,
@@ -230,8 +230,8 @@ export async function writeJSON<T = unknown>(
 /**
  * Deleta arquivo do registry
  *
- * @param filePath Caminho do arquivo (use ORACULO_FILES.*)
- * @param options Opções de deleção
+ *  filePath Caminho do arquivo (use ORACULO_FILES.*)
+ *  options Opções de deleção
  */
 export async function deleteJSON(
   filePath: OraculoFilePath | string,
@@ -261,8 +261,8 @@ export async function deleteJSON(
 /**
  * Lista todos os arquivos JSON em um diretório do registry
  *
- * @param dirPath Caminho do diretório (use ORACULO_DIRS.*)
- * @returns Lista de caminhos completos
+ *  dirPath Caminho do diretório (use ORACULO_DIRS.*)
+ *  Lista de caminhos completos
  */
 export async function listJSONFiles(dirPath: string): Promise<string[]> {
   try {

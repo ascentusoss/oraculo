@@ -24,9 +24,9 @@ import { join } from 'node:path';
 
 /**
  * Executa comando shell e retorna stdout
- * @param {string} cmd - Comando a executar
- * @param {Object} opts - Opções do execSync
- * @returns {string} Output do comando (trimmed)
+ *  {string} cmd - Comando a executar
+ *  {Object} opts - Opções do execSync
+ *  {string} Output do comando (trimmed)
  */
 function sh(cmd, opts = {}) {
   return execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8', ...opts }).trim();
@@ -34,7 +34,7 @@ function sh(cmd, opts = {}) {
 
 /**
  * Verifica se o GitHub CLI está disponível
- * @returns {boolean} true se gh está instalado e acessível
+ *  {boolean} true se gh está instalado e acessível
  */
 function hasGh() {
   try {
@@ -47,10 +47,10 @@ function hasGh() {
 
 /**
  * Faz requisição à API do GitHub
- * @param {string} method - Método HTTP (GET, PUT, PATCH, etc)
- * @param {string} path - Caminho da API (ex: /repos/owner/repo/...)
- * @param {string|Object} body - Corpo da requisição (opcional)
- * @returns {Promise<string>} Resposta da API
+ *  {string} method - Método HTTP (GET, PUT, PATCH, etc)
+ *  {string} path - Caminho da API (ex: /repos/owner/repo/...)
+ *  {string|Object} body - Corpo da requisição (opcional)
+ *  {Promise<string>} Resposta da API
  */
 function apiRequest(method, path, body) {
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
@@ -90,11 +90,11 @@ function inferRepo() {
   try {
     const url = sh('git config --get remote.origin.url');
     // supports https and ssh
-    // https://github.com/owner/repo.git
-    // git@github.com:owner/repo.git
+    // https://github.com/ascentusoss/repo.git
+    // git.com:owner/repo.git
     const https = url.match(/https:\/\/github\.com\/(.+?)\/(.+?)(\.git)?$/);
     if (https) return { owner: https[1], repo: https[2] };
-    const ssh = url.match(/git@github\.com:(.+?)\/(.+?)(\.git)?$/);
+    const ssh = url.match(/git\.com:(.+?)\/(.+?)(\.git)?$/);
     if (ssh) return { owner: ssh[1], repo: ssh[2] };
   } catch {}
   return null;

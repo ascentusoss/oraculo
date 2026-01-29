@@ -1,6 +1,6 @@
-import { parse as babelParse } from '@babel/parser';
-import traverse from '@babel/traverse';
-import * as t from '@babel/types';
+import { parse as babelParse } from '/parser';
+import traverse from '/traverse';
+import * as t from '/types';
 import { AnalystOrigins, AnalystTypes, ReactMessages, SeverityLevels, } from '../../core/messages/core/plugin-messages.js';
 import { createLineLookup } from '../../shared/helpers/line-lookup.js';
 import { maskJsComments } from '../../shared/helpers/masking.js';

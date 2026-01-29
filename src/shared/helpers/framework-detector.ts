@@ -26,17 +26,17 @@ export function detectarFrameworks(rootDir: string): FrameworkInfo[] {
     // Lista de frameworks conhecidos com seus identificadores
     const knownFrameworks = [
       { pkg: 'discord.js', name: 'Discord.js' },
-      { pkg: '@discordjs/rest', name: 'Discord.js' },
+      { pkg: '/rest', name: 'Discord.js' },
       { pkg: 'stripe', name: 'Stripe' },
-      { pkg: '@stripe/stripe-js', name: 'Stripe' },
+      { pkg: '/stripe-js', name: 'Stripe' },
       { pkg: 'aws-sdk', name: 'AWS SDK' },
-      { pkg: '@aws-sdk/client-s3', name: 'AWS SDK' },
+      { pkg: '/client-s3', name: 'AWS SDK' },
       { pkg: 'express', name: 'Express' },
       { pkg: 'fastify', name: 'Fastify' },
       { pkg: 'next', name: 'Next.js' },
       { pkg: 'react', name: 'React' },
       { pkg: 'vue', name: 'Vue' },
-      { pkg: '@angular/core', name: 'Angular' },
+      { pkg: '/core', name: 'Angular' },
     ];
 
     // Verificar dependências

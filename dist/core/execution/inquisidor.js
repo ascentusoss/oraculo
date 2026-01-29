@@ -99,7 +99,7 @@ export async function prepararComAst(entries, baseDir) {
                             const globalStore2 = globalStore;
                             const lista = globalStore2.__ORACULO_PARSE_ERROS__ || [];
                             try {
-                                const babel = await import('@babel/parser');
+                                const babel = await import('/parser');
                                 try {
                                     const parseOpts = {
                                         sourceType: 'unambiguous',

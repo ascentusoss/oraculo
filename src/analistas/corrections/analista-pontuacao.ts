@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
 import {
   findQuickFixes,
   type PatternBasedQuickFix,
-} from '@core/config/auto/fix-config.js';
+} from '/config/auto/fix-config.js';
 
 import type {
   Analista,

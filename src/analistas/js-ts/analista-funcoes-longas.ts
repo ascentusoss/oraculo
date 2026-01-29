@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
-import { config } from '@core/config/config.js';
-import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
+import { config } from '/config/config.js';
+import { detectarContextoProjeto } from '/contexto-projeto.js';
 
 import type { FileLike, FunctionLikeNode, Ocorrencia } from '@';
 import { criarAnalista, isBabelNode } from '@';

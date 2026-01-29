@@ -6,7 +6,7 @@ import {
   gerarTabelaOcorrencias,
   gerarTabelaResumoTipos,
   RelatorioMessages,
-} from '@core/messages/index.js';
+} from '/messages/index.js';
 
 import type {
   GeradorMarkdownOptions,
@@ -33,7 +33,7 @@ export async function gerarRelatorioMarkdown(
   // Se modo brief, usar filtro inteligente
   if (modoBrief) {
     const { processarRelatorioResumo, gerarRelatorioMarkdownResumo } =
-      await import('@relatorios/filtro-inteligente.js');
+      await import('/filtro-inteligente.js');
     const relatorioResumo = processarRelatorioResumo(ocorrencias);
     await gerarRelatorioMarkdownResumo(relatorioResumo, outputPath);
     return;
@@ -132,7 +132,7 @@ export async function gerarRelatorioMarkdown(
     );
   }
 
-  const { salvarEstado } = await import('@shared/persistence/persistencia.js');
+  const { salvarEstado } = await import('/persistence/persistencia.js');
   await salvarEstado(outputPath, lines.join('\n'));
 }
 
@@ -141,7 +141,7 @@ export async function gerarRelatorioJson(
   outputPath: string,
 ): Promise<void> {
   // Importar sistema de versionamento
-  const { criarRelatorioComVersao } = await import('@core/schema/version.js');
+  const { criarRelatorioComVersao } = await import('/schema/version.js');
 
   // Criar relatório versionado (mantemos metadados, mas salvamos os dados brutos para compatibilidade)
   const relatorioVersionado = criarRelatorioComVersao(
@@ -150,6 +150,6 @@ export async function gerarRelatorioJson(
     'Relatório completo de diagnóstico do Oráculo',
   );
 
-  const { salvarEstado } = await import('@shared/persistence/persistencia.js');
+  const { salvarEstado } = await import('/persistence/persistencia.js');
   await salvarEstado(outputPath, relatorioVersionado.dados ?? resultado);
 }

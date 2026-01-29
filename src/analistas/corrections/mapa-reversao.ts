@@ -2,10 +2,10 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
-import { log, logAuto } from '@core/messages/index.js';
-import { ORACULO_FILES } from '@core/registry/paths.js';
-import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
+import { log, logAuto } from '/messages/index.js';
+import { ORACULO_FILES } from '/registry/paths.js';
+import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
 
 import type { MapaReversao, MoveReversao } from '@';
 

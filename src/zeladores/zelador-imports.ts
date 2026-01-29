@@ -3,8 +3,8 @@
  * Zelador de Imports
  *
  * Corrige automaticamente imports em arquivos TypeScript/JavaScript:
- * - Converte imports relativos para aliases (@core, @analistas, etc)
- * - Normaliza @types/<subpath> para @types/types
+ * - Converte imports relativos para aliases (, , etc)
+ * - Normaliza /<subpath> para /types
  * - Remove extensões .js desnecessárias em imports de tipos
  *
  * Migrado de:
@@ -15,13 +15,13 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { log } from '@core/messages/index.js';
+import { log } from '/messages/index.js';
 import {
   ERROS_IMPORTS,
   gerarResumoImports,
   MENSAGENS_IMPORTS,
   PROGRESSO_IMPORTS,
-} from '@core/messages/zeladores/zelador-messages.js';
+} from '/messages/zeladores/zelador-messages.js';
 
 import type {
   AliasConfig,
@@ -34,22 +34,22 @@ import type {
  * Configuração padrão de aliases baseada em tsconfig.json
  */
 const DEFAULT_ALIAS_CONFIG: AliasConfig = {
-  '@core': './core',
-  '@analistas': './analistas',
-  '@types': './types',
-  '@shared': './shared',
-  '@cli': './cli',
-  '@guardian': './guardian',
-  '@relatorios': './relatorios',
-  '@zeladores': './zeladores',
+  '': './core',
+  '': './analistas',
+  '': './types',
+  '': './shared',
+  '': './cli',
+  '': './guardian',
+  '': './relatorios',
+  '': './zeladores',
 };
 
 /**
  * Padrões de imports que devem ser corrigidos
  */
 const PATTERNS = {
-  // @types/types.js → @types/types
-  tiposComExtensao: /@types\/types\.js\b/g,
+  // /types.js → /types
+  tiposComExtensao: /\/types\.js\b/g,
 
   // Imports relativos que podem ser convertidos em aliases
   importRelativo: /from\s+(['"])(\.\.[\/\\].+?)\1/g,
@@ -84,7 +84,7 @@ async function* walkDirectory(dir: string): AsyncGenerator<string> {
 }
 
 /**
- * Corrige imports de @types com extensão .js ou subpaths
+ * Corrige imports de  com extensão .js ou subpaths
  */
 function corrigirImportsTipos(conteudo: string): {
   conteudo: string;
@@ -93,23 +93,23 @@ function corrigirImportsTipos(conteudo: string): {
   const correcoes: ImportCorrecao[] = [];
   let conteudoAtualizado = conteudo;
 
-  // Corrigir @types/types.js → @types/types
+  // Corrigir /types.js → /types
   conteudoAtualizado = conteudoAtualizado.replace(
     PATTERNS.tiposComExtensao,
     (match, offset) => {
       correcoes.push({
         tipo: 'tipos-extensao',
         de: match,
-        para: '@types/types',
+        para: '/types',
         linha: conteudo.substring(0, offset).split('\n').length,
       });
-      return '@types/types';
+      return '/types';
     },
   );
 
-  // Corrigir @types/<subpath> → @types/types
-  // Importante: não deve "corrigir" o que já está em @types/types (evita duplicar correções).
-  const regex = /(['"])@types\/([^'"\n]+?)\1/g;
+  // Corrigir /<subpath> → /types
+  // Importante: não deve "corrigir" o que já está em /types (evita duplicar correções).
+  const regex = /(['"])\/([^'"\n]+?)\1/g;
   conteudoAtualizado = conteudoAtualizado.replace(
     regex,
     (match, quote: string, subpath: string, offset: number) => {
@@ -120,7 +120,7 @@ function corrigirImportsTipos(conteudo: string): {
 
       // Caso ainda chegue aqui como types.js (por algum input estranho), não duplicar: trata como extensão.
       if (normalized === 'types.js') {
-        const novoImport = `${quote}@types/types${quote}`;
+        const novoImport = `${quote}/types${quote}`;
         correcoes.push({
           tipo: 'tipos-extensao',
           de: match,
@@ -130,7 +130,7 @@ function corrigirImportsTipos(conteudo: string): {
         return novoImport;
       }
 
-      const novoImport = `${quote}@types/types${quote}`;
+      const novoImport = `${quote}/types${quote}`;
       correcoes.push({
         tipo: 'tipos-subpath',
         de: match,
@@ -157,7 +157,7 @@ function corrigirImportsRelativos(
   const conteudoAtualizado = conteudo;
 
   // Implementação simplificada - não tenta converter relativos para aliases
-  // pois requer análise de paths complexa. Foco apenas em @types por enquanto.
+  // pois requer análise de paths complexa. Foco apenas em  por enquanto.
 
   return { conteudo: conteudoAtualizado, correcoes };
 }
@@ -179,7 +179,7 @@ async function processarArquivo(
     const conteudoOriginal = await fs.readFile(filePath, 'utf-8');
     let conteudoAtualizado = conteudoOriginal;
 
-    // Aplicar correções de @types
+    // Aplicar correções de
     if (options.corrigirTipos !== false) {
       const { conteudo, correcoes } = corrigirImportsTipos(conteudoAtualizado);
       conteudoAtualizado = conteudo;

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
-import { DetectorAgregadosMessages } from '@core/messages/analistas/detector-agregados-messages.js';
-import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
-import { filtrarOcorrenciasSuprimidas } from '@shared/helpers/suppressao.js';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
+import { DetectorAgregadosMessages } from '/messages/analistas/detector-agregados-messages.js';
+import { detectarContextoProjeto } from '/contexto-projeto.js';
+import { filtrarOcorrenciasSuprimidas } from '/helpers/suppressao.js';
 
 import type { Analista, Ocorrencia, ProblemaDocumentacao } from '@';
 import { criarOcorrencia } from '@';

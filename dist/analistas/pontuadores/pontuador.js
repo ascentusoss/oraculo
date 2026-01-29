@@ -243,7 +243,7 @@ export function scoreArquetipoAvancado(def, arquivos, sinaisAvancados) {
                 score += 25;
                 explicacao += '\n✓ App Router Next.js detectado - arquitetura moderna.';
             }
-            if (deps.includes('prisma') || deps.includes('@prisma/client')) {
+            if (deps.includes('prisma') || deps.includes('/client')) {
                 score += 20;
                 explicacao += '\n✓ Prisma ORM detectado - banco de dados integrado.';
             }
@@ -275,7 +275,7 @@ export function scoreArquetipoAvancado(def, arquivos, sinaisAvancados) {
                 score += 25;
                 explicacao += '\n✓ Framework Fastify detectado - alta performance.';
             }
-            if (frameworks.includes('NestJS') || deps.includes('@nestjs/core')) {
+            if (frameworks.includes('NestJS') || deps.includes('/core')) {
                 score += 30;
                 explicacao +=
                     '\n✓ Framework NestJS detectado - arquitetura enterprise.';
@@ -284,7 +284,7 @@ export function scoreArquetipoAvancado(def, arquivos, sinaisAvancados) {
                 score += 20;
                 explicacao += '\n✓ Framework Koa detectado.';
             }
-            if (frameworks.includes('Hapi') || deps.includes('@hapi/hapi')) {
+            if (frameworks.includes('Hapi') || deps.includes('/hapi')) {
                 score += 20;
                 explicacao += '\n✓ Framework Hapi detectado.';
             }
@@ -296,11 +296,11 @@ export function scoreArquetipoAvancado(def, arquivos, sinaisAvancados) {
             }
             if (deps.includes('cors') ||
                 deps.includes('helmet') ||
-                deps.includes('@fastify/cors')) {
+                deps.includes('/cors')) {
                 score += 10;
                 explicacao += '\n✓ Middleware de segurança/CORS presente.';
             }
-            if (deps.includes('joi') || deps.includes('@hapi/joi')) {
+            if (deps.includes('joi') || deps.includes('/joi')) {
                 score += 10;
                 explicacao += '\n✓ Validação de dados detectada.';
             }
@@ -332,7 +332,7 @@ export function scoreArquetipoAvancado(def, arquivos, sinaisAvancados) {
                 score += 20;
                 explicacao += '\n✓ State management detectado (Vuex/Pinia).';
             }
-            if (deps.includes('@vue/cli-service') || deps.includes('vite')) {
+            if (deps.includes('/cli-service') || deps.includes('vite')) {
                 score += 15;
                 explicacao += '\n✓ Build tool Vue detectado (CLI/Vite).';
             }

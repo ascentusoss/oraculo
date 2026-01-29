@@ -4,8 +4,8 @@
  * Fornece fallback para ambientes onde log.bloco não está disponível
  */
 
-import { CliExibirMolduraMessages } from '@core/messages/cli/cli-exibir-moldura-messages.js';
-import { log } from '@core/messages/index.js';
+import { CliExibirMolduraMessages } from '/messages/cli/cli-exibir-moldura-messages.js';
+import { log } from '/messages/index.js';
 
 /**
  * Exibe uma moldura formatada com fallback seguro
@@ -14,12 +14,12 @@ import { log } from '@core/messages/index.js';
  * Se falhar (ambiente de teste ou log.bloco não disponível),
  * usa fallback simples com log.info.
  *
- * @param titulo - Título da moldura
- * @param linhas - Linhas de conteúdo a exibir
- * @param fallbackFn - Função de fallback customizada (opcional)
- * @returns true se usou moldura, false se usou fallback
+ *  titulo - Título da moldura
+ *  linhas - Linhas de conteúdo a exibir
+ *  fallbackFn - Função de fallback customizada (opcional)
+ *  true se usou moldura, false se usou fallback
  *
- * @example
+ *
  * ```typescript
  * exibirMolduraSegura('Plano de reestruturação', [
  *   'De                  → Para',
@@ -57,8 +57,8 @@ export function exibirMolduraSegura(
 /**
  * Exibe moldura de plano de reestruturação com tratamento de overflow
  *
- * @param movimentos - Lista de movimentos (formato: { de, para })
- * @param limite - Número máximo de linhas a exibir (padrão: 10)
+ *  movimentos - Lista de movimentos (formato: { de, para })
+ *  limite - Número máximo de linhas a exibir (padrão: 10)
  */
 export function exibirMolduraPlano(
   movimentos: Array<{ de: string; para: string }>,
@@ -99,8 +99,8 @@ export function exibirMolduraPlano(
 /**
  * Exibe moldura de conflitos com tratamento de overflow
  *
- * @param conflitos - Lista de conflitos (formato: { alvo, motivo })
- * @param limite - Número máximo de linhas a exibir (padrão: 10)
+ *  conflitos - Lista de conflitos (formato: { alvo, motivo })
+ *  limite - Número máximo de linhas a exibir (padrão: 10)
  */
 export function exibirMolduraConflitos(
   conflitos: Array<{ alvo?: string; motivo?: string } | unknown>,

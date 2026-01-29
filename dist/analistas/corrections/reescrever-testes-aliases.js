@@ -45,7 +45,7 @@ export function rewriteToAlias(spec, ctx) {
             return { changed: false, value: spec };
         const withoutExt = posixSpec.replace(/\.(ts|js|mjs|cjs|tsx|jsx)$/i, '');
         let mapped = LEGACY_ALIAS_MAP.get(withoutExt);
-        if (!mapped && withoutExt.startsWith('@cli/src/'))
+        if (!mapped && withoutExt.startsWith('/src/'))
             mapped = withoutExt;
         if (mapped) {
             const withExt = pickExtForAlias(mapped, ctx.srcRoot);

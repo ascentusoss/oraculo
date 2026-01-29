@@ -113,7 +113,7 @@ export function isLikelyIntentionalDuplicate(
     return true;
   }
 
-  // Fallback de fontes em @font-face: múltiplos src são esperados
+  // Fallback de fontes em : múltiplos src são esperados
   const inFontFace = (ctx?.currentAtRule || '').toLowerCase() === 'font-face';
   if (inFontFace && normalizedProp === 'src') {
     return true;
@@ -192,7 +192,7 @@ export function lintCssLikeStylelint(opts: {
 
   csstree.walk(ast as never, {
     enter: (node: CssTreeNode) => {
-      // @import duplicado
+      //  duplicado
       if (
         node?.type === 'Atrule' &&
         String(node.name || '').toLowerCase() === 'import'
@@ -206,7 +206,7 @@ export function lintCssLikeStylelint(opts: {
             warnings.push({
               rule: 'no-http-at-import-rules',
               severity: 'warning',
-              text: '@import via HTTP detectado; prefira HTTPS ou bundling local.',
+              text: ' via HTTP detectado; prefira HTTPS ou bundling local.',
               line: node.loc?.start?.line,
               column: node.loc?.start?.column,
             });
@@ -215,7 +215,7 @@ export function lintCssLikeStylelint(opts: {
             warnings.push({
               rule: 'no-duplicate-at-import-rules',
               severity: 'warning',
-              text: `@import duplicado detectado (${key}).`,
+              text: ` duplicado detectado (${key}).`,
               line: node.loc?.start?.line,
               column: node.loc?.start?.column,
             });
@@ -225,7 +225,7 @@ export function lintCssLikeStylelint(opts: {
         }
       }
 
-      // @keyframes duplicado (colide animações)
+      //  duplicado (colide animações)
       if (node?.type === 'Atrule') {
         const name = String(node.name || '').toLowerCase();
         const isKeyframes =
@@ -241,7 +241,7 @@ export function lintCssLikeStylelint(opts: {
             warnings.push({
               rule: 'no-duplicate-keyframes',
               severity: 'warning',
-              text: `Declaração @keyframes duplicada detectada (${prelude}).`,
+              text: `Declaração  duplicada detectada (${prelude}).`,
               line: node.loc?.start?.line,
               column: node.loc?.start?.column,
             });
@@ -251,7 +251,7 @@ export function lintCssLikeStylelint(opts: {
         }
       }
 
-      // Mantém contexto de @media/@supports/... para não marcar como duplicado
+      // Mantém contexto de //... para não marcar como duplicado
       // o mesmo seletor em escopos diferentes (padrão mobile-first).
       if (node?.type === 'Atrule' && node.block) {
         const name = String(node.name || '').toLowerCase();

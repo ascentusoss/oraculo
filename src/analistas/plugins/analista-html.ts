@@ -4,9 +4,9 @@ import {
   AnalystTypes,
   HtmlMessages,
   SeverityLevels,
-} from '@core/messages/core/plugin-messages.js';
-import { createLineLookup } from '@shared/helpers/line-lookup.js';
-import { maskHtmlComments, maskTagBlocks } from '@shared/helpers/masking.js';
+} from '/messages/core/plugin-messages.js';
+import { createLineLookup } from '/helpers/line-lookup.js';
+import { maskHtmlComments, maskTagBlocks } from '/helpers/masking.js';
 import type { AnyNode, Document, Element, Text } from 'domhandler';
 import { parseDocument } from 'htmlparser2';
 

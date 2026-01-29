@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable tipo-literal-inline-complexo
+//  tipo-literal-inline-complexo
 // Justificativa: tipos inline para mensagens de zeladores
 
 import {

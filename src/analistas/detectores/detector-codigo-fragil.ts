@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
+import type { NodePath } from '/traverse';
 import type {
   ArrowFunctionExpression,
   CallExpression,
@@ -10,13 +10,13 @@ import type {
   Node,
   NumericLiteral,
   TSAnyKeyword,
-} from '@babel/types';
-import { config } from '@core/config/config.js';
-import { traverse } from '@core/config/traverse.js';
-import { DetectorCodigoFragilMessages } from '@core/messages/analistas/detector-codigo-fragil-messages.js';
-import { detectarFrameworks } from '@shared/helpers/framework-detector.js';
-import { isWhitelistedConstant } from '@shared/helpers/magic-constants-whitelist.js';
-import { filtrarOcorrenciasSuprimidas } from '@shared/helpers/suppressao.js';
+} from '/types';
+import { config } from '/config/config.js';
+import { traverse } from '/config/traverse.js';
+import { DetectorCodigoFragilMessages } from '/messages/analistas/detector-codigo-fragil-messages.js';
+import { detectarFrameworks } from '/helpers/framework-detector.js';
+import { isWhitelistedConstant } from '/helpers/magic-constants-whitelist.js';
+import { filtrarOcorrenciasSuprimidas } from '/helpers/suppressao.js';
 
 import type { Analista, Fragilidade, Ocorrencia } from '@';
 import { criarOcorrencia } from '@';

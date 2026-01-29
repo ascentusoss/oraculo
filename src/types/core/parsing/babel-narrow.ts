@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-import type { Comment, Node } from '@babel/types';
+import type { Comment, Node } from '/types';
 
 export type AstBodyNode = Node | Node[] | null | undefined;
 

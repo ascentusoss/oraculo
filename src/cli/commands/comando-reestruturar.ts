@@ -1,23 +1,23 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable tipo-literal-inline-complexo
+//  tipo-literal-inline-complexo
 // Justificativa: tipos inline para opções de comando CLI são locais e não precisam de extração
-import { OperarioEstrutura } from '@analistas/estrategistas/operario-estrutura.js';
-import { exportarRelatoriosReestruturacao } from '@cli/handlers/reestruturacao-exporter.js';
+import { OperarioEstrutura } from '/estrategistas/operario-estrutura.js';
+import { exportarRelatoriosReestruturacao } from '/handlers/reestruturacao-exporter.js';
 import {
   exibirMolduraConflitos,
   exibirMolduraPlano,
-} from '@cli/helpers/exibir-moldura.js';
-import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
-import { parsearCategorias } from '@cli/helpers/flags-helpers.js';
-import chalk from '@core/config/chalk-safe.js';
-import { config } from '@core/config/config.js';
+} from '/helpers/exibir-moldura.js';
+import { ExitCode, sair } from '/helpers/exit-codes.js';
+import { parsearCategorias } from '/helpers/flags-helpers.js';
+import chalk from '/config/chalk-safe.js';
+import { config } from '/config/config.js';
 import {
   executarInquisicao,
   prepararComAst,
   tecnicas,
-} from '@core/execution/inquisidor.js';
-import { CliComandoReestruturarMessages } from '@core/messages/cli/cli-comando-reestruturar-messages.js';
-import { CABECALHOS, log } from '@core/messages/index.js';
+} from '/execution/inquisidor.js';
+import { CliComandoReestruturarMessages } from '/messages/cli/cli-comando-reestruturar-messages.js';
+import { CABECALHOS, log } from '/messages/index.js';
 import { Command } from 'commander';
 import ora from 'ora';
 
@@ -215,7 +215,7 @@ export function comandoReestruturar(
           ocorrencias: [],
         };
         try {
-          const { scanRepository } = await import('@core/execution/scanner.js');
+          const { scanRepository } = await import('/execution/scanner.js');
           const fileMap = await scanRepository(baseDir, {});
           const fileEntries: FileEntry[] = Object.values(fileMap);
           fileEntriesComAst =
@@ -226,7 +226,7 @@ export function comandoReestruturar(
           let analise;
           try {
             const { iniciarInquisicao } =
-              await import('@core/execution/inquisidor.js');
+              await import('/execution/inquisidor.js');
             if (typeof iniciarInquisicao === 'function') {
               analise = await iniciarInquisicao(baseDir, { skipExec: false });
               // Se retornar fileEntries, use executarInquisicao normalmente

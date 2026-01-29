@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// @oraculo-disable tipo-literal-inline-complexo
+//  tipo-literal-inline-complexo
 // Justificativa: tipos inline para sistema de logs
 /**
  * Sistema unificado de helpers de log
@@ -7,15 +7,15 @@
  * Remove duplicação e centraliza lógica via log-engine
  */
 
-import { config } from '@core/config/config.js';
-import { logEngine } from '@core/messages/log/log-engine.js';
-import { LogMessages } from '@core/messages/log/log-messages.js';
+import { config } from '/config/config.js';
+import { logEngine } from '/messages/log/log-engine.js';
+import { LogMessages } from '/messages/log/log-messages.js';
 import {
   ICONES_ARQUIVO,
   ICONES_DIAGNOSTICO,
   ICONES_FEEDBACK,
   ICONES_STATUS,
-} from '@core/messages/ui/icons.js';
+} from '/messages/ui/icons.js';
 
 /**
  * Sistema de logs para analistas com controle de spam unificado

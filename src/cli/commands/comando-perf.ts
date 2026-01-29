@@ -3,12 +3,12 @@ import crypto from 'node:crypto';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
-import { config } from '@core/config/config.js';
-import { formatPct } from '@core/config/format.js';
-import { CliComandoPerfMessages } from '@core/messages/cli/cli-comando-perf-messages.js';
-import { ICONES_DIAGNOSTICO, log, logSistema } from '@core/messages/index.js';
-import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
+import { ExitCode, sair } from '/helpers/exit-codes.js';
+import { config } from '/config/config.js';
+import { formatPct } from '/config/format.js';
+import { CliComandoPerfMessages } from '/messages/cli/cli-comando-perf-messages.js';
+import { ICONES_DIAGNOSTICO, log, logSistema } from '/messages/index.js';
+import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
 import { Command } from 'commander';
 
 import type { MetricaExecucaoLike, SnapshotPerf } from '@';
@@ -16,7 +16,7 @@ import type { MetricaExecucaoLike, SnapshotPerf } from '@';
 async function obterCommit(): Promise<string | undefined> {
   try {
     // usar helper seguro
-    const { executarShellSeguro } = await import('@core/utils/exec-safe.js');
+    const { executarShellSeguro } = await import('/utils/exec-safe.js');
     return executarShellSeguro('git rev-parse --short HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
     })

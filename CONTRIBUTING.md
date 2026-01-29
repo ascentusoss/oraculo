@@ -1,4 +1,4 @@
-<!-- @oraculo-disable markdown-licenca-incompativel markdown-referencia-risco -->
+<!--  markdown-licenca-incompativel markdown-referencia-risco -->
 
 > **Proveniência e Autoria**: Este documento integra o projeto Oráculo (licença MIT).
 > Nada aqui implica cessão de direitos morais/autorais.
@@ -19,7 +19,7 @@ Este guia visa facilitar sua participação no projeto, garantindo que suas cont
 
 Antes de começar a contribuir, certifique-se de que possui:
 
-- **Node.js 25+** (recomendamos usar [nvm](https://github.com/nvm-sh/nvm), [fnm](https://github.com/Schniz/fnm) ou [volta](https://volta.sh/))
+- **Node.js 25+** (recomendamos usar [nvm](https://github.com/ascentusoss/nvm), [fnm](https://github.com/ascentusoss/fnm) ou [volta](https://volta.sh/))
 - **Git** para controle de versão
 - **Conta no GitHub** para submeter pull requests
 - Conhecimento básico de **TypeScript** e **desenvolvimento de CLI**
@@ -34,11 +34,11 @@ Antes de começar a contribuir, certifique-se de que possui:
 # Fork o repositório no GitHub (botão "Fork" no canto superior direito)
 
 # Clone seu fork (substitua SEU-USUARIO pelo seu nome de usuário)
-git clone https://github.com/SEU-USUARIO/oraculo.git
+git clone https://github.com/ascentusoss/oraculo.git
 cd oraculo
 
 # Adicione o repositório upstream como remote
-git remote add upstream https://github.com/ossmoralus/oraculo.git
+git remote add upstream https://github.com/ascentusoss/oraculo.git
 ```
 
 ### 2. Instalação de Dependências
@@ -79,8 +79,8 @@ git checkout -b feature/sua-contribuicao-descritiva
 
 ### 🐛 Correção de Bugs
 
-- Issues com label [`bug`](https://github.com/ossmoralus/oraculo/labels/bug)
-- Issues com label [`good-first-issue`](https://github.com/ossmoralus/oraculo/labels/good-first-issue)
+- Issues com label [`bug`](https://github.com/ascentusoss/oraculo/labels/bug)
+- Issues com label [`good-first-issue`](https://github.com/ascentusoss/oraculo/labels/good-first-issue)
 - Priorize bugs críticos e regressions
 
 ### ✨ Novas Funcionalidades
@@ -178,11 +178,11 @@ import { Command } from "commander";
 import chalk from "chalk";
 
 // 2. Imports internos com aliases
-import { Analisador } from "@analistas/core";
-import { Logger } from "@shared/logger";
+import { Analisador } from "/core";
+import { Logger } from "/logger";
 
 // 3. Imports de tipos
-import type { Configuracao } from "@types/config";
+import type { Configuracao } from "/config";
 ```
 
 ### Convenções de Nomenclatura
@@ -379,7 +379,7 @@ npm run typecheck
 
 **Estrutura de Imports:**
 
-- Use aliases: `@nucleo/*`, `@analistas/*`, `@tipos/*`
+- Use aliases: `/*`, `/*`, `/*`
 - Imports organizados: externos → internos → tipos
 
 **Boas Práticas:**
@@ -497,7 +497,7 @@ Envie o PR contra a branch `main` (ou `develop` se existir). PRs pequenos são r
 
 Toda contribuição é valorizada! Contribuidores são listados em:
 
-- [Contributors Graph](https://github.com/ossmoralus/oraculo/graphs/contributors)
+- [Contributors Graph](https://github.com/ascentusoss/oraculo/graphs/contributors)
 - Menções em releases notes quando aplicável
 
 ---

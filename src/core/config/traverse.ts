@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-import traverseModule from '@babel/traverse';
+import traverseModule from '/traverse';
 
 /**
- * Wrapper resiliente para o `@babel/traverse` lidando com variações de ESM/CJS.
+ * Wrapper resiliente para o `/traverse` lidando com variações de ESM/CJS.
  * Algumas builds expõem a função no `default`, outras como export do módulo CJS.
  */
 type TraverseFn = (...a: unknown[]) => unknown;

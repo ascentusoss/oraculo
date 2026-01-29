@@ -9,11 +9,11 @@
  * - Formata resultados
  */
 
-import { detectarArquetipos } from '@analistas/detectores/detector-arquetipos.js';
-import { config } from '@core/config/config.js';
-import { CliArquetipoHandlerMessages } from '@core/messages/cli/cli-arquetipo-handler-messages.js';
-import { MENSAGENS_ARQUETIPOS } from '@core/messages/core/diagnostico-messages.js';
-import { log } from '@core/messages/index.js';
+import { detectarArquetipos } from '/detectores/detector-arquetipos.js';
+import { config } from '/config/config.js';
+import { CliArquetipoHandlerMessages } from '/messages/cli/cli-arquetipo-handler-messages.js';
+import { MENSAGENS_ARQUETIPOS } from '/messages/core/diagnostico-messages.js';
+import { log } from '/messages/index.js';
 
 import type { ArquetipoOptions, ArquetipoResult, FileEntryWithAst } from '@';
 

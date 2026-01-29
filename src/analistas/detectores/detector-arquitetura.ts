@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '@babel/traverse';
+import type { NodePath } from '/traverse';
 import type {
   ExportNamedDeclaration,
   ImportDeclaration,
@@ -7,9 +7,9 @@ import type {
   ImportNamespaceSpecifier,
   ImportSpecifier,
   Node,
-} from '@babel/types';
-import { traverse } from '@core/config/traverse.js';
-import { DetectorArquiteturaMessages } from '@core/messages/analistas/detector-arquitetura-messages.js';
+} from '/types';
+import { traverse } from '/config/traverse.js';
+import { DetectorArquiteturaMessages } from '/messages/analistas/detector-arquitetura-messages.js';
 import * as path from 'path';
 
 import type {
@@ -322,11 +322,11 @@ function detectarPadraoArquitetural(estatisticas: EstatisticasArquivo[]): {
     if (stats.aliases) {
       Object.keys(stats.aliases).forEach((alias) => aliases.add(alias));
 
-      if (stats.aliases['@nucleo']) temNucleo = true;
-      if (stats.aliases['@analistas']) temAnalistas = true;
-      if (stats.aliases['@cli']) _temCLI = true;
-      if (stats.aliases['@shared']) temShared = true;
-      if (stats.aliases['@types']) temTipos = true;
+      if (stats.aliases['']) temNucleo = true;
+      if (stats.aliases['']) temAnalistas = true;
+      if (stats.aliases['']) _temCLI = true;
+      if (stats.aliases['']) temShared = true;
+      if (stats.aliases['']) temTipos = true;
     }
   }
 

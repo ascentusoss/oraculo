@@ -3,7 +3,7 @@
 import {
   otimizarSvgLikeSvgo,
   shouldSugerirOtimizacaoSvg,
-} from '@shared/impar/svgs.js';
+} from '/impar/svgs.js';
 
 import type { AutoFixConfig, PatternBasedQuickFix } from '@';
 
@@ -59,7 +59,7 @@ function _isInTodoComment(match: RegExpMatchArray, fullCode: string): boolean {
 function _isCriticalSystemFile(fullCode: string): boolean {
   const criticalIndicators = [
     'SPDX-License-Identifier',
-    '@core/configuracao',
+    '/configuracao',
     'operario-estrutura',
     'corretor-estrutura',
     'config.js',

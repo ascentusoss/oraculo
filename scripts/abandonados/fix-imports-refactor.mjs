@@ -15,28 +15,28 @@ const TESTS_DIR = join(ROOT, 'tests');
 // Mapa de substituições (ordem importa!)
 const REPLACEMENTS = [
     // Messages movido para core/messages
-    { from: /from ['"]@messages\//g, to: "from '@core/messages/" },
+    { from: /from ['"]\//g, to: "from '/messages/" },
     { from: /from ['"]\.\.\/messages\//g, to: "from '../core/messages/" },
     { from: /from ['"]\.\.\/.\.\/messages\//g, to: "from '../../core/messages/" },
     { from: /from ['"]\.\.\/\.\.\/\.\.\/messages\//g, to: "from '../../../core/messages/" },
 
     // Auto movido para analistas/corrections
-    { from: /from ['"]@auto\//g, to: "from '@analistas/corrections/" },
+    { from: /from ['"]\//g, to: "from '/corrections/" },
     { from: /from ['"]\.\.\/auto\//g, to: "from '../analistas/corrections/" },
     { from: /from ['"]\.\.\/.\.\/auto\//g, to: "from '../../analistas/corrections/" },
 
     // Core/nucleo → core/execution
-    { from: /from ['"]@core\/nucleo\//g, to: "from '@core/execution/" },
+    { from: /from ['"]\/nucleo\//g, to: "from '/execution/" },
     { from: /from ['"]\.\.\/nucleo\//g, to: "from '../execution/" },
     { from: /from ['"]\.\.\/.\.\/core\/nucleo\//g, to: "from '../../core/execution/" },
 
     // Core files movidos
-    { from: /from ['"]@core\/parser['"];/g, to: "from '@core/parsing/parser.js';" },
-    { from: /from ['"]@core\/filtros['"];/g, to: "from '@core/parsing/filters.js';" },
-    { from: /from ['"]@core\/schema-versao['"];/g, to: "from '@core/schema/version.js';" },
-    { from: /from ['"]@core\/worker-pool['"];/g, to: "from '@core/workers/worker-pool.js';" },
-    { from: /from ['"]@core\/file-registry['"];/g, to: "from '@core/registry/file-registry.js';" },
-    { from: /from ['"]@core\/paths['"];/g, to: "from '@core/registry/paths.js';" },
+    { from: /from ['"]\/parser['"];/g, to: "from '/parsing/parser.js';" },
+    { from: /from ['"]\/filtros['"];/g, to: "from '/parsing/filters.js';" },
+    { from: /from ['"]\/schema-versao['"];/g, to: "from '/schema/version.js';" },
+    { from: /from ['"]\/worker-pool['"];/g, to: "from '/workers/worker-pool.js';" },
+    { from: /from ['"]\/file-registry['"];/g, to: "from '/registry/file-registry.js';" },
+    { from: /from ['"]\/paths['"];/g, to: "from '/registry/paths.js';" },
 
     // Caminhos relativos para parser/filtros
     { from: /from ['"]\.\.\/parser['"];/g, to: "from '../parsing/parser.js';" },
@@ -45,16 +45,16 @@ const REPLACEMENTS = [
     { from: /from ['"]\.\.\/.\.\/filtros['"];/g, to: "from '../../parsing/filters.js';" },
 
     // Configuracao → config
-    { from: /from ['"]@core\/configuracao\//g, to: "from '@core/config/" },
+    { from: /from ['"]\/configuracao\//g, to: "from '/config/" },
     { from: /from ['"]\.\.\/configuracao\//g, to: "from '../config/" },
     { from: /from ['"]\.\.\/.\.\/configuracao\//g, to: "from '../../config/" },
 
     // Util → utils
-    { from: /from ['"]@core\/util\//g, to: "from '@core/utils/" },
+    { from: /from ['"]\/util\//g, to: "from '/utils/" },
     { from: /from ['"]\.\.\/util\//g, to: "from '../utils/" },
 
     // Analistas/scripts → analistas/js-ts
-    { from: /from ['"]@analistas\/scripts\//g, to: "from '@analistas/js-ts/" },
+    { from: /from ['"]\/scripts\//g, to: "from '/js-ts/" },
     { from: /from ['"]\.\.\/scripts\//g, to: "from '../js-ts/" },
 ];
 

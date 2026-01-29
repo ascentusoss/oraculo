@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- * @fileoverview Tipos para sistema de linting CSS interno
+ *  Tipos para sistema de linting CSS interno
  */
 
 export type CssTreeLoc = { start?: { line?: number; column?: number } };

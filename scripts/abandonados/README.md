@@ -61,7 +61,7 @@ oraculo perf baseline
 oraculo perf compare
 
 # Zelador de Imports (programático)
-import { corrigirImports } from '@zeladores/zelador-imports.js';
+import { corrigirImports } from '/zelador-imports.js';
 await corrigirImports(['src', 'tests']);
 ```
 
@@ -77,7 +77,7 @@ await corrigirImports(['src', 'tests']);
 ### Segunda Onda (2025-09-14)
 
 1. **Scripts de Validação**: Específicos para validação de melhorias já concluídas (redução de falsos positivos). Substituídos por `resumo-validacao.mjs` mais conciso.
-2. **Scripts de Fix**: `fix-test-imports.mjs` obsoleto em favor do `rewrite-tests-to-aliases.mjs` mais moderno que usa aliases `@dominio/`.
+2. **Scripts de Fix**: `fix-test-imports.mjs` obsoleto em favor do `rewrite-tests-to-aliases.mjs` mais moderno que usa aliases `/`.
 
 ## Ideias Reaproveitáveis
 

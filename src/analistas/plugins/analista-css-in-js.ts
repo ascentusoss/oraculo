@@ -4,7 +4,7 @@ import {
   AnalystTypes,
   CssInJsMessages,
   SeverityLevels,
-} from '@core/messages/core/plugin-messages.js';
+} from '/messages/core/plugin-messages.js';
 
 import type { Ocorrencia } from '@';
 import { criarAnalista, criarOcorrencia } from '@';

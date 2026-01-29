@@ -248,7 +248,7 @@ function converterConfigSimplificada(config) {
         resultado.plugins = {
             enabled: enabledPlugins,
             autoload: true,
-            registry: '@oraculo/plugins',
+            registry: '/plugins',
         };
         delete resultado.languages;
     }

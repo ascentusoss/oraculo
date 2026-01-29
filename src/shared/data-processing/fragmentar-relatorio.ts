@@ -2,11 +2,11 @@
 import path from 'node:path';
 import { gzipSync } from 'node:zlib';
 
-import { config } from '@core/config/config.js';
+import { config } from '/config/config.js';
 import {
   salvarBinario,
   salvarEstado,
-} from '@shared/persistence/persistencia.js';
+} from '/persistence/persistencia.js';
 
 import type {
   FileEntryFragmentacao,

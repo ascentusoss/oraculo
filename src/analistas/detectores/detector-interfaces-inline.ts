@@ -10,13 +10,13 @@
  * - Analisa reutilização e complexidade para priorizar extrações
  */
 
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
 import {
   getTypesDirectoryDisplay,
   isInsideTypesDirectory,
-} from '@core/config/conventions.js';
-import { DetectorInterfacesInlineMessages } from '@core/messages/analistas/detector-interfaces-inline-messages.js';
+} from '/config/conventions.js';
+import { DetectorInterfacesInlineMessages } from '/messages/analistas/detector-interfaces-inline-messages.js';
 
 import type { Analista, InterfaceInlineDetection, Ocorrencia } from '@';
 

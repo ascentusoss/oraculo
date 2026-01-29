@@ -4,7 +4,7 @@
  * Detecta padrões de uso para inferir tipos corretos
  */
 
-import type { Node } from '@babel/types';
+import type { Node } from '/types';
 
 import type {
   ASTNode,

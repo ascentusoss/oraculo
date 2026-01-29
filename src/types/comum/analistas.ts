@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 
-import type { NodePath } from '@babel/traverse';
-import type { Node } from '@babel/types';
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
+import type { NodePath } from '/traverse';
+import type { Node } from '/types';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
 
 import type { ContextoExecucao, Ocorrencia } from '@';
 
@@ -94,7 +94,7 @@ export function asTecnicas(
             contextoGlobal?: import('@').ContextoExecucao,
           ) => {
             const astParam = ast as
-              | import('@babel/traverse').NodePath<import('@babel/types').Node>
+              | import('/traverse').NodePath<import('/types').Node>
               | null;
 
             // Chamamos usando a assinatura esperada da Técnica, sem `any`.

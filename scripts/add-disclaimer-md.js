@@ -20,27 +20,13 @@ try {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} cmd - TODO: Descrever parâmetro
+ *  {*} cmd - TODO: Descrever parâmetro
 
- * @param {*} args - TODO: Descrever parâmetro
+ *  {*} args - TODO: Descrever parâmetro
 
- * @param {*} opts - TODO: Descrever parâmetro
+ *  {*} opts - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} cmd - TODO: Descrever parâmetro
-
- * @param {*} args - TODO: Descrever parâmetro
-
- * @param {*} opts - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -48,27 +34,13 @@ try {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} cmd - TODO: Descrever parâmetro
+ *  {*} cmd - TODO: Descrever parâmetro
 
- * @param {*} args - TODO: Descrever parâmetro
+ *  {*} args - TODO: Descrever parâmetro
 
- * @param {*} opts - TODO: Descrever parâmetro
+ *  {*} opts - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- * @param {*} cmd - TODO: Descrever parâmetro
-
- * @param {*} args - TODO: Descrever parâmetro
-
- * @param {*} opts - TODO: Descrever parâmetro
-
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
 
  */
 
@@ -76,13 +48,41 @@ try {
 
  * TODO: Adicionar descrição da função
 
- * @param {*} cmd - TODO: Descrever parâmetro
+ *  {*} cmd - TODO: Descrever parâmetro
 
- * @param {*} args - TODO: Descrever parâmetro
+ *  {*} args - TODO: Descrever parâmetro
 
- * @param {*} opts - TODO: Descrever parâmetro
+ *  {*} opts - TODO: Descrever parâmetro
 
- * @returns {*} TODO: Descrever retorno
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} cmd - TODO: Descrever parâmetro
+
+ *  {*} args - TODO: Descrever parâmetro
+
+ *  {*} opts - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ *  {*} cmd - TODO: Descrever parâmetro
+
+ *  {*} args - TODO: Descrever parâmetro
+
+ *  {*} opts - TODO: Descrever parâmetro
+
+ *  {*} TODO: Descrever retorno
 
  */
 

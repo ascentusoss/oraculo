@@ -28,7 +28,7 @@ export function getAvailablePlugins(): string[] {
 export const DEFAULT_PLUGIN_CONFIG = {
   enabled: ['core'],
   autoload: true,
-  registry: '@oraculo/plugins',
+  registry: '/plugins',
 };
 
 /**

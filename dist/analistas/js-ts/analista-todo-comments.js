@@ -34,8 +34,8 @@ export const analistaTodoComments = {
         const isJSDocTemplate = (linha, _linhaAnterior) => {
             const templatePatterns = [
                 /\*\s*TODO:\s*Adicionar descrição da função\s*$/i,
-                /\*\s*@param\s+\{[^}]*\}\s+\w+\s*-\s*TODO:\s*Descrever parâmetro\s*$/i,
-                /\*\s*@returns\s+\{[^}]*\}\s*TODO:\s*Descrever retorno\s*$/i,
+                /\*\s*\s+\{[^}]*\}\s+\w+\s*-\s*TODO:\s*Descrever parâmetro\s*$/i,
+                /\*\s*\s+\{[^}]*\}\s*TODO:\s*Descrever retorno\s*$/i,
             ];
             return templatePatterns.some((pattern) => pattern.test(linha));
         };

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 import path from 'node:path';
 
-import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
+import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
 
 import type { ErroValidacaoCombinacao } from '@';
 

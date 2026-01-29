@@ -4,7 +4,7 @@
  * Suporta análise e correção inteligente de tipos `any` e `unknown`
  */
 
-import type { Node } from '@babel/types';
+import type { Node } from '/types';
 
 /**
  * Tipo auxiliar para nós AST com propriedades específicas
