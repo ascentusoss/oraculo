@@ -5,12 +5,6 @@
 > Conteúdos de terceiros não licenciados de forma compatível não devem ser incluídos.
 > Referências a materiais externos devem ser linkadas e reescritas com palavras próprias.
 
-[![CI](https://github.com/ascentusoss/oraculo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ascentusoss/oraculo/actions/workflows/ci.yml)
-[![Build](https://github.com/ascentusoss/oraculo/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/ascentusoss/oraculo/actions/workflows/build.yml)
-[![Monitor Deps](https://github.com/ascentusoss/oraculo/actions/workflows/monitor-deps.yml/badge.svg)](https://github.com/ascentusoss/oraculo/actions/workflows/monitor-deps.yml)
-[![Compliance](https://github.com/ascentusoss/oraculo/actions/workflows/compliance.yml/badge.svg?branch=main)](https://github.com/ascentusoss/oraculo/actions/workflows/compliance.yml)
-[![License Gate](https://github.com/ascentusoss/oraculo/actions/workflows/license-gate.yml/badge.svg)](https://github.com/ascentusoss/oraculo/actions/workflows/license-gate.yml)
-
 ## 🌟 Status do Projeto
 
 **Versão Atual:** 0.3.6 | **Node.js:** >=24.12.0 | **Licença:** MIT
