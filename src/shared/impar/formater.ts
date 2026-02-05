@@ -533,8 +533,7 @@ function normalizarSeparadoresDeSecao(
       .replace(/\bHTML\b/g, 'HTML')
       .replace(/\bCSS\b/g, 'CSS')
       .replace(/\bXML\b/g, 'XML')
-      .replace(/\bSVG\b/g, 'SVG')
-      .replace(/\bXXE\b/g, 'XXE');
+      .replace(/\bSVG\b/g, 'SVG');
   };
 
   const inferTitleFromNextSymbol = (fromIndex: number): string | null => {
