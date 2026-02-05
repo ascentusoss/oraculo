@@ -529,13 +529,7 @@ function normalizarSeparadoresDeSecao(
 
     const upper = withSpaces.toUpperCase();
 
-    return upper
-      .replace(/\bJSON\b/g, 'JSON')
-      .replace(/\bHTML\b/g, 'HTML')
-      .replace(/\bCSS\b/g, 'CSS')
-      .replace(/\bXML\b/g, 'XML')
-      .replace(/\bSVG\b/g, 'SVG')
-      .replace(/\bXXE\b/g, 'XXE');
+    return upper;
   };
 
   const inferTitleFromNextSymbol = (fromIndex: number): string | null => {
