@@ -5,7 +5,7 @@ import path from 'node:path';
 import {
   otimizarSvgLikeSvgo,
   shouldSugerirOtimizacaoSvg,
-} from '/impar/svgs.js';
+} from '@shared/impar/svgs.js';
 
 import type { FileEntryWithAst } from '@';
 

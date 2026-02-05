@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
-import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
-import { log, logCore } from '/messages/index.js';
+import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
+import { log, logCore } from '@core/messages/index.js';
 
 import type {
   GlobalComImport,
@@ -29,7 +29,7 @@ export class PluginRegistry {
     this.config = {
       enabled: ['core'],
       autoload: true,
-      registry: '/plugins',
+      registry: '@oraculo/plugins',
       ...config,
     };
     this.userConfiguredEnabled = !!config?.enabled;

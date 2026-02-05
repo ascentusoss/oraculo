@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Tipos para análise de padrões async/await
+ * @fileoverview Tipos para análise de padrões async/await
  *
  * Define estruturas para análise pós-diagnóstico de promises não tratadas,
  * agrupamento por criticidade e geração de relatórios de ação.

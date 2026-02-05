@@ -18,11 +18,11 @@ import {
   isLegacyOrVendorFile,
   isTypeScriptContext,
   isUnknownInGenericContext,
-} from '/corrections/type-safety/context-analyzer.js';
-import type { NodePath } from '/traverse';
-import type { Node } from '/types';
-import { config } from '/config/config.js';
-import { shouldSuppressOccurrence } from '/helpers/rule-config.js';
+} from '@analistas/corrections/type-safety/context-analyzer.js';
+import type { NodePath } from '@babel/traverse';
+import type { Node } from '@babel/types';
+import { config } from '@core/config/config.js';
+import { shouldSuppressOccurrence } from '@shared/helpers/rule-config.js';
 
 import type { Analista, Ocorrencia } from '@';
 

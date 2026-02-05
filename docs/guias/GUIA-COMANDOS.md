@@ -565,7 +565,7 @@ oraculo atualizar --global
 
 1. Executa análise do projeto
 2. Verifica integridade via Guardian
-3. Se OK, executa `npm install oraculo`
+3. Se OK, executa `npm install oraculo@latest`
 4. Reporta sucesso/falha
 
 ### Exemplos

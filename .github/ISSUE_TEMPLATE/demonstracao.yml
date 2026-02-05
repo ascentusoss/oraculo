@@ -1,0 +1,27 @@
+name: "Demonstração / Show & Tell"
+about: "Compartilhe projetos, integrações, exemplos de uso e casos de sucesso com oraculo."
+title: "Demonstração: {{short description}}"
+labels: ["discussão", "demonstração", "showcase"]
+category: "Show and tell"
+body: |
+  Adoramos ver usos criativos — compartilhe o que construiu e como funciona.
+
+questions:
+  - type: input
+    id: titulo
+    attributes:
+      label: "Título curto"
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "Descrição / caso de uso"
+      description: "O que foi construído, problema resolvido e benefícios."
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: "Link (repositório, demo, vídeo)"
+      placeholder: "https://..."

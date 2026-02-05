@@ -1,0 +1,123 @@
+# SPDX-License-Identifier: MIT
+name: Compliance
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  schedule:
+    - cron: "0 6 * * 1" # Every Monday at 6 AM
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: "25"
+
+jobs:
+  licenses:
+    name: 📜 License Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check Licenses
+        run: npm run licenses:auditar
+
+      - name: Generate License Report
+        run: npm run licenses:json
+        continue-on-error: true
+
+      - name: Upload License Report
+        uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: license-report
+          path: .oraculo/licenses.json
+          retention-days: 30
+
+  security:
+    name: 🔐 Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: NPM Audit
+        run: npm run security:deps
+        continue-on-error: true
+
+      - name: Security Lint
+        run: npm run security:lint
+
+  spdx-headers:
+    name: 📋 SPDX Headers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check SPDX Headers
+        run: |
+          # Check if source files have SPDX headers
+          missing_headers=$(find src -name "*.ts" -exec grep -L "SPDX-License-Identifier" {} \; 2>/dev/null | head -20)
+          if [ -n "$missing_headers" ]; then
+            echo "⚠️ Files missing SPDX headers:"
+            echo "$missing_headers"
+            echo "Run 'npm run headers:spdx' to add headers"
+          else
+            echo "✅ All source files have SPDX headers"
+          fi
+
+  markdown:
+    name: 📝 Markdown Quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scan Markdown
+        run: npm run md:scan
+        continue-on-error: true
+
+      - name: Verify Disclaimers
+        run: npm run md:verify-disclaimer
+        continue-on-error: true

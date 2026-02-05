@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Exportações centralizadas de tipos de analistas
+ * @fileoverview Exportações centralizadas de tipos de analistas
  *
  * Re-exporta todos os tipos relacionados a analistas, detectores,
  * estrategistas e suas funcionalidades.

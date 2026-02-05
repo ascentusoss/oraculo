@@ -21,22 +21,22 @@ function mapTsConfigAliases(rootAbs: string): VitestAlias[] {
       find: aliasPrefix,
       replacement: path.resolve(rootAbs, 'src', rel).replace(/\\/g, '/'),
     });
-    if (paths['/*']) entries.push(mapPrefix('', 'core'));
-    if (paths['/*']) entries.push(mapPrefix('', 'nucleo'));
-    if (paths['/*']) entries.push(mapPrefix('', 'shared'));
-    if (paths['/*'])
-      entries.push(mapPrefix('', 'analistas'));
-    if (paths['/*']) entries.push(mapPrefix('', 'auto'));
-    if (paths['/*'])
-      entries.push(mapPrefix('', 'arquitetos'));
-    if (paths['/*'])
-      entries.push(mapPrefix('', 'zeladores'));
-    if (paths['/*'])
-      entries.push(mapPrefix('', 'relatorios'));
-    if (paths['/*']) entries.push(mapPrefix('', 'messages'));
-    if (paths['/*']) entries.push(mapPrefix('', 'guardian'));
-    if (paths['/*']) entries.push(mapPrefix('', 'cli'));
-    if (paths['/*']) entries.push(mapPrefix('', 'tipos'));
+    if (paths['@core/*']) entries.push(mapPrefix('@core', 'core'));
+    if (paths['@nucleo/*']) entries.push(mapPrefix('@nucleo', 'nucleo'));
+    if (paths['@shared/*']) entries.push(mapPrefix('@shared', 'shared'));
+    if (paths['@analistas/*'])
+      entries.push(mapPrefix('@analistas', 'analistas'));
+    if (paths['@auto/*']) entries.push(mapPrefix('@auto', 'auto'));
+    if (paths['@arquitetos/*'])
+      entries.push(mapPrefix('@arquitetos', 'arquitetos'));
+    if (paths['@zeladores/*'])
+      entries.push(mapPrefix('@zeladores', 'zeladores'));
+    if (paths['@relatorios/*'])
+      entries.push(mapPrefix('@relatorios', 'relatorios'));
+    if (paths['@messages/*']) entries.push(mapPrefix('@messages', 'messages'));
+    if (paths['@guardian/*']) entries.push(mapPrefix('@guardian', 'guardian'));
+    if (paths['@cli/*']) entries.push(mapPrefix('@cli', 'cli'));
+    if (paths['@tipos/*']) entries.push(mapPrefix('@tipos', 'tipos'));
     if (paths['@/*']) entries.push(mapPrefix('@', ''));
     if (paths['@/resolver.js'] || paths['@/resolver']) {
       // O arquivo "src/resolver.ts" foi abandonado/excluído em algumas
@@ -87,7 +87,7 @@ function createResolvePlugin(rootAbs: string) {
           id
             .split('?')[0]
             .split('#')[0]
-            .replace(/^\/\//, '');
+            .replace(/^\/@fs\//, '');
         let importerPath = cleanId(importer as string);
         if (importerPath.startsWith('file://'))
           importerPath = fileURLToPath(importerPath);
@@ -132,7 +132,7 @@ function resolveCandidateToTs(candidate: string | null) {
   if (!candidate) return null;
   if (fs.existsSync(candidate)) return null;
   const asTs = candidate.replace(/\.js$/i, '.ts');
-  if (fs.existsSync(asTs)) return `//${asTs.replace(/\\/g, '/')}`;
+  if (fs.existsSync(asTs)) return `/@fs/${asTs.replace(/\\/g, '/')}`;
   return null;
 }
 
@@ -142,7 +142,7 @@ function resolveSrcPattern(rootAbs: string, source: string) {
     const sub = source.slice(idxSrc);
     const absFromRoot = path.join(rootAbs, sub);
     const asTsRoot = absFromRoot.replace(/\.js$/i, '.ts');
-    if (fs.existsSync(asTsRoot)) return `//${asTsRoot.replace(/\\/g, '/')}`;
+    if (fs.existsSync(asTsRoot)) return `/@fs/${asTsRoot.replace(/\\/g, '/')}`;
   }
   return null;
 }
@@ -227,7 +227,7 @@ function createTransformMocksPlugin(rootAbs: string) {
                 absTarget = absTs;
               if (fs.existsSync(absTarget)) {
                 changed = true;
-                return `${prefix}//${absTarget.replace(/\\/g, '/')} ${suffix}`.replace(
+                return `${prefix}/@fs/${absTarget.replace(/\\/g, '/')} ${suffix}`.replace(
                   ' ',
                   '',
                 );

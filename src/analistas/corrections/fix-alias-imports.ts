@@ -6,7 +6,7 @@ export async function aplicarFixAliasImports(
   content: string,
 ): Promise<{ changed: boolean; content: string }> {
   if (!filePath.endsWith('.ts')) return { changed: false, content };
-  const out = content.replace(/\/types\.js\b/g, 'types');
+  const out = content.replace(/@types\/types\.js\b/g, 'types');
   return { changed: out !== content, content: out };
 }
 

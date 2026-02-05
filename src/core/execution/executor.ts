@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 import crypto from 'node:crypto';
 
-import { config } from '/config/config.js';
-import { formatMs } from '/config/format.js';
-import { log, logCore } from '/messages/index.js';
-import { logAnalistas } from '/messages/log/log-helper.js';
-import { WorkerPool } from '/workers/worker-pool.js';
-import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
+import { config } from '@core/config/config.js';
+import { formatMs } from '@core/config/format.js';
+import { log, logCore } from '@core/messages/index.js';
+import { logAnalistas } from '@core/messages/log/log-helper.js';
+import { WorkerPool } from '@core/workers/worker-pool.js';
+import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
 import XXH from 'xxhashjs';
 
 import type {
@@ -55,7 +55,7 @@ export async function executarInquisicao(
   // Narrowing helper: detecta se um objeto se parece com NodePath do babel
   function isNodePath(
     x: unknown, // Type guard intencional: aceita entrada arbitrária para validação estrutural
-  ): x is import('/traverse').NodePath<import('/types').Node> {
+  ): x is import('@babel/traverse').NodePath<import('@babel/types').Node> {
     if (typeof x !== 'object' || x === null) return false;
     const maybe = x as Record<string, unknown>;
     if (!('node' in maybe)) return false;
@@ -64,7 +64,7 @@ export async function executarInquisicao(
     return 'type' in (node as Record<string, unknown>);
   }
 
-  // Incremental: carregar estado anterior (tipo importado de )
+  // Incremental: carregar estado anterior (tipo importado de @types)
   let estadoIncremental: EstadoIncremental | null = null;
   if (config.ANALISE_INCREMENTAL_ENABLED) {
     const lido = await lerEstado<EstadoIncremental>(
@@ -401,8 +401,8 @@ export async function executarInquisicao(
         if (timeoutMs > 0) {
           // Promise.race entre execução do analista e timeout
           const astParam = isNodePath(entry.ast)
-            ? (entry.ast as import('/traverse').NodePath<
-                import('/types').Node
+            ? (entry.ast as import('@babel/traverse').NodePath<
+                import('@babel/types').Node
               >)
             : null;
           const execPromise = tecnica.aplicar(
@@ -437,8 +437,8 @@ export async function executarInquisicao(
         } else {
           // Execução sem timeout
           const astParam2 = isNodePath(entry.ast)
-            ? (entry.ast as import('/traverse').NodePath<
-                import('/types').Node
+            ? (entry.ast as import('@babel/traverse').NodePath<
+                import('@babel/types').Node
               >)
             : null;
           resultado = await tecnica.aplicar(

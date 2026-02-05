@@ -1,0 +1,27 @@
+name: "Feedback — Documentação / UX / Experiência"
+about: "Relatos de opinião, usabilidade, documentação e sugestões de melhoria não-técnicas."
+title: "Feedback: {{short description}}"
+labels: ["discussão", "feedback"]
+category: "Feedback"
+body: |
+  Agradecemos seu feedback — por favor seja específico para que possamos agir.
+
+questions:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: "O que você tentou / contexto"
+      description: "Onde você encontrou o problema ou melhoria (página, comando, documento)."
+      required: true
+
+  - type: textarea
+    id: expectativa
+    attributes:
+      label: "O que você esperava"
+      required: true
+
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: "Sugestão ou solução (opcional)"
+      placeholder: "Como poderíamos melhorar?"

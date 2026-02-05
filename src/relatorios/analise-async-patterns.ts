@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Análise de padrões async/await
+ * @fileoverview Análise de padrões async/await
  *
  * Pós-processador de relatórios que analisa ocorrências `unhandled-async`,
  * agrupa por criticidade e gera recomendações priorizadas.
@@ -11,8 +11,8 @@
 
 import path from 'node:path';
 
-import { log, MENSAGENS_RELATORIOS_ANALISE } from '/messages/index.js';
-import { salvarEstado } from '/persistence/persistencia.js';
+import { log, MENSAGENS_RELATORIOS_ANALISE } from '@core/messages/index.js';
+import { salvarEstado } from '@shared/persistence/persistencia.js';
 
 import type { Ocorrencia } from '@';
 

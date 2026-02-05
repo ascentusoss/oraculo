@@ -116,17 +116,17 @@ import { existsSync } from 'node:fs';
 
 // Mapeamento de aliases baseado no tsconfig.json
 const aliases = {
-  '/tipos.js': 'tipos/tipos.ts',
-  '/': 'nucleo/',
-  '/': 'shared/',
-  '/': 'analistas/',
-  '/': 'arquitetos/',
-  '/': 'zeladores/',
-  '/': 'relatorios/',
-  '/': 'guardian/',
-  '/': 'cli/',
-  '/': 'tipos/',
-  '/': '',
+  '@tipos/tipos.js': 'tipos/tipos.ts',
+  '@nucleo/': 'nucleo/',
+  '@shared/': 'shared/',
+  '@analistas/': 'analistas/',
+  '@arquitetos/': 'arquitetos/',
+  '@zeladores/': 'zeladores/',
+  '@relatorios/': 'relatorios/',
+  '@guardian/': 'guardian/',
+  '@cli/': 'cli/',
+  '@tipos/': 'tipos/',
+  '@src/': '',
   '@/': '',
 };
 
@@ -134,27 +134,13 @@ const aliases = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} specifier - TODO: Descrever parâmetro
+ * @param {*} specifier - TODO: Descrever parâmetro
 
- *  {*} context - TODO: Descrever parâmetro
+ * @param {*} context - TODO: Descrever parâmetro
 
- *  {*} nextResolve - TODO: Descrever parâmetro
+ * @param {*} nextResolve - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} specifier - TODO: Descrever parâmetro
-
- *  {*} context - TODO: Descrever parâmetro
-
- *  {*} nextResolve - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -162,27 +148,13 @@ const aliases = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} specifier - TODO: Descrever parâmetro
+ * @param {*} specifier - TODO: Descrever parâmetro
 
- *  {*} context - TODO: Descrever parâmetro
+ * @param {*} context - TODO: Descrever parâmetro
 
- *  {*} nextResolve - TODO: Descrever parâmetro
+ * @param {*} nextResolve - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} specifier - TODO: Descrever parâmetro
-
- *  {*} context - TODO: Descrever parâmetro
-
- *  {*} nextResolve - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -190,27 +162,13 @@ const aliases = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} specifier - TODO: Descrever parâmetro
+ * @param {*} specifier - TODO: Descrever parâmetro
 
- *  {*} context - TODO: Descrever parâmetro
+ * @param {*} context - TODO: Descrever parâmetro
 
- *  {*} nextResolve - TODO: Descrever parâmetro
+ * @param {*} nextResolve - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} specifier - TODO: Descrever parâmetro
-
- *  {*} context - TODO: Descrever parâmetro
-
- *  {*} nextResolve - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -218,27 +176,13 @@ const aliases = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} specifier - TODO: Descrever parâmetro
+ * @param {*} specifier - TODO: Descrever parâmetro
 
- *  {*} context - TODO: Descrever parâmetro
+ * @param {*} context - TODO: Descrever parâmetro
 
- *  {*} nextResolve - TODO: Descrever parâmetro
+ * @param {*} nextResolve - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} specifier - TODO: Descrever parâmetro
-
- *  {*} context - TODO: Descrever parâmetro
-
- *  {*} nextResolve - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -246,13 +190,13 @@ const aliases = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} specifier - TODO: Descrever parâmetro
+ * @param {*} specifier - TODO: Descrever parâmetro
 
- *  {*} context - TODO: Descrever parâmetro
+ * @param {*} context - TODO: Descrever parâmetro
 
- *  {*} nextResolve - TODO: Descrever parâmetro
+ * @param {*} nextResolve - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -260,13 +204,69 @@ const aliases = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} specifier - TODO: Descrever parâmetro
+ * @param {*} specifier - TODO: Descrever parâmetro
 
- *  {*} context - TODO: Descrever parâmetro
+ * @param {*} context - TODO: Descrever parâmetro
 
- *  {*} nextResolve - TODO: Descrever parâmetro
+ * @param {*} nextResolve - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} specifier - TODO: Descrever parâmetro
+
+ * @param {*} context - TODO: Descrever parâmetro
+
+ * @param {*} nextResolve - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} specifier - TODO: Descrever parâmetro
+
+ * @param {*} context - TODO: Descrever parâmetro
+
+ * @param {*} nextResolve - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} specifier - TODO: Descrever parâmetro
+
+ * @param {*} context - TODO: Descrever parâmetro
+
+ * @param {*} nextResolve - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} specifier - TODO: Descrever parâmetro
+
+ * @param {*} context - TODO: Descrever parâmetro
+
+ * @param {*} nextResolve - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -374,17 +374,17 @@ import { existsSync } from 'node:fs';
 
 // Mapeamento de aliases baseado no tsconfig.json
 const aliases = {
-  '/tipos.js': '../src/tipos/tipos.ts',
-  '/': '../src/nucleo/',
-  '/': '../src/shared/',
-  '/': '../src/analistas/',
-  '/': '../src/arquitetos/',
-  '/': '../src/zeladores/',
-  '/': '../src/relatorios/',
-  '/': '../src/guardian/',
-  '/': '../src/cli/',
-  '/': '../src/tipos/',
-  '/': '../src/',
+  '@tipos/tipos.js': '../src/tipos/tipos.ts',
+  '@nucleo/': '../src/nucleo/',
+  '@shared/': '../src/shared/',
+  '@analistas/': '../src/analistas/',
+  '@arquitetos/': '../src/arquitetos/',
+  '@zeladores/': '../src/zeladores/',
+  '@relatorios/': '../src/relatorios/',
+  '@guardian/': '../src/guardian/',
+  '@cli/': '../src/cli/',
+  '@tipos/': '../src/tipos/',
+  '@src/': '../src/',
   '@/': '../src/',
 };
 
@@ -501,9 +501,9 @@ ${aliasList.map((alias) =>
 ### Em Arquivos TypeScript
 \`\`\`typescript
 // ✅ Correto - usar aliases
-import { executar } from '/executor';
-import { analisarPadroes } from '/javascript-typescript/analista-padroes-uso';
-import { salvarEstado } from '/persistence/persistencia';
+import { executar } from '@nucleo/executor';
+import { analisarPadroes } from '@analistas/javascript-typescript/analista-padroes-uso';
+import { salvarEstado } from '@shared/persistence/persistencia';
 
 // ❌ Incorreto - imports relativos longos  
 import { executar } from '../../../nucleo/executor';
@@ -513,7 +513,7 @@ import { executar } from '../../../nucleo/executor';
 \`\`\`typescript
 // ✅ Correto - mesmos aliases funcionam nos testes
 import { describe, it, expect } from 'vitest';
-import { JavaPlugin } from '/plugins/java/java-plugin';
+import { JavaPlugin } from '@shared/plugins/java/java-plugin';
 \`\`\`
 
 ## Configuração Automática
@@ -538,7 +538,7 @@ O sistema sincroniza automaticamente:
 export const ALIASES: AliasConfig[] = [
   // ...aliases existentes...
   {
-    alias: '/',
+    alias: '@novo-modulo/',
     srcPath: 'novo-modulo/',
     description: 'Descrição do novo módulo'
   }

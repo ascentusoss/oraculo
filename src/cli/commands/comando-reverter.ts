@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
-import { mapaReversao } from '/corrections/mapa-reversao.js';
-import { ExitCode, sair } from '/helpers/exit-codes.js';
-import { CliComandoReverterMessages } from '/messages/cli/cli-comando-reverter-messages.js';
+import { mapaReversao } from '@analistas/corrections/mapa-reversao.js';
+import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
+import { CliComandoReverterMessages } from '@core/messages/cli/cli-comando-reverter-messages.js';
 import {
   ICONES_DIAGNOSTICO,
   log,
   logAuto,
   logSistema,
-} from '/messages/index.js';
+} from '@core/messages/index.js';
 import { Command } from 'commander';
 
 export function registrarComandoReverter(program: Command): void {

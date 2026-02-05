@@ -1,6 +1,6 @@
-import { parse as babelParse } from '/parser';
-import traverse from '/traverse';
-import * as t from '/types';
+import { parse as babelParse } from '@babel/parser';
+import traverse from '@babel/traverse';
+import * as t from '@babel/types';
 import { AnalystOrigins, AnalystTypes, ReactHooksMessages, SeverityLevels, } from '../../core/messages/core/plugin-messages.js';
 import { criarAnalista, criarOcorrencia } from '../../types/index.js';
 const disableEnv = process.env.ORACULO_DISABLE_PLUGIN_REACT_HOOKS === '1';

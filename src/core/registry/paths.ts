@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Gerenciamento centralizado de caminhos para arquivos JSON do Oráculo
+ * @fileoverview Gerenciamento centralizado de caminhos para arquivos JSON do Oráculo
  *
  * Este módulo define todos os caminhos de arquivos JSON usados pelo sistema,
  * evitando hardcoding espalhado e permitindo evolução consistente.
@@ -75,16 +75,16 @@ export const ORACULO_FILES = {
   ),
 
   /* -------------------------- ARQUIVOS LEGADOS (compatibilidade) -------------------------- */
-  /**  Use GUARDIAN_BASELINE - baseline.json antigo */
+  /** @deprecated Use GUARDIAN_BASELINE - baseline.json antigo */
   GUARDIAN_BASELINE_LEGACY: path.join(ORACULO_DIRS.STATE, 'baseline.json'),
 
-  /**  Use ESTRUTURA_BASELINE - baseline-estrutura.json antigo */
+  /** @deprecated Use ESTRUTURA_BASELINE - baseline-estrutura.json antigo */
   ESTRUTURA_BASELINE_LEGACY: path.join(
     ORACULO_DIRS.STATE,
     'baseline-estrutura.json',
   ),
 
-  /**  Movido para .oraculo/ - oraculo.repo.arquetipo.json na raiz */
+  /** @deprecated Movido para .oraculo/ - oraculo.repo.arquetipo.json na raiz */
   ESTRUTURA_ARQUETIPO_LEGACY_ROOT: path.join(
     PROJECT_ROOT,
     'oraculo.repo.arquetipo.json',
@@ -134,8 +134,8 @@ export const MIGRATION_MAP = {
 
 /**
  * Retorna o caminho legado (se existir) ou o novo
- *  newPath Caminho novo desejado
- *  Caminho do arquivo (prioriza legado se existir)
+ * @param newPath Caminho novo desejado
+ * @returns Caminho do arquivo (prioriza legado se existir)
  */
 export function resolveFilePath(newPath: string): string {
   // Verifica se há entrada no mapa de migração reverso

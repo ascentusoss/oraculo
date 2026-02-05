@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para inferência de tipos
 /**
  * Módulo de inferência de tipos

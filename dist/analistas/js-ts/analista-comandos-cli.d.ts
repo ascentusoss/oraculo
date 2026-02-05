@@ -1,5 +1,5 @@
-import type { NodePath } from '/traverse';
-import type { Node } from '/types';
+import type { NodePath } from '@babel/traverse';
+import type { Node } from '@babel/types';
 import type { ContextoExecucao, HandlerInfo, TecnicaAplicarResultado } from '../../types/index.js';
 export declare function extractHandlerInfo(node: Node | unknown): HandlerInfo | null;
 export declare const analistaComandosCli: {

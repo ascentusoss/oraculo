@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 import type tty from 'node:tty';
 
-import chalk from '/config/chalk-safe.js';
-import { config } from '/config/config.js';
-import { isJsonMode } from '/helpers/json-mode.js';
+import chalk from '@core/config/chalk-safe.js';
+import { config } from '@core/config/config.js';
+import { isJsonMode } from '@shared/helpers/json-mode.js';
 
 import type { FormatOptions, Nivel, StyleFn } from '@';
 // Reexport para testes configurarem flags sem importar cosmos diretamente
-export { config } from '/config/config.js';
+export { config } from '@core/config/config.js';
 
 export const LOG_SIMBOLOS = {
   // Prefixos de níveis de severidade com cores ANSI

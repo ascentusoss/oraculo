@@ -12,8 +12,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { config } from '/config/config.js';
-import { mesclarConfigExcludes } from '/config/excludes-padrao.js';
+import { config } from '@core/config/config.js';
+import { mesclarConfigExcludes } from '@core/config/excludes-padrao.js';
 
 import type {
   FiltrosProcessados,
@@ -26,7 +26,7 @@ import type {
 /**
  * Processa lista de padrões achatada (vírgulas, espaços)
  *
- *
+ * @example
  * processPatternListAchatado(['src/**', 'tests, lib'])
  * // => ['src/**', 'tests', 'lib']
  */
@@ -48,7 +48,7 @@ export function processPatternListAchatado(
 /**
  * Processa padrões em grupos (cada elemento da lista é um grupo)
  *
- *
+ * @example
  * processPatternGroups(['src/** tests/**', 'lib/**'])
  * // => [['src/**', 'tests/**'], ['lib/**']]
  */
@@ -72,7 +72,7 @@ export function processPatternGroups(raw: string[] | undefined): string[][] {
  * - `pattern/**` (recursivo)
  * - `** /pattern/**` (se não tiver barra)
  *
- *
+ * @example
  * expandIncludes(['src', 'lib/*.ts'])
  * // => ['src', 'src/**', '** /src/**', 'lib/*.ts']
  */

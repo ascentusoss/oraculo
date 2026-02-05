@@ -6,10 +6,10 @@ export interface BabelNode {
   [key: string]: unknown;
 }
 
-//  tipo-inseguro-unknown
+// @oraculo-disable tipo-inseguro-unknown
 // Justificativa: função é um type guard; aceita `unknown` e valida com checagem runtime.
 export function isBabelNode(obj: unknown): obj is BabelNode {
-  // Implementação de runtime fica em src/ ou em utilitários reais.
+  // Implementação de runtime fica em src/@types ou em utilitários reais.
   return (
     typeof obj === 'object' &&
     obj !== null &&

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Tipos para sistema de memória conversacional
+ * @fileoverview Tipos para sistema de memória conversacional
  */
 
 export type MemoryMessage = {

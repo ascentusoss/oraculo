@@ -1,0 +1,32 @@
+name: "Discussão geral"
+about: "Tópicos abertos para discussões que não se encaixam nas outras categorias."
+title: "Discussão: {{short description}}"
+labels: ["discussão", "geral"]
+category: "Geral"
+body: |
+  Abra uma conversa — explique o tema e o objetivo da discussão.
+
+questions:
+  - type: input
+    id: assunto
+    attributes:
+      label: "Assunto / tópico"
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: "Contexto e objetivo"
+      required: true
+
+  - type: checkbox
+    id: recursos
+    attributes:
+      label: "Precisa de algo específico (marcação, revisão, ajuda)?"
+      options:
+        - label: "Revisão técnica"
+          value: "revisao"
+        - label: "Feedback de UX"
+          value: "ux"
+        - label: "Ajuda para implementação"
+          value: "implementacao"

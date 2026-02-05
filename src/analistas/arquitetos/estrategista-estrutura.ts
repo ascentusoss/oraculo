@@ -2,14 +2,14 @@
 import { statSync } from 'node:fs';
 import path from 'node:path';
 
-import { getTypesDirectoryRelPosix } from '/config/conventions.js';
-import type { OpcoesEstrategista } from '/helpers/estrutura.js';
+import { getTypesDirectoryRelPosix } from '@core/config/conventions.js';
+import type { OpcoesEstrategista } from '@shared/helpers/estrutura.js';
 import {
   carregarConfigEstrategia,
   destinoPara,
   deveIgnorar,
   normalizarRel,
-} from '/helpers/estrutura.js';
+} from '@shared/helpers/estrutura.js';
 
 import type {
   ContextoExecucao,

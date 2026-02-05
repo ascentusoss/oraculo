@@ -1,4 +1,4 @@
-import type { NodePath } from '/traverse';
+import type { NodePath } from '@babel/traverse';
 import type { ContextoExecucao, TecnicaAplicarResultado } from '../../types/index.js';
 export declare const grafoDependencias: Map<string, Set<string>>;
 export declare const importsUsadosDinamicamente: Map<string, Set<string>>;

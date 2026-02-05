@@ -1,4 +1,4 @@
-import type { File as BabelFile } from '/types';
+import type { File as BabelFile } from '@babel/types';
 import type { ParserOptions, ParserPlugin } from '../../types/index.js';
 export declare class CorePlugin implements ParserPlugin {
     name: string;

@@ -12,23 +12,11 @@ async function ensureDir(p) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} src - TODO: Descrever parâmetro
+ * @param {*} src - TODO: Descrever parâmetro
 
- *  {*} dest - TODO: Descrever parâmetro
+ * @param {*} dest - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} src - TODO: Descrever parâmetro
-
- *  {*} dest - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -36,23 +24,11 @@ async function ensureDir(p) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} src - TODO: Descrever parâmetro
+ * @param {*} src - TODO: Descrever parâmetro
 
- *  {*} dest - TODO: Descrever parâmetro
+ * @param {*} dest - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} src - TODO: Descrever parâmetro
-
- *  {*} dest - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -60,11 +36,35 @@ async function ensureDir(p) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} src - TODO: Descrever parâmetro
+ * @param {*} src - TODO: Descrever parâmetro
 
- *  {*} dest - TODO: Descrever parâmetro
+ * @param {*} dest - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} src - TODO: Descrever parâmetro
+
+ * @param {*} dest - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} src - TODO: Descrever parâmetro
+
+ * @param {*} dest - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

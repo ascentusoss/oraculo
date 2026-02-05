@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para helpers de estrutura
 import path from 'node:path';
 
-import { lerEstado } from '/persistence/persistencia.js';
+import { lerEstado } from '@shared/persistence/persistencia.js';
 
 import type { NomeacaoEstilo, OpcoesEstrategista, ParseNomeResultado } from '@';
 

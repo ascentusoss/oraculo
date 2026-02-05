@@ -90,23 +90,11 @@ if (arquivosPerf.length > 1) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} oldV - TODO: Descrever parâmetro
+ * @param {*} oldV - TODO: Descrever parâmetro
 
- *  {*} newV - TODO: Descrever parâmetro
+ * @param {*} newV - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} oldV - TODO: Descrever parâmetro
-
- *  {*} newV - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -114,23 +102,11 @@ if (arquivosPerf.length > 1) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} oldV - TODO: Descrever parâmetro
+ * @param {*} oldV - TODO: Descrever parâmetro
 
- *  {*} newV - TODO: Descrever parâmetro
+ * @param {*} newV - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} oldV - TODO: Descrever parâmetro
-
- *  {*} newV - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -138,11 +114,35 @@ if (arquivosPerf.length > 1) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} oldV - TODO: Descrever parâmetro
+ * @param {*} oldV - TODO: Descrever parâmetro
 
- *  {*} newV - TODO: Descrever parâmetro
+ * @param {*} newV - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} oldV - TODO: Descrever parâmetro
+
+ * @param {*} newV - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} oldV - TODO: Descrever parâmetro
+
+ * @param {*} newV - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

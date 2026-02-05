@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para operações de estrutura
-import { gerarPlanoEstrategico } from '/arquitetos/estrategista-estrutura.js';
-import { extrairSinaisAvancados } from '/arquitetos/sinais-projeto-avancados.js';
-import { corrigirEstrutura } from '/corrections/corretor-estrutura.js';
-import { detectarArquetipos } from '/detectores/detector-arquetipos.js';
-import { config } from '/config/config.js';
-import { log, MENSAGENS_ARQUETIPOS_HANDLER } from '/messages/index.js';
+import { gerarPlanoEstrategico } from '@analistas/arquitetos/estrategista-estrutura.js';
+import { extrairSinaisAvancados } from '@analistas/arquitetos/sinais-projeto-avancados.js';
+import { corrigirEstrutura } from '@analistas/corrections/corretor-estrutura.js';
+import { detectarArquetipos } from '@analistas/detectores/detector-arquetipos.js';
+import { config } from '@core/config/config.js';
+import { log, MENSAGENS_ARQUETIPOS_HANDLER } from '@core/messages/index.js';
 
 import type {
   FileEntryWithAst,

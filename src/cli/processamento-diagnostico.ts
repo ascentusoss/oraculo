@@ -2,42 +2,42 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { detectarArquetipos } from '/detectores/detector-arquetipos.js';
-import { normalizarOcorrenciaParaJson } from '/diagnostico/normalizar-ocorrencias-json.js';
+import { detectarArquetipos } from '@analistas/detectores/detector-arquetipos.js';
+import { normalizarOcorrenciaParaJson } from '@cli/diagnostico/normalizar-ocorrencias-json.js';
 import {
   exibirBlocoFiltros,
   listarAnalistas,
-} from '/processing/display.js';
+} from '@cli/processing/display.js';
 import {
   configurarFiltros,
   expandIncludes,
   processPatternGroups,
   processPatternListAchatado,
-} from '/processing/filters.js';
-import chalk from '/config/chalk-safe.js';
-import { config } from '/config/config.js';
+} from '@cli/processing/filters.js';
+import chalk from '@core/config/chalk-safe.js';
+import { config } from '@core/config/config.js';
 import {
   executarInquisicao,
   iniciarInquisicao,
   prepararComAst,
   registrarUltimasMetricas,
-} from '/execution/inquisidor.js';
-import { CliProcessamentoDiagnosticoMessages } from '/messages/cli/cli-processamento-diagnostico-messages.js';
-import { ExcecoesMessages } from '/messages/core/excecoes-messages.js';
+} from '@core/execution/inquisidor.js';
+import { CliProcessamentoDiagnosticoMessages } from '@core/messages/cli/cli-processamento-diagnostico-messages.js';
+import { ExcecoesMessages } from '@core/messages/core/excecoes-messages.js';
 import {
   log,
   logGuardian,
   logRelatorio,
   logSistema,
   MENSAGENS_AUTOFIX,
-} from '/messages/index.js';
-import { aplicarSupressaoOcorrencias } from '/parsing/filters.js';
-import { scanSystemIntegrity } from '/sentinela.js';
-import { emitirConselhoOracular } from '/conselheiro-oracular.js';
-import { gerarRelatorioMarkdown } from '/gerador-relatorio.js';
-import fragmentarRelatorio from '/data-processing/fragmentar-relatorio.js';
-import { stringifyJsonEscaped } from '/data-processing/json.js';
-import { dedupeOcorrencias } from '/data-processing/ocorrencias.js';
+} from '@core/messages/index.js';
+import { aplicarSupressaoOcorrencias } from '@core/parsing/filters.js';
+import { scanSystemIntegrity } from '@guardian/sentinela.js';
+import { emitirConselhoOracular } from '@relatorios/conselheiro-oracular.js';
+import { gerarRelatorioMarkdown } from '@relatorios/gerador-relatorio.js';
+import fragmentarRelatorio from '@shared/data-processing/fragmentar-relatorio.js';
+import { stringifyJsonEscaped } from '@shared/data-processing/json.js';
+import { dedupeOcorrencias } from '@shared/data-processing/ocorrencias.js';
 
 // Importar tipos centralizados (consolidado)
 import {
@@ -67,10 +67,10 @@ async function getSalvarEstado(): Promise<
   // Em testes, permitir mock do path .ts para compatibilidade com Vitest
   const candidates = process.env.VITEST
     ? [
-        '/persistence/persistencia.js',
-        '/persistence/persistencia.ts',
+        '@shared/persistence/persistencia.js',
+        '@shared/persistence/persistencia.ts',
       ]
-    : ['/persistence/persistencia.js'];
+    : ['@shared/persistence/persistencia.js'];
 
   for (const p of candidates) {
     try {
@@ -89,7 +89,7 @@ async function getSalvarEstado(): Promise<
 
   // Fallback: importar pelo alias oficial
   if (!salvarEstado) {
-    const mod = await import('/persistence/persistencia.js');
+    const mod = await import('@shared/persistence/persistencia.js');
     salvarEstado = (
       mod as { salvarEstado: (c: string, d: unknown) => Promise<void> }
     ).salvarEstado;
@@ -100,10 +100,10 @@ async function getSalvarEstado(): Promise<
 export {
   configurarFiltros,
   getDefaultExcludes,
-} from '/processing/filters.js';
+} from '@cli/processing/filters.js';
 // registroAnalistas será importado dinamicamente quando necessário
 
-// Helpers deduplicação/agrupamento: agora centralizados em /data-processing/ocorrencias
+// Helpers deduplicação/agrupamento: agora centralizados em @shared/data-processing/ocorrencias
 
 // Constante para timeout de detecção de arquétipos (em milissegundos)
 const DETECT_TIMEOUT_MS = process.env.VITEST ? 1000 : 30000;
@@ -308,7 +308,7 @@ export async function processarDiagnostico(
         const {
           criarTemplateArquetipoPersonalizado,
           salvarArquetipoPersonalizado,
-        } = await import('/js-ts/arquetipos-personalizados.js');
+        } = await import('@analistas/js-ts/arquetipos-personalizados.js');
         const arquetipo = criarTemplateArquetipoPersonalizado(
           nomeProjeto,
           estruturaDetectada,
@@ -482,7 +482,7 @@ export async function processarDiagnostico(
 
     // Continuar com o processamento restante...
     // Em fast-mode, reduz o conjunto de analistas para acelerar
-    const registro = (await import('/registry/registry.js'))
+    const registro = (await import('@analistas/registry/registry.js'))
       .registroAnalistas;
     let tecnicas = asTecnicas(registro);
     if (fastMode) {
@@ -657,9 +657,9 @@ export async function processarDiagnostico(
         // Importar módulos de quick fixes e configuração
         // O registro de quick fixes foi consolidado em fix-config.js
         const { findQuickFixes, applyQuickFix } =
-          await import('/config/auto/fix-config.js');
+          await import('@core/config/auto/fix-config.js');
         const { getAutoFixConfig } =
-          await import('/config/auto/auto-fix-config.js');
+          await import('@core/config/auto/auto-fix-config.js');
 
         // Determinar configuração do auto-fix
         let autoFixMode = opts.autoFixMode || 'balanced';
@@ -1843,7 +1843,7 @@ export async function processarDiagnostico(
           // Modo executivo: apenas problemas críticos e altos
           if (opts.executive) {
             const { gerarResumoExecutivo } =
-              await import('/filtro-inteligente.js');
+              await import('@relatorios/filtro-inteligente.js');
             const resumoExec = gerarResumoExecutivo(ocorrenciasFiltradas);
             if (resumoExec.detalhes.length > 0) {
               const linhasExec = resumoExec.detalhes.map(
@@ -2121,7 +2121,7 @@ export async function processarDiagnostico(
             // Relatório adicional: otimização de SVG (agrupado por diretório)
             try {
               const { exportarRelatorioSvgOtimizacao } =
-                await import('/diagnostico/exporters/svg-otimizacao-exporter.js');
+                await import('@cli/diagnostico/exporters/svg-otimizacao-exporter.js');
               await exportarRelatorioSvgOtimizacao({
                 entries: fileEntriesComAst,
                 relatoriosDir: dir,

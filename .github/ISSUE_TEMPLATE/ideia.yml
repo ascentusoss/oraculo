@@ -1,0 +1,48 @@
+name: "Ideia / Proposta — Recurso ou melhoria"
+about: "Sugestões de funcionalidades, melhorias de UX ou propostas arquiteturais."
+title: "Ideia: {{short description}}"
+labels: ["discussão", "ideia", "feature-request"]
+category: "Ideias"
+body: |
+  Obrigado por contribuir com uma ideia! Use este formulário para descrever o problema que deseja resolver e a proposta.
+
+questions:
+  - type: input
+    id: resumo
+    attributes:
+      label: "Resumo curto da ideia"
+      placeholder: "Uma frase que descreva a ideia"
+      required: true
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: "Que problema a ideia resolve?"
+      description: "Explique o contexto e por que isso é importante."
+      required: true
+
+  - type: textarea
+    id: proposta
+    attributes:
+      label: "Descrição da proposta"
+      description: "Como a solução funcionaria, exemplos de uso e comportamento esperado."
+      required: true
+
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: "Impacto estimado"
+      options:
+        - label: "Baixo — pequena melhoria"
+          value: "baixo"
+        - label: "Médio — muda fluxo/UX"
+          value: "medio"
+        - label: "Alto — mudança arquitetural"
+          value: "alto"
+      required: true
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: "Alternativas consideradas (opcional)"
+      placeholder: "Soluções alternativas ou trade-offs"

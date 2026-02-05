@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para formatação de display
-import { chalk } from '/config/chalk-safe.js';
-import { config } from '/config/config.js';
-import { log } from '/messages/index.js';
+import { chalk } from '@core/config/chalk-safe.js';
+import { config } from '@core/config/config.js';
+import { log } from '@core/messages/index.js';
 
 /**
  * Utilitários para exibição de informações da CLI
@@ -69,7 +69,7 @@ export async function listarAnalistas(): Promise<void> {
   try {
     // Importação dinâmica para evitar dependência circular
     listaAnalistas = (
-      await import('/registry/registry.js')
+      await import('@analistas/registry/registry.js')
     ).listarAnalistas();
   } catch (err) {
     listaAnalistas = [];

@@ -4,11 +4,11 @@ import {
   AnalystTypes,
   CssMessages,
   SeverityLevels,
-} from '/messages/core/plugin-messages.js';
+} from '@core/messages/core/plugin-messages.js';
 import {
   isLikelyIntentionalDuplicate,
   lintCssLikeStylelint,
-} from '/impar/stylelint.js';
+} from '@shared/impar/stylelint.js';
 import postcss, {
   type AtRule,
   type Container,
@@ -61,7 +61,7 @@ function collectCssIssues(src: string, relPath: string): Msg[] {
     // Abre novos blocos antes de analisar propriedades da linha
     const opens = (trimmed.match(/\{/g) || []).length;
     for (let i = 0; i < opens; i++) {
-      const ctx = //i.test(trimmed) ? 'font-face' : undefined;
+      const ctx = /@font-face/i.test(trimmed) ? 'font-face' : undefined;
       stack.push({ props: {}, context: ctx });
     }
 
@@ -104,8 +104,8 @@ function collectCssIssues(src: string, relPath: string): Msg[] {
       ocorrencias.push(warn(CssMessages.importantUsage, relPath, line));
     }
 
-    // /http
-    if (/^\s+[^;]*http:\/\//i.test(trimmed)) {
+    // @import/http
+    if (/^@import\s+[^;]*http:\/\//i.test(trimmed)) {
       ocorrencias.push(warn(CssMessages.httpImport, relPath, line));
     }
 
@@ -389,7 +389,7 @@ function collectCssIssuesFromPostCssAst(root: Root, relPath: string): Msg[] {
     // 1) Duplicidade / !important / url(http:)
     const props: Record<string, { value: string; line?: number }> = {};
     const inFontFace = ctxAtRules.some((c) =>
-      c.toLowerCase().startsWith(''),
+      c.toLowerCase().startsWith('@font-face'),
     );
 
     container.nodes?.forEach((node) => {
@@ -517,14 +517,14 @@ function collectCssIssuesFromPostCssAst(root: Root, relPath: string): Msg[] {
       }
     }
 
-    // 3) Descer recursivamente para filhos ( e regras aninhadas)
+    // 3) Descer recursivamente para filhos (@rules e regras aninhadas)
     container.nodes?.forEach((node) => {
       if (node.type === 'atrule') {
         const at = node as AtRule;
         const name = String(at.name || '').toLowerCase();
         const line = getNodeLine(at);
 
-        //  http://...
+        // @import http://...
         if (
           name === 'import' &&
           /^\s*(url\()?\s*['"]?http:\/\//i.test(String(at.params || ''))

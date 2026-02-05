@@ -3,7 +3,7 @@ import path from 'node:path';
 export async function aplicarFixAliasImports(filePath, content) {
     if (!filePath.endsWith('.ts'))
         return { changed: false, content };
-    const out = content.replace(/\/types\.js\b/g, 'types');
+    const out = content.replace(/@types\/types\.js\b/g, 'types');
     return { changed: out !== content, content: out };
 }
 export async function scanAndApplyFix(root) {

@@ -4,9 +4,9 @@ import {
   AnalystTypes,
   SeverityLevels,
   XmlMessages,
-} from '/messages/core/plugin-messages.js';
-import { createLineLookup } from '/helpers/line-lookup.js';
-import { maskXmlNonCode } from '/helpers/masking.js';
+} from '@core/messages/core/plugin-messages.js';
+import { createLineLookup } from '@shared/helpers/line-lookup.js';
+import { maskXmlNonCode } from '@shared/helpers/masking.js';
 
 import { criarAnalista, criarOcorrencia } from '@';
 

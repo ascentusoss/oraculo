@@ -1,105 +1,55 @@
-# Dependencies
+# deixar aqui
+*.local
+.vscode
+.legados
+scripts/
+
+# Node modules
 node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-bun.lockb
+# pnpm store / pnp
+.pnpm-store/
+.pnp.cjs
+.pnp.loader.mjs
 
-# Build outputs
-dist/
+# Pacotes npm empacotados
+
+
+# build output
 build/
-bin/
-*.tsbuildinfo
+dist/
 
-# Test coverage
+# coverage
 coverage/
 .nyc_output/
-*.lcov
 
-# IDE and editor
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-*.sublime-workspace
-*.sublime-project
-.eclipse
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-.env.production
+# Oráculo runtime / caches / reports
+.oraculo/
+# TypeScript
+*.tsbuildinfo
 
 # Logs
-logs/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
-pnpm-debug.log*
 
-# System files
+# OS
 .DS_Store
 Thumbs.db
-.AppleDouble
-.LSOverride
-*.bak
-*.swp
-*.tmp
 
-# Project specific
-.oraculo/
-.cache/
-.temp/
-tmp/
-temp/
+# Editor settings
+.vscode/
+.idea/
 
-# OS-specific
-.windows-build-tools
-.venv/
-venv/
+# temp / test artifacts
+tmp-
+tmp*/
+tests/tmp/
 
-# Testing
-.vitest/
-.mocha/
-mocha.opts
+# lockfiles (do not commit lockfiles for library modules)
+yarn.lock
+pnpm-lock.yaml
+# package-lock.json is intentionally tracked for CI (GitHub Actions) and reproducible installs
 
-# TypeScript
-*.tsbuildinfo
-tsconfig.tsbuildinfo
-
-# npm
-.npmrc
-.npm/
-
-# yarn
-.yarn/cache/
-.yarn/unplugged/
-.yarn/build-state.yml
-.yarn/install-state.gz
-
-# pnpm
-pnpm-workspace.yaml
-
-# Temporary files
-*.tmp
-*.temp
-.tmp/
-
-# Git
-.git/
-.gitignore~
-
-# Node version managers
-.nvmrc
-.node-version
-.volta.json
+# optional: local env
+.env
+.env.*

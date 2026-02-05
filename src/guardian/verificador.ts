@@ -6,9 +6,9 @@ import { gerarSnapshotDoConteudo } from './hash.js';
 /**
  * Compara os arquivos atuais com os registros de integridade salvos e detecta divergências.
  *
- *  fileEntries Arquivos atuais lidos do sistema
- *  registrosSalvos Registros prévios salvos (hashes de referência)
- *  Resultado contendo lista de arquivos corrompidos e total verificado
+ * @param fileEntries Arquivos atuais lidos do sistema
+ * @param registrosSalvos Registros prévios salvos (hashes de referência)
+ * @returns Resultado contendo lista de arquivos corrompidos e total verificado
  */
 
 export function verificarRegistros(

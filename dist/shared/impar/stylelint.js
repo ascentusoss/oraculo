@@ -134,7 +134,7 @@ export function lintCssLikeStylelint(opts) {
                         warnings.push({
                             rule: 'no-http-at-import-rules',
                             severity: 'warning',
-                            text: ' via HTTP detectado; prefira HTTPS ou bundling local.',
+                            text: '@import via HTTP detectado; prefira HTTPS ou bundling local.',
                             line: node.loc?.start?.line,
                             column: node.loc?.start?.column,
                         });
@@ -143,7 +143,7 @@ export function lintCssLikeStylelint(opts) {
                         warnings.push({
                             rule: 'no-duplicate-at-import-rules',
                             severity: 'warning',
-                            text: ` duplicado detectado (${key}).`,
+                            text: `@import duplicado detectado (${key}).`,
                             line: node.loc?.start?.line,
                             column: node.loc?.start?.column,
                         });
@@ -167,7 +167,7 @@ export function lintCssLikeStylelint(opts) {
                         warnings.push({
                             rule: 'no-duplicate-keyframes',
                             severity: 'warning',
-                            text: `Declaração  duplicada detectada (${prelude}).`,
+                            text: `Declaração @keyframes duplicada detectada (${prelude}).`,
                             line: node.loc?.start?.line,
                             column: node.loc?.start?.column,
                         });

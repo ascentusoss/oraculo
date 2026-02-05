@@ -22,23 +22,11 @@ const multiSegmentDomains = [
 
  * TODO: Adicionar descrição da função
 
- *  {*} filePath - TODO: Descrever parâmetro
+ * @param {*} filePath - TODO: Descrever parâmetro
 
- *  {*} patterns - TODO: Descrever parâmetro
+ * @param {*} patterns - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} filePath - TODO: Descrever parâmetro
-
- *  {*} patterns - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -46,23 +34,11 @@ const multiSegmentDomains = [
 
  * TODO: Adicionar descrição da função
 
- *  {*} filePath - TODO: Descrever parâmetro
+ * @param {*} filePath - TODO: Descrever parâmetro
 
- *  {*} patterns - TODO: Descrever parâmetro
+ * @param {*} patterns - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} filePath - TODO: Descrever parâmetro
-
- *  {*} patterns - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -70,11 +46,35 @@ const multiSegmentDomains = [
 
  * TODO: Adicionar descrição da função
 
- *  {*} filePath - TODO: Descrever parâmetro
+ * @param {*} filePath - TODO: Descrever parâmetro
 
- *  {*} patterns - TODO: Descrever parâmetro
+ * @param {*} patterns - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} filePath - TODO: Descrever parâmetro
+
+ * @param {*} patterns - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} filePath - TODO: Descrever parâmetro
+
+ * @param {*} patterns - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -103,23 +103,11 @@ function matchesAnyPattern(filePath, patterns) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} cov - TODO: Descrever parâmetro
+ * @param {*} cov - TODO: Descrever parâmetro
 
- *  {*} total - TODO: Descrever parâmetro
+ * @param {*} total - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cov - TODO: Descrever parâmetro
-
- *  {*} total - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -127,23 +115,11 @@ function matchesAnyPattern(filePath, patterns) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} cov - TODO: Descrever parâmetro
+ * @param {*} cov - TODO: Descrever parâmetro
 
- *  {*} total - TODO: Descrever parâmetro
+ * @param {*} total - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cov - TODO: Descrever parâmetro
-
- *  {*} total - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -151,11 +127,35 @@ function matchesAnyPattern(filePath, patterns) {
 
  * TODO: Adicionar descrição da função
 
- *  {*} cov - TODO: Descrever parâmetro
+ * @param {*} cov - TODO: Descrever parâmetro
 
- *  {*} total - TODO: Descrever parâmetro
+ * @param {*} total - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cov - TODO: Descrever parâmetro
+
+ * @param {*} total - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cov - TODO: Descrever parâmetro
+
+ * @param {*} total - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

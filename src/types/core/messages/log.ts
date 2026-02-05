@@ -26,7 +26,7 @@ export interface ProjetoMetricas {
 }
 
 // Re-export do LogContextConfig
-export { LogContextConfig } from '/messages/log/log-messages.js';
+export { LogContextConfig } from '@core/messages/log/log-messages.js';
 
 /**
  * Tipos para funcionalidades estendidas do sistema de log

@@ -34,31 +34,52 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "/*": [
+      "@core/*": [
+        "core/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@analistas/*": [
+        "analistas/*"
+      ],
+      "@relatorios/*": [
+        "relatorios/*"
+      ],
+      "@guardian/*": [
+        "guardian/*"
+      ],
+      "@cli/*": [
+        "cli/*"
+      ],
+      "@zeladores/*": [
+        "zeladores/*"
+      ],
+      "@types/*": [
         "types/*"
       ],
-      "/types": [
+      "@types/types": [
         "types/index.ts"
       ],
-      "/analistas": [
+      "@types/analistas": [
         "types/analistas/index.ts"
       ],
-      "/guardian": [
+      "@types/guardian": [
         "types/guardian/index.ts"
       ],
-      "/cli": [
+      "@types/cli": [
         "types/cli/index.ts"
       ],
-      "/core": [
+      "@types/core": [
         "types/core/index.ts"
       ],
-      "/relatorios": [
+      "@types/relatorios": [
         "types/relatorios/index.ts"
       ],
-      "/shared": [
+      "@types/shared": [
         "types/shared/index.ts"
       ],
-      "/projeto": [
+      "@types/projeto": [
         "types/projeto/index.ts"
       ],
       "@": [

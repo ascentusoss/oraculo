@@ -84,7 +84,7 @@ export function detectarContextoProjeto(
   const allImports = importMatches.join(' ').toLowerCase();
 
   // Frameworks de bot
-  if (/discord\.js||eris/.test(allImports)) {
+  if (/discord\.js|@discordjs|eris/.test(allImports)) {
     contexto.frameworks.push('discord.js');
     contexto.isBot = true;
   }
@@ -187,7 +187,7 @@ export function detectarContextoProjeto(
     };
 
     Object.keys(deps).forEach((dep) => {
-      if (/discord\.js|eris|/.test(dep)) {
+      if (/discord\.js|eris|@discordjs/.test(dep)) {
         contexto.isBot = true;
         contexto.frameworks.push('discord.js');
       }

@@ -29,23 +29,11 @@ const CORES = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} cor - TODO: Descrever parâmetro
+ * @param {*} cor - TODO: Descrever parâmetro
 
- *  {*} mensagem - TODO: Descrever parâmetro
+ * @param {*} mensagem - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cor - TODO: Descrever parâmetro
-
- *  {*} mensagem - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -53,23 +41,11 @@ const CORES = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} cor - TODO: Descrever parâmetro
+ * @param {*} cor - TODO: Descrever parâmetro
 
- *  {*} mensagem - TODO: Descrever parâmetro
+ * @param {*} mensagem - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cor - TODO: Descrever parâmetro
-
- *  {*} mensagem - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -77,11 +53,35 @@ const CORES = {
 
  * TODO: Adicionar descrição da função
 
- *  {*} cor - TODO: Descrever parâmetro
+ * @param {*} cor - TODO: Descrever parâmetro
 
- *  {*} mensagem - TODO: Descrever parâmetro
+ * @param {*} mensagem - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cor - TODO: Descrever parâmetro
+
+ * @param {*} mensagem - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cor - TODO: Descrever parâmetro
+
+ * @param {*} mensagem - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -96,23 +96,11 @@ function logTitulo(titulo) {// console.log(`\n${CORES.bold}${CORES.azul}=== ${t
 
  * TODO: Adicionar descrição da função
 
- *  {*} nome - TODO: Descrever parâmetro
+ * @param {*} nome - TODO: Descrever parâmetro
 
- *  {*} arquivos - TODO: Descrever parâmetro
+ * @param {*} arquivos - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} nome - TODO: Descrever parâmetro
-
- *  {*} arquivos - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -120,23 +108,11 @@ function logTitulo(titulo) {// console.log(`\n${CORES.bold}${CORES.azul}=== ${t
 
  * TODO: Adicionar descrição da função
 
- *  {*} nome - TODO: Descrever parâmetro
+ * @param {*} nome - TODO: Descrever parâmetro
 
- *  {*} arquivos - TODO: Descrever parâmetro
+ * @param {*} arquivos - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} nome - TODO: Descrever parâmetro
-
- *  {*} arquivos - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -144,11 +120,35 @@ function logTitulo(titulo) {// console.log(`\n${CORES.bold}${CORES.azul}=== ${t
 
  * TODO: Adicionar descrição da função
 
- *  {*} nome - TODO: Descrever parâmetro
+ * @param {*} nome - TODO: Descrever parâmetro
 
- *  {*} arquivos - TODO: Descrever parâmetro
+ * @param {*} arquivos - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} nome - TODO: Descrever parâmetro
+
+ * @param {*} arquivos - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} nome - TODO: Descrever parâmetro
+
+ * @param {*} arquivos - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

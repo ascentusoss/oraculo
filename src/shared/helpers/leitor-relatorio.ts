@@ -3,8 +3,8 @@
  * Utilitários para trabalhar com relatórios JSON versionados
  */
 
-import { migrarParaVersaoAtual, validarSchema } from '/schema/version.js';
-import { lerEstado } from '/persistence/persistencia.js';
+import { migrarParaVersaoAtual, validarSchema } from '@core/schema/version.js';
+import { lerEstado } from '@shared/persistence/persistencia.js';
 
 import type { LeitorRelatorioOptions } from '@';
 

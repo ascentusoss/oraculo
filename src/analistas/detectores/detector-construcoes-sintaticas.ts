@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import type { NodePath } from '/traverse';
+import type { NodePath } from '@babel/traverse';
 import type {
   ArrowFunctionExpression,
   ClassDeclaration,
@@ -11,9 +11,9 @@ import type {
   TSInterfaceDeclaration,
   TSTypeAliasDeclaration,
   VariableDeclaration,
-} from '/types';
-import { traverse } from '/config/traverse.js';
-import { DetectorConstrucoesSintaticasMessages } from '/messages/analistas/detector-construcoes-sintaticas-messages.js';
+} from '@babel/types';
+import { traverse } from '@core/config/traverse.js';
+import { DetectorConstrucoesSintaticasMessages } from '@core/messages/analistas/detector-construcoes-sintaticas-messages.js';
 
 import {
   type Analista,

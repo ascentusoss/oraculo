@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para arquétipos personalizados
 /**
  * Sistema de Arquétipos Personalizados do Oráculo
@@ -12,12 +12,12 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { ARQUETIPOS } from '/estrategistas/arquetipos-defs.js';
+import { ARQUETIPOS } from '@analistas/estrategistas/arquetipos-defs.js';
 // NOTA: parseFileAST ainda não foi implementado no módulo de parsing
-// import { parseFileAST } from '/parsing/parser.js';
-import { log } from '/messages/index.js';
-import { ORACULO_FILES } from '/registry/paths.js';
-import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
+// import { parseFileAST } from '@core/parsing/parser.js';
+import { log } from '@core/messages/index.js';
+import { ORACULO_FILES } from '@core/registry/paths.js';
+import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
 
 import type { ArquetipoEstruturaDef, ArquetipoPersonalizado } from '@';
 

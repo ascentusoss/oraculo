@@ -1,0 +1,93 @@
+# SPDX-License-Identifier: MIT
+name: Performance Gate
+
+on:
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "src/**"
+      - "package.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "25"
+
+jobs:
+  performance:
+    name: ⚡ Performance Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Create Performance Baseline (if needed)
+        run: |
+          if [ ! -f docs/perf/baseline.json ]; then
+            mkdir -p docs/perf
+            npm run perf:baseline
+          fi
+        continue-on-error: true
+
+      - name: Run Performance Comparison
+        id: perf
+        run: |
+          npm run perf:compare > perf-result.txt 2>&1 || true
+          cat perf-result.txt
+
+      - name: Check for Regression
+        run: npm run perf:gate
+        continue-on-error: true
+
+      - name: Upload Performance Report
+        uses: actions/upload-artifact@v6
+        with:
+          name: performance-report
+          path: |
+            perf-result.txt
+            docs/perf/
+          retention-days: 7
+
+  benchmark:
+    name: 📊 Benchmark
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Run Diagnostic Benchmark
+        run: |
+          echo "## Benchmark: oraculo diagnosticar"
+          time node dist/bin/index.js diagnosticar --json > /dev/null 2>&1 || true
+
+          echo ""
+          echo "## Benchmark: oraculo diagnosticar --fast"
+          time node dist/bin/index.js diagnosticar --fast --json > /dev/null 2>&1 || true

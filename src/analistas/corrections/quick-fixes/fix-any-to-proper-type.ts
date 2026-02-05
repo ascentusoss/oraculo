@@ -4,9 +4,9 @@
  * Analisa uso de `any` e infere/cria tipos corretos
  */
 
-import type { Node } from '/types';
-import { buildTypesRelPathPosix } from '/config/conventions.js';
-import { MENSAGENS_FIX_TYPES } from '/messages/index.js';
+import type { Node } from '@babel/types';
+import { buildTypesRelPathPosix } from '@core/config/conventions.js';
+import { MENSAGENS_FIX_TYPES } from '@core/messages/index.js';
 
 import type { QuickFix, QuickFixResult, TypeSafetyWarning } from '@';
 
@@ -45,7 +45,7 @@ export const fixAnyToProperType: QuickFix = {
     }
 
     // 3. Não modificar arquivos de definição de tipos
-    if (filePath?.includes('.d.ts') || filePath?.includes('//')) {
+    if (filePath?.includes('.d.ts') || filePath?.includes('/@types/')) {
       return false;
     }
 

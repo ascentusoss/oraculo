@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import { ORACULO_FILES } from '/registry/paths.js';
+import { ORACULO_FILES } from '@core/registry/paths.js';
 
 /**
  * 📌 Caminho absoluto para o arquivo de baseline principal (usado pelo Sentinela).

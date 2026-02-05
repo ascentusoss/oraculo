@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Tipos para zelador de imports
+ * @fileoverview Tipos para zelador de imports
  *
  * Define estruturas para correção automática de imports relativos
  * para aliases @ e normalização de imports de tipos.
@@ -74,7 +74,7 @@ export interface ImportCorrecaoOptions {
   dryRun?: boolean;
   /** Modo verbose */
   verbose?: boolean;
-  /** Corrigir imports de  */
+  /** Corrigir imports de @types */
   corrigirTipos?: boolean;
   /** Corrigir imports relativos para aliases */
   corrigirRelativos?: boolean;

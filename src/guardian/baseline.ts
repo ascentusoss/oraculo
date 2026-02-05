@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 import path from 'node:path';
 
-import { lerEstado, salvarEstado } from '/persistence/persistencia.js';
+import { lerEstado, salvarEstado } from '@shared/persistence/persistencia.js';
 
 import { BASELINE_PATH } from './constantes.js';
 
