@@ -408,13 +408,7 @@ function normalizarSeparadoresDeSecao(code, opts = {}) {
             .replace(/\s+/g, ' ')
             .trim();
         const upper = withSpaces.toUpperCase();
-        return upper
-            .replace(/\bJSON\b/g, 'JSON')
-            .replace(/\bHTML\b/g, 'HTML')
-            .replace(/\bCSS\b/g, 'CSS')
-            .replace(/\bXML\b/g, 'XML')
-            .replace(/\bSVG\b/g, 'SVG')
-            .replace(/\bXXE\b/g, 'XXE');
+        return upper;
     };
     const inferTitleFromNextSymbol = (fromIndex) => {
         for (let j = fromIndex + 1; j < Math.min(lines.length, fromIndex + 35); j++) {
