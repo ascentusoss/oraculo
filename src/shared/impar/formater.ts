@@ -530,7 +530,6 @@ function normalizarSeparadoresDeSecao(
     const upper = withSpaces.toUpperCase();
 
     return upper
-      .replace(/\bJSON\b/g, 'JSON')
       .replace(/\bHTML\b/g, 'HTML')
       .replace(/\bCSS\b/g, 'CSS')
       .replace(/\bXML\b/g, 'XML')
