@@ -352,7 +352,7 @@ function collectHtmlIssuesRegex(src, relPath) {
             }
         }
     }
-    for (const m of src.matchAll(/<script[^>]*>[\s\S]*?<\/script\b[^>]*>/gi)) {
+    for (const m of src.matchAll(/<script[^>]*>[\s\S]*?<\/\s*script\b[^>]*\s*>/gi)) {
         if (typeof m.index === 'number') {
             const idx = m.index;
             if ((scanNoScriptStyle[idx] ?? ' ') !== '<') {
@@ -360,19 +360,19 @@ function collectHtmlIssuesRegex(src, relPath) {
             }
         }
         const isExternal = /\ssrc=/.test(m[0]);
-        const isEmpty = /<script[^>]*>\s*<\/\s*script\b[^>]*>/i.test(m[0]);
+        const isEmpty = /<script\b[^>]*>\s*<\/\s*script[^>]*>/i.test(m[0]);
         if (!isExternal && !isEmpty) {
             ocorrencias.push(warn(HtmlMessages.inlineScript, relPath, lineOfScan(m.index)));
         }
     }
-    for (const m of src.matchAll(/<style[^>]*>[\s\S]*?<\/style>/gi)) {
+    for (const m of src.matchAll(/<style[^>]*>[\s\S]*?<\/\s*style\b[^>]*\s*>/gi)) {
         if (typeof m.index === 'number') {
             const idx = m.index;
             if ((scanNoScriptStyle[idx] ?? ' ') !== '<') {
                 continue;
             }
         }
-        const isEmpty = /<style[^>]*>\s*<\/style>/i.test(m[0]);
+        const isEmpty = /<style\b[^>]*>\s*<\/\s*style[^>]*>/i.test(m[0]);
         if (!isEmpty) {
             ocorrencias.push(warn(HtmlMessages.inlineStyle, relPath, lineOfScan(m.index)));
         }
