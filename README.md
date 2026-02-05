@@ -5,21 +5,21 @@
 > Conteúdos de terceiros não licenciados de forma compatível não devem ser incluídos.
 > Referências a materiais externos devem ser linkadas e reescritas com palavras próprias.
 
-[![CI](https://github.com/i-lopos/oraculo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/i-lopos/oraculo/actions/workflows/ci.yml)
-[![Build](https://github.com/i-lopos/oraculo/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/i-lopos/oraculo/actions/workflows/build.yml)
-[![Monitor Deps](https://github.com/i-lopos/oraculo/actions/workflows/monitor-deps.yml/badge.svg)](https://github.com/i-lopos/oraculo/actions/workflows/monitor-deps.yml)
-[![Compliance](https://github.com/i-lopos/oraculo/actions/workflows/compliance.yml/badge.svg?branch=main)](https://github.com/i-lopos/oraculo/actions/workflows/compliance.yml)
-[![License Gate](https://github.com/i-lopos/oraculo/actions/workflows/license-gate.yml/badge.svg)](https://github.com/i-lopos/oraculo/actions/workflows/license-gate.yml)
+[![CI](https://github.com/ascentusoss/oraculo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/i-lopos/oraculo/actions/workflows/ci.yml)
+[![Build](https://github.com/ascentusoss/oraculo/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/ascentusoss/oraculo/actions/workflows/build.yml)
+[![Monitor Deps](https://github.com/ascentusoss/oraculo/actions/workflows/monitor-deps.yml/badge.svg)](https://github.com/ascentusoss/oraculo/actions/workflows/monitor-deps.yml)
+[![Compliance](https://github.com/ascentusoss/oraculo/actions/workflows/compliance.yml/badge.svg?branch=main)](https://github.com/ascentusoss/oraculo/actions/workflows/compliance.yml)
+[![License Gate](https://github.com/ascentusoss/oraculo/actions/workflows/license-gate.yml/badge.svg)](https://github.com/ascentusoss/oraculo/actions/workflows/license-gate.yml)
 
 ## 🌟 Status do Projeto
 
-**Versão Atual:** 0.3.6 | **Node.js:** >=24.12.0 | **Licença:** MIT
+**Versão Atual:** 0.3.7 | **Node.js:** >=24.12.0 | **Licença:** MIT
 
-[![Stars](https://img.shields.io/github/stars/ossmoralus/oraculo?style=social)](https://github.com/i-lopos/oraculo/stargazers)
-[![Forks](https://img.shields.io/github/forks/ossmoralus/oraculo?style=social)](https://github.com/i-lopos/oraculo/network/members)
-[![Issues](https://img.shields.io/github/issues/ossmoralus/oraculo)](https://github.com/i-lopos/oraculo/issues)
-[![Contributors](https://img.shields.io/github/contributors/ossmoralus/oraculo)](https://github.com/i-lopos/oraculo/graphs/contributors)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/i-lopos/oraculo/blob/main/CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/ossmoralus/oraculo?style=social)](https://github.com/ascentusoss/oraculo/stargazers)
+[![Forks](https://img.shields.io/github/forks/ossmoralus/oraculo?style=social)](https://github.com/ascentusoss/oraculo/network/members)
+[![Issues](https://img.shields.io/github/issues/ossmoralus/oraculo)](https://github.com/ascentusoss/oraculo/issues)
+[![Contributors](https://img.shields.io/github/contributors/ossmoralus/oraculo)](https://github.com/ascentusoss/oraculo/graphs/contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ascentusoss/oraculo/blob/main/CONTRIBUTING.md)
 
 ## 🚀 Demo Rápido
 
