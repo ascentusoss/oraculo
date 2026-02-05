@@ -92,12 +92,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ossmoralus/oraculo.git"
+    "url": "git+https://github.com/ascentusoss/oraculo.git"
   },
   "bugs": {
-    "url": "https://github.com/ossmoralus/oraculo/issues"
+    "url": "https://github.com/ascentusoss/oraculo/issues"
   },
-  "homepage": "https://github.com/ossmoralus/oraculo#readme",
+  "homepage": "https://github.com/ascentusoss/oraculo#readme",
   "preferGlobal": true,
   "files": [
     "dist",

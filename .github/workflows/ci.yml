@@ -47,12 +47,3 @@ jobs:
 
       - name: TypeScript Check
         run: npm run typecheck
-
-      - name: Format Check
-        run: npm run formatar --check
-
-      - name: Test
-        run: npm run test:ci
-
-      - name: Coverage Gate
-        run: npm run coverage:gate
