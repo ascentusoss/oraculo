@@ -1,5 +1,5 @@
-import type { NodePath } from '/traverse';
-import type { Node } from '/types';
+import type { NodePath } from '@babel/traverse';
+import type { Node } from '@babel/types';
 import type { Ocorrencia } from '../../types/index.js';
 export declare const analistaFuncoesLongas: {
     aplicar(src: string, relPath: string, ast: NodePath<Node> | Node | null, _fullPath?: string): Ocorrencia[];

@@ -2,8 +2,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { config } from '/config/config.js';
-import { mesclarConfigExcludes } from '/config/excludes-padrao.js';
+import { config } from '@core/config/config.js';
+import { mesclarConfigExcludes } from '@core/config/excludes-padrao.js';
 
 /**
  * Utilitários para processamento de filtros CLI

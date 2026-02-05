@@ -16,27 +16,13 @@ const ROOT = process.cwd();
 
  * TODO: Adicionar descrição da função
 
- *  {*} cmd - TODO: Descrever parâmetro
+ * @param {*} cmd - TODO: Descrever parâmetro
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} opts - TODO: Descrever parâmetro
+ * @param {*} opts - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cmd - TODO: Descrever parâmetro
-
- *  {*} args - TODO: Descrever parâmetro
-
- *  {*} opts - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -44,27 +30,13 @@ const ROOT = process.cwd();
 
  * TODO: Adicionar descrição da função
 
- *  {*} cmd - TODO: Descrever parâmetro
+ * @param {*} cmd - TODO: Descrever parâmetro
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} opts - TODO: Descrever parâmetro
+ * @param {*} opts - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cmd - TODO: Descrever parâmetro
-
- *  {*} args - TODO: Descrever parâmetro
-
- *  {*} opts - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -72,13 +44,41 @@ const ROOT = process.cwd();
 
  * TODO: Adicionar descrição da função
 
- *  {*} cmd - TODO: Descrever parâmetro
+ * @param {*} cmd - TODO: Descrever parâmetro
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} opts - TODO: Descrever parâmetro
+ * @param {*} opts - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cmd - TODO: Descrever parâmetro
+
+ * @param {*} args - TODO: Descrever parâmetro
+
+ * @param {*} opts - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cmd - TODO: Descrever parâmetro
+
+ * @param {*} args - TODO: Descrever parâmetro
+
+ * @param {*} opts - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

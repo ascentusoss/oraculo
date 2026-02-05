@@ -1,4 +1,4 @@
-import type { Node } from '/types';
+import type { Node } from '@babel/types';
 import type { FileEntryWithAst, Ocorrencia } from '../../index.js';
 import type { GuardianResult } from '../../guardian/resultado.js';
 export interface SimbolosLog {

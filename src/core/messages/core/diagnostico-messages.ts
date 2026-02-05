@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos inline para helpers de mensagens
 /**
  * Mensagens do Comando Diagnosticar

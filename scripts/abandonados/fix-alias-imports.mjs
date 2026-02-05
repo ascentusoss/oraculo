@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env node
 // SPDX-License-Identifier: MIT
-// Codemod simples: substitui '/tipos.js' -> '/tipos' nos .ts de src/ e tests/
+// Codemod simples: substitui '@tipos/tipos.js' -> '@tipos/tipos' nos .ts de src/ e tests/
 
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
@@ -36,7 +36,7 @@ async function main() {
       for await (const file of walk(dir)) {
         if (!file.endsWith('.ts')) continue;
         const src = await fs.readFile(file, 'utf8');
-        const out = src.replace(/\/tipos\.js\b/g, '/tipos');
+        const out = src.replace(/@tipos\/tipos\.js\b/g, '@tipos/tipos');
         if (out !== src) {
           await fs.writeFile(file, out, 'utf8');
           console.log(`[rewrite] ${path.relative(root, file)}`);

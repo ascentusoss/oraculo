@@ -27,23 +27,11 @@ const vitestEntry = path.join(root, 'node_modules', 'vitest', 'vitest.mjs');
 
  * TODO: Adicionar descrição da função
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} extraEnv = {} - TODO: Descrever parâmetro
+ * @param {*} extraEnv = {} - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} args - TODO: Descrever parâmetro
-
- *  {*} extraEnv = {} - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -51,23 +39,11 @@ const vitestEntry = path.join(root, 'node_modules', 'vitest', 'vitest.mjs');
 
  * TODO: Adicionar descrição da função
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} extraEnv = {} - TODO: Descrever parâmetro
+ * @param {*} extraEnv = {} - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} args - TODO: Descrever parâmetro
-
- *  {*} extraEnv = {} - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -75,11 +51,35 @@ const vitestEntry = path.join(root, 'node_modules', 'vitest', 'vitest.mjs');
 
  * TODO: Adicionar descrição da função
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} extraEnv = {} - TODO: Descrever parâmetro
+ * @param {*} extraEnv = {} - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} args - TODO: Descrever parâmetro
+
+ * @param {*} extraEnv = {} - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} args - TODO: Descrever parâmetro
+
+ * @param {*} extraEnv = {} - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -105,23 +105,11 @@ const coverageFile = path.join(root, 'coverage', 'coverage-final.json');
 
  * TODO: Adicionar descrição da função
 
- *  {*} target - TODO: Descrever parâmetro
+ * @param {*} target - TODO: Descrever parâmetro
 
- *  {*} source - TODO: Descrever parâmetro
+ * @param {*} source - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} target - TODO: Descrever parâmetro
-
- *  {*} source - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -129,23 +117,11 @@ const coverageFile = path.join(root, 'coverage', 'coverage-final.json');
 
  * TODO: Adicionar descrição da função
 
- *  {*} target - TODO: Descrever parâmetro
+ * @param {*} target - TODO: Descrever parâmetro
 
- *  {*} source - TODO: Descrever parâmetro
+ * @param {*} source - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} target - TODO: Descrever parâmetro
-
- *  {*} source - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -153,11 +129,35 @@ const coverageFile = path.join(root, 'coverage', 'coverage-final.json');
 
  * TODO: Adicionar descrição da função
 
- *  {*} target - TODO: Descrever parâmetro
+ * @param {*} target - TODO: Descrever parâmetro
 
- *  {*} source - TODO: Descrever parâmetro
+ * @param {*} source - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} target - TODO: Descrever parâmetro
+
+ * @param {*} source - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} target - TODO: Descrever parâmetro
+
+ * @param {*} source - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

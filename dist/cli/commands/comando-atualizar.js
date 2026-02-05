@@ -41,8 +41,8 @@ export function comandoAtualizar(aplicarFlagsGlobais) {
                 log.info('Recomendado: `oraculo guardian --diff` e `oraculo guardian --accept-baseline` antes de atualizar.');
             }
             const cmd = opts.global
-                ? 'npm install -g oraculo'
-                : 'npm install oraculo';
+                ? 'npm install -g oraculo@latest'
+                : 'npm install oraculo@latest';
             logSistema.atualizacaoExecutando(cmd);
             executarShellSeguro(cmd, { stdio: 'inherit' });
             logSistema.atualizacaoSucesso();

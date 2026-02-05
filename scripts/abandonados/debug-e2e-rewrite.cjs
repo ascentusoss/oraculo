@@ -10,7 +10,7 @@ const { spawnSync } = require('child_process');
  * TODO: Adicionar descrição da função
 
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
 
  */
@@ -22,7 +22,7 @@ const { spawnSync } = require('child_process');
  * TODO: Adicionar descrição da função
 
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
 
  */
@@ -34,7 +34,7 @@ const { spawnSync } = require('child_process');
  * TODO: Adicionar descrição da função
 
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
 
  */
@@ -46,7 +46,7 @@ const { spawnSync } = require('child_process');
  * TODO: Adicionar descrição da função
 
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
 
  */
@@ -58,7 +58,7 @@ const { spawnSync } = require('child_process');
  * TODO: Adicionar descrição da função
 
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
 
  */
@@ -70,7 +70,7 @@ const { spawnSync } = require('child_process');
  * Descreve a função garantirBuild
 
 
- *  {*} Descrever retorno
+ * @returns {*} Descrever retorno
 
 
  */
@@ -82,7 +82,7 @@ const { spawnSync } = require('child_process');
  * Descreve a função garantirBuild
 
 
- *  {*} Descrever retorno
+ * @returns {*} Descrever retorno
 
 
  */

@@ -7,13 +7,13 @@
 import {
   type CasoTipoInseguro,
   exportarRelatoriosFixTypes,
-} from '/handlers/fix-types-exporter.js';
-import { ExitCode, sair } from '/helpers/exit-codes.js';
+} from '@cli/handlers/fix-types-exporter.js';
+import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
 import {
   expandIncludePatterns,
   processPatternList,
-} from '/helpers/pattern-helpers.js';
-import { config } from '/config/config.js';
+} from '@cli/helpers/pattern-helpers.js';
+import { config } from '@core/config/config.js';
 import {
   DICAS,
   formatarTipoInseguro,
@@ -29,8 +29,8 @@ import {
   MENSAGENS_SUCESSO_FIX_TYPES as MENSAGENS_SUCESSO,
   TEMPLATE_RESUMO_FINAL,
   TEXTOS_CATEGORIZACAO_FIX_TYPES,
-} from '/messages/index.js';
-import { PROJECT_ROOT } from '/registry/paths.js';
+} from '@core/messages/index.js';
+import { PROJECT_ROOT } from '@core/registry/paths.js';
 import { Command } from 'commander';
 
 import type { FixTypesOptions, Ocorrencia } from '@';
@@ -120,8 +120,8 @@ async function executarFixTypes(options: FixTypesOptions): Promise<void> {
   if (excludeList.length) config.CLI_EXCLUDE_PATTERNS = excludeList;
 
   // Importações dinâmicas para evitar dependências circulares
-  const { iniciarInquisicao } = await import('/execution/inquisidor.js');
-  const { registroAnalistas } = await import('/registry/registry.js');
+  const { iniciarInquisicao } = await import('@core/execution/inquisidor.js');
+  const { registroAnalistas } = await import('@analistas/registry/registry.js');
 
   // Filtrar apenas o detector de tipos inseguros
   const analistaTiposInseguros = registroAnalistas.find(
@@ -239,9 +239,9 @@ async function executarFixTypes(options: FixTypesOptions): Promise<void> {
 
   // Importar quick fixes (exportações nomeadas)
   const { fixAnyToProperType } =
-    await import('/corrections/quick-fixes/fix-any-to-proper-type.js');
+    await import('@analistas/corrections/quick-fixes/fix-any-to-proper-type.js');
   const { fixUnknownToSpecificType } =
-    await import('/corrections/quick-fixes/fix-unknown-to-specific-type.js');
+    await import('@analistas/corrections/quick-fixes/fix-unknown-to-specific-type.js');
 
   if (!fixAnyToProperType || !fixUnknownToSpecificType) {
     log.erro(MENSAGENS_ERRO.modulosNaoEncontrados);
@@ -268,7 +268,7 @@ async function executarFixTypes(options: FixTypesOptions): Promise<void> {
 
   // Importar categorizador
   const { categorizarUnknown, extractLineContext } =
-    await import('/corrections/type-safety/context-analyzer.js');
+    await import('@analistas/corrections/type-safety/context-analyzer.js');
 
   // Estatísticas de categorização
   const stats = {
@@ -603,7 +603,7 @@ async function executarFixTypes(options: FixTypesOptions): Promise<void> {
     log.info(MENSAGENS_CLI_FIX_TYPES.linhaEmBranco);
 
     const { aplicarCorrecoesEmLote } =
-      await import('/corrections/auto-fix-engine.js');
+      await import('@analistas/corrections/auto-fix-engine.js');
 
     // Agrupar ocorrências por arquivo
     const porArquivo: Record<

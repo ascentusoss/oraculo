@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-//  tipo-inseguro-unknown
+// @oraculo-disable tipo-inseguro-unknown
 // Justificativa: unknown é usado para manipulação segura de nós AST com tipagem defensiva
-import type { NodePath } from '/traverse';
+import type { NodePath } from '@babel/traverse';
 import type {
   ArrowFunctionExpression,
   BlockStatement,
@@ -18,14 +18,14 @@ import type {
   StringLiteral,
   VariableDeclaration,
   VariableDeclarator,
-} from '/types';
-import * as t from '/types';
-import { traverse } from '/config/traverse.js';
-import { ComandosCliMessages } from '/messages/analistas/analista-comandos-cli-messages.js';
+} from '@babel/types';
+import * as t from '@babel/types';
+import { traverse } from '@core/config/traverse.js';
+import { ComandosCliMessages } from '@core/messages/analistas/analista-comandos-cli-messages.js';
 import {
   detectarContextoProjeto,
   isRelevanteParaAnalise,
-} from '/contexto-projeto.js';
+} from '@shared/contexto-projeto.js';
 
 import type {
   ComandoRegistro,
@@ -455,7 +455,7 @@ export const analistaComandosCli = {
               }
               if (t.isExpressionStatement(stmt)) {
                 const exprStmt =
-                  stmt as import('/types').ExpressionStatement;
+                  stmt as import('@babel/types').ExpressionStatement;
                 if (
                   t.isCallExpression(exprStmt.expression) &&
                   t.isMemberExpression(exprStmt.expression.callee)

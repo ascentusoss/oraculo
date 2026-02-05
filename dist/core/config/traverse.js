@@ -1,4 +1,4 @@
-import traverseModule from '/traverse';
+import traverseModule from '@babel/traverse';
 let _traverseModule = traverseModule;
 export function __setTraverseModule(modulo) {
     _traverseModule = modulo;

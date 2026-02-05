@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: MIT
+name: Stale Issues
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Daily at midnight
+  workflow_dispatch:
+
+jobs:
+  stale:
+    name: 🧹 Mark Stale Issues
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v10
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Issues
+          stale-issue-message: |
+            Esta issue está inativa há 60 dias.
+
+            - Se ainda for relevante, por favor adicione um comentário ou atualize a issue.
+            - Caso contrário, ela será fechada em 14 dias.
+
+            Obrigado pela sua contribuição! 🙏
+          stale-issue-label: "stale"
+          days-before-issue-stale: 60
+          days-before-issue-close: 14
+
+          # Pull Requests
+          stale-pr-message: |
+            Este PR está inativo há 30 dias.
+
+            - Se você pretende continuar trabalhando nele, por favor adicione um comentário.
+            - Caso contrário, ele será fechado em 14 dias.
+
+            Obrigado pela sua contribuição! 🙏
+          stale-pr-label: "stale"
+          days-before-pr-stale: 30
+          days-before-pr-close: 14
+
+          # Labels to ignore
+          exempt-issue-labels: "pinned,security,priority-high,in-progress"
+          exempt-pr-labels: "pinned,security,priority-high,in-progress,wip"
+
+          # Messages
+          close-issue-message: "Esta issue foi fechada por inatividade. Sinta-se à vontade para reabri-la se necessário."
+          close-pr-message: "Este PR foi fechado por inatividade. Sinta-se à vontade para reabri-lo se necessário."

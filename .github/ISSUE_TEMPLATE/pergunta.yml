@@ -1,0 +1,42 @@
+name: "Pergunta — Suporte / Dúvida"
+about: "Perguntas de uso, configuração e comportamento do projeto (Q&A)."
+title: "Pergunta: {{short description}}"
+labels: ["discussão", "pergunta"]
+category: "Perguntas"
+body: |
+  Obrigado por abrir uma pergunta — preencha o formulário abaixo com o máximo de contexto.
+
+questions:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "Descreva sua dúvida"
+      description: "Contexto, comportamento esperado e o que ocorreu. Inclua trechos mínimos de código quando relevante."
+      placeholder: "Ex.: Ao executar `oraculo ...` recebo o erro X..."
+      required: true
+      min_length: 20
+
+  - type: input
+    id: passos
+    attributes:
+      label: "Passos mínimos para reproduzir (opcional)"
+      placeholder: "1) ... 2) ..."
+
+  - type: input
+    id: ambiente
+    attributes:
+      label: "Ambiente (SO, Node, versão do oraculo)"
+      placeholder: "Ex.: Linux, Node 18, oraculo v0.3.0"
+
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: "Prioridade (ajuda a priorizar)"
+      options:
+        - label: "Baixa"
+          value: "baixa"
+        - label: "Média"
+          value: "media"
+        - label: "Alta"
+          value: "alta"
+      required: true

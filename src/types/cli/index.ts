@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Exportações centralizadas de tipos da CLI
+ * @fileoverview Exportações centralizadas de tipos da CLI
  */
 
 // Options e Filtros

@@ -2,10 +2,10 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { grafoDependencias } from '/detectores/detector-dependencias.js';
-import { config } from '/config/config.js';
-import { isInsideSrc } from '/config/paths.js';
-import { scanRepository } from '/execution/scanner.js';
+import { grafoDependencias } from '@analistas/detectores/detector-dependencias.js';
+import { config } from '@core/config/config.js';
+import { isInsideSrc } from '@core/config/paths.js';
+import { scanRepository } from '@core/execution/scanner.js';
 import { minimatch } from 'minimatch';
 
 import type { ArquivoFantasma, FileMap } from '@';

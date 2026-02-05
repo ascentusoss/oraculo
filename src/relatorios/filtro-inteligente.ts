@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para filtragem de relatórios
 // Sistema inteligente de filtragem e priorização de relatórios
 // Agrupa problemas similares e prioriza por impacto para evitar sobrecarga de informação
@@ -8,7 +8,7 @@ import {
   AGRUPAMENTOS_MENSAGEM,
   PRIORIDADES,
   RelatorioMessages,
-} from '/messages/index.js';
+} from '@core/messages/index.js';
 
 import type {
   Ocorrencia,
@@ -344,7 +344,7 @@ export async function gerarRelatorioMarkdownResumo(
   linhas.push('');
   linhas.push(`**Relatório gerado em**: ${new Date().toLocaleString('pt-BR')}`);
 
-  const { salvarEstado } = await import('/persistence/persistencia.js');
+  const { salvarEstado } = await import('@shared/persistence/persistencia.js');
   await salvarEstado(outputPath, linhas.join('\n'));
 }
 

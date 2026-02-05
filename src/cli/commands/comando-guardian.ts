@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos inline para opções de comando CLI são locais e não precisam de extração
 // Importar handler modular do Guardian (Sprint 2)
 import {
   executarGuardian as executarGuardianModular,
   type GuardianOptions,
-} from '/diagnostico/handlers/guardian-handler.js';
-import { ExitCode, sair } from '/helpers/exit-codes.js';
-import { config } from '/config/config.js';
-import { iniciarInquisicao } from '/execution/inquisidor.js';
-import { CliComandoGuardianMessages } from '/messages/cli/cli-comando-guardian-messages.js';
-import { log, logGuardian } from '/messages/index.js';
-import { acceptNewBaseline } from '/sentinela.js';
+} from '@cli/diagnostico/handlers/guardian-handler.js';
+import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
+import { config } from '@core/config/config.js';
+import { iniciarInquisicao } from '@core/execution/inquisidor.js';
+import { CliComandoGuardianMessages } from '@core/messages/cli/cli-comando-guardian-messages.js';
+import { log, logGuardian } from '@core/messages/index.js';
+import { acceptNewBaseline } from '@guardian/sentinela.js';
 import { Command } from 'commander';
 
 import type { FileEntry, FileEntryWithAst } from '@';

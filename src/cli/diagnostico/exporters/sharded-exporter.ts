@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 // SPDX-FileCopyrightText: 2025 Oráculo Contributors
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para manipulação de shards
 
 /**
- *  cli/diagnostico/exporters/sharded-exporter
- *  Exportador que fragmenta relatórios grandes em múltiplos arquivos
- *  docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
+ * @module cli/diagnostico/exporters/sharded-exporter
+ * @description Exportador que fragmenta relatórios grandes em múltiplos arquivos
+ * @see docs/REFACTOR-CLI-DIAGNOSTICAR.md - Sprint 2
  */
 
 import type {

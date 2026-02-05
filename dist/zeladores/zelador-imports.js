@@ -3,17 +3,17 @@ import path from 'node:path';
 import { log } from '../core/messages/index.js';
 import { ERROS_IMPORTS, gerarResumoImports, MENSAGENS_IMPORTS, PROGRESSO_IMPORTS, } from '../core/messages/zeladores/zelador-messages.js';
 const DEFAULT_ALIAS_CONFIG = {
-    '': './core',
-    '': './analistas',
-    '': './types',
-    '': './shared',
-    '': './cli',
-    '': './guardian',
-    '': './relatorios',
-    '': './zeladores',
+    '@core': './core',
+    '@analistas': './analistas',
+    '@types': './types',
+    '@shared': './shared',
+    '@cli': './cli',
+    '@guardian': './guardian',
+    '@relatorios': './relatorios',
+    '@zeladores': './zeladores',
 };
 const PATTERNS = {
-    tiposComExtensao: /\/types\.js\b/g,
+    tiposComExtensao: /@types\/types\.js\b/g,
     importRelativo: /from\s+(['"])(\.\.[\/\\].+?)\1/g,
 };
 async function* walkDirectory(dir) {
@@ -45,18 +45,18 @@ function corrigirImportsTipos(conteudo) {
         correcoes.push({
             tipo: 'tipos-extensao',
             de: match,
-            para: '/types',
+            para: '@types/types',
             linha: conteudo.substring(0, offset).split('\n').length,
         });
-        return '/types';
+        return '@types/types';
     });
-    const regex = /(['"])\/([^'"\n]+?)\1/g;
+    const regex = /(['"])@types\/([^'"\n]+?)\1/g;
     conteudoAtualizado = conteudoAtualizado.replace(regex, (match, quote, subpath, offset) => {
         const normalized = String(subpath || '').trim();
         if (normalized === 'types')
             return match;
         if (normalized === 'types.js') {
-            const novoImport = `${quote}/types${quote}`;
+            const novoImport = `${quote}@types/types${quote}`;
             correcoes.push({
                 tipo: 'tipos-extensao',
                 de: match,
@@ -65,7 +65,7 @@ function corrigirImportsTipos(conteudo) {
             });
             return novoImport;
         }
-        const novoImport = `${quote}/types${quote}`;
+        const novoImport = `${quote}@types/types${quote}`;
         correcoes.push({
             tipo: 'tipos-subpath',
             de: match,

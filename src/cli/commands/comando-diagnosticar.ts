@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos inline para opções de comando CLI são locais e não precisam de extração
-import { optionsDiagnosticar } from '/options-diagnosticar.js';
-import { processarDiagnostico } from '/processamento-diagnostico.js';
-import { CliComandoDiagnosticarMessages } from '/messages/cli/cli-comando-diagnosticar-messages.js';
-import { CABECALHOS, log } from '/messages/index.js';
-import { ativarModoJson } from '/helpers/json-mode.js';
+import { optionsDiagnosticar } from '@cli/options-diagnosticar.js';
+import { processarDiagnostico } from '@cli/processamento-diagnostico.js';
+import { CliComandoDiagnosticarMessages } from '@core/messages/cli/cli-comando-diagnosticar-messages.js';
+import { CABECALHOS, log } from '@core/messages/index.js';
+import { ativarModoJson } from '@shared/helpers/json-mode.js';
 import { Command } from 'commander';
 import ora from 'ora';
 
@@ -118,8 +118,8 @@ export function comandoDiagnosticar(
       const isVerbose = opts.full || logLevel === 'debug' || opts.detalhado;
       if (!opts.json && isVerbose) {
         try {
-          const { default: chalk } = await import('/config/chalk-safe.js');
-          const { config } = await import('/config/config.js');
+          const { default: chalk } = await import('@core/config/chalk-safe.js');
+          const { config } = await import('@core/config/config.js');
           const activeFlags: string[] = [];
           const details: string[] = [];
 

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-import { grafoDependencias } from '/detectores/detector-dependencias.js';
+import { grafoDependencias } from '@analistas/detectores/detector-dependencias.js';
 import {
   ARQUETIPOS,
   normalizarCaminho,
-} from '/estrategistas/arquetipos-defs.js';
+} from '@analistas/estrategistas/arquetipos-defs.js';
 
 import type {
   ArquetipoDeteccaoAnomalia,
@@ -321,7 +321,7 @@ export function scoreArquetipoAvancado(
         score += 25;
         explicacao += '\n✓ App Router Next.js detectado - arquitetura moderna.';
       }
-      if (deps.includes('prisma') || deps.includes('/client')) {
+      if (deps.includes('prisma') || deps.includes('@prisma/client')) {
         score += 20;
         explicacao += '\n✓ Prisma ORM detectado - banco de dados integrado.';
       }
@@ -359,7 +359,7 @@ export function scoreArquetipoAvancado(
         score += 25;
         explicacao += '\n✓ Framework Fastify detectado - alta performance.';
       }
-      if (frameworks.includes('NestJS') || deps.includes('/core')) {
+      if (frameworks.includes('NestJS') || deps.includes('@nestjs/core')) {
         score += 30;
         explicacao +=
           '\n✓ Framework NestJS detectado - arquitetura enterprise.';
@@ -368,7 +368,7 @@ export function scoreArquetipoAvancado(
         score += 20;
         explicacao += '\n✓ Framework Koa detectado.';
       }
-      if (frameworks.includes('Hapi') || deps.includes('/hapi')) {
+      if (frameworks.includes('Hapi') || deps.includes('@hapi/hapi')) {
         score += 20;
         explicacao += '\n✓ Framework Hapi detectado.';
       }
@@ -383,12 +383,12 @@ export function scoreArquetipoAvancado(
       if (
         deps.includes('cors') ||
         deps.includes('helmet') ||
-        deps.includes('/cors')
+        deps.includes('@fastify/cors')
       ) {
         score += 10;
         explicacao += '\n✓ Middleware de segurança/CORS presente.';
       }
-      if (deps.includes('joi') || deps.includes('/joi')) {
+      if (deps.includes('joi') || deps.includes('@hapi/joi')) {
         score += 10;
         explicacao += '\n✓ Validação de dados detectada.';
       }
@@ -425,7 +425,7 @@ export function scoreArquetipoAvancado(
         score += 20;
         explicacao += '\n✓ State management detectado (Vuex/Pinia).';
       }
-      if (deps.includes('/cli-service') || deps.includes('vite')) {
+      if (deps.includes('@vue/cli-service') || deps.includes('vite')) {
         score += 15;
         explicacao += '\n✓ Build tool Vue detectado (CLI/Vite).';
       }

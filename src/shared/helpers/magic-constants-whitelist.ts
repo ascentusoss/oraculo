@@ -14,8 +14,8 @@ export type { MagicConstantRule };
 
 /**
  * Discord.js API limits (oficialmente documentados)
- *  https://discord.com/developers/docs/resources/channel#embed-limits
- *  https://discord.com/developers/docs/interactions/message-components#select-menus
+ * @see https://discord.com/developers/docs/resources/channel#embed-limits
+ * @see https://discord.com/developers/docs/interactions/message-components#select-menus
  */
 export const DISCORD_LIMITS: MagicConstantRule[] = [
   { value: 10, description: 'Máximo de fields em embed' },

@@ -40,7 +40,7 @@ function _isInTodoComment(match, fullCode) {
 function _isCriticalSystemFile(fullCode) {
     const criticalIndicators = [
         'SPDX-License-Identifier',
-        '/configuracao',
+        '@core/configuracao',
         'operario-estrutura',
         'corretor-estrutura',
         'config.js',

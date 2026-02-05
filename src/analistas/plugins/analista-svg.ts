@@ -4,11 +4,11 @@ import {
   AnalystTypes,
   SeverityLevels,
   SvgMessages,
-} from '/messages/core/plugin-messages.js';
+} from '@core/messages/core/plugin-messages.js';
 import {
   otimizarSvgLikeSvgo,
   shouldSugerirOtimizacaoSvg,
-} from '/impar/svgs.js';
+} from '@shared/impar/svgs.js';
 
 import type { Ocorrencia } from '@';
 import { criarAnalista, criarOcorrencia } from '@';

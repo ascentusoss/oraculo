@@ -26,23 +26,11 @@ import { join } from 'node:path';
 
  * TODO: Adicionar descrição da função
 
- *  {*} cmd - TODO: Descrever parâmetro
+ * @param {*} cmd - TODO: Descrever parâmetro
 
- *  {*} opts = {} - TODO: Descrever parâmetro
+ * @param {*} opts = {} - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cmd - TODO: Descrever parâmetro
-
- *  {*} opts = {} - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -50,23 +38,11 @@ import { join } from 'node:path';
 
  * TODO: Adicionar descrição da função
 
- *  {*} cmd - TODO: Descrever parâmetro
+ * @param {*} cmd - TODO: Descrever parâmetro
 
- *  {*} opts = {} - TODO: Descrever parâmetro
+ * @param {*} opts = {} - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} cmd - TODO: Descrever parâmetro
-
- *  {*} opts = {} - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -74,11 +50,35 @@ import { join } from 'node:path';
 
  * TODO: Adicionar descrição da função
 
- *  {*} cmd - TODO: Descrever parâmetro
+ * @param {*} cmd - TODO: Descrever parâmetro
 
- *  {*} opts = {} - TODO: Descrever parâmetro
+ * @param {*} opts = {} - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cmd - TODO: Descrever parâmetro
+
+ * @param {*} opts = {} - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} cmd - TODO: Descrever parâmetro
+
+ * @param {*} opts = {} - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -99,27 +99,13 @@ function hasGh() {
 
  * TODO: Adicionar descrição da função
 
- *  {*} method - TODO: Descrever parâmetro
+ * @param {*} method - TODO: Descrever parâmetro
 
- *  {*} path - TODO: Descrever parâmetro
+ * @param {*} path - TODO: Descrever parâmetro
 
- *  {*} body - TODO: Descrever parâmetro
+ * @param {*} body - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} method - TODO: Descrever parâmetro
-
- *  {*} path - TODO: Descrever parâmetro
-
- *  {*} body - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -127,27 +113,13 @@ function hasGh() {
 
  * TODO: Adicionar descrição da função
 
- *  {*} method - TODO: Descrever parâmetro
+ * @param {*} method - TODO: Descrever parâmetro
 
- *  {*} path - TODO: Descrever parâmetro
+ * @param {*} path - TODO: Descrever parâmetro
 
- *  {*} body - TODO: Descrever parâmetro
+ * @param {*} body - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} method - TODO: Descrever parâmetro
-
- *  {*} path - TODO: Descrever parâmetro
-
- *  {*} body - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -155,13 +127,41 @@ function hasGh() {
 
  * TODO: Adicionar descrição da função
 
- *  {*} method - TODO: Descrever parâmetro
+ * @param {*} method - TODO: Descrever parâmetro
 
- *  {*} path - TODO: Descrever parâmetro
+ * @param {*} path - TODO: Descrever parâmetro
 
- *  {*} body - TODO: Descrever parâmetro
+ * @param {*} body - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} method - TODO: Descrever parâmetro
+
+ * @param {*} path - TODO: Descrever parâmetro
+
+ * @param {*} body - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} method - TODO: Descrever parâmetro
+
+ * @param {*} path - TODO: Descrever parâmetro
+
+ * @param {*} body - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -203,11 +203,11 @@ function inferRepo() {
   try {
     const url = sh('git config --get remote.origin.url');
     // supports https and ssh
-    // https://github.com/ascentusoss/repo.git
-    // git.com:owner/repo.git
+    // https://github.com/owner/repo.git
+    // git@github.com:owner/repo.git
     const https = url.match(/https:\/\/github\.com\/(.+?)\/(.+?)(\.git)?$/);
     if (https) return { owner: https[1], repo: https[2] };
-    const ssh = url.match(/git\.com:(.+?)\/(.+?)(\.git)?$/);
+    const ssh = url.match(/git@github\.com:(.+?)\/(.+?)(\.git)?$/);
     if (ssh) return { owner: ssh[1], repo: ssh[2] };
   } catch {}
   return null;

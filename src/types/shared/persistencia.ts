@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-//  problema-documentacao
+// @oraculo-disable problema-documentacao
 // Justificativa: types com any são propositais para tipagem genérica de wrappers
 /**
- *  Tipos para funções de persistência e mocking de testes
+ * @fileoverview Tipos para funções de persistência e mocking de testes
  */
 
 /**
@@ -22,7 +22,7 @@ export type SalvarBinarioFn = (caminho: string, dados: Buffer) => Promise<void>;
  * Função wrapper do Vitest para spy
  * Array genérico/rest params: captura qualquer assinatura de função
  */
-// eslint-disable-next-line /no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type VitestSpyWrapper<T extends (...args: any[]) => any> = (
   fn: T,
 ) => unknown;

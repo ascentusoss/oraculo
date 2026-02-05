@@ -1,0 +1,48 @@
+name: "Proposta técnica — RFC / Mudança grande"
+about: "Discussões para propostas técnicas, design ou RFCs antes de implementação."
+title: "RFC: {{short description}}"
+labels: ["discussão", "rfc", "proposta-tecnica"]
+category: "Ideias"
+body: |
+  Use este template para discutir design, contrato público ou alterações de arquitetura de grande impacto.
+
+questions:
+  - type: input
+    id: alvo
+    attributes:
+      label: "Área afetada / módulo"
+      placeholder: "Ex.: core, CLI, API"
+      required: true
+
+  - type: textarea
+    id: resumo
+    attributes:
+      label: "Resumo executivo"
+      description: "Breve descrição do que se propõe e por quê."
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: "Descrição técnica detalhada"
+      description: "APIs públicas, schema, migrações, rollback, compatibilidade retroativa."
+      required: true
+
+  - type: textarea
+    id: riscos
+    attributes:
+      label: "Riscos e alternativas"
+      placeholder: "Impactos, migração, custos operacionais"
+
+  - type: dropdown
+    id: urgencia
+    attributes:
+      label: "Urgência / prioridade"
+      options:
+        - label: "Baixa"
+          value: "baixa"
+        - label: "Média"
+          value: "media"
+        - label: "Alta"
+          value: "alta"
+      required: true

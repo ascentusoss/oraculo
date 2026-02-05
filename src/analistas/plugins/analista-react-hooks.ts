@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: MIT
-import type { ParserPlugin as BabelParserPlugin } from '/parser';
-import { parse as babelParse } from '/parser';
-import type { NodePath, Visitor } from '/traverse';
-import traverse from '/traverse';
-import * as t from '/types';
+import type { ParserPlugin as BabelParserPlugin } from '@babel/parser';
+import { parse as babelParse } from '@babel/parser';
+import type { NodePath, Visitor } from '@babel/traverse';
+import traverse from '@babel/traverse';
+import * as t from '@babel/types';
 import {
   AnalystOrigins,
   AnalystTypes,
   ReactHooksMessages,
   SeverityLevels,
-} from '/messages/core/plugin-messages.js';
+} from '@core/messages/core/plugin-messages.js';
 
 import { criarAnalista, criarOcorrencia } from '@';
 
@@ -131,7 +131,7 @@ function collectHookIssues(src: string, relPath: string): Msg[] {
 }
 
 const traverseFn =
-  traverse as unknown as typeof import('/traverse').default;
+  traverse as unknown as typeof import('@babel/traverse').default;
 
 function parseHooksWithBabel(src: string, relPath: string): Msg[] | null {
   const lower = relPath.toLowerCase();

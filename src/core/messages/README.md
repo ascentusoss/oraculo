@@ -28,7 +28,7 @@ import {
   ICONES_RELATORIO,
   ICONES_STATUS,
   ICONES_TIPOS,
-} from "/messages";
+} from "@core/messages";
 
 // Exemplos (tokens/prefixos, sem emojis hard-coded)
 ICONES_STATUS.ok; // [OK]
@@ -48,7 +48,7 @@ ICONES_DIAGNOSTICO.stats; // [STATS]
 ### Geração Contextual
 
 ```typescript
-import { gerarSugestoesContextuais, formatarSugestoes } from "/messages";
+import { gerarSugestoesContextuais, formatarSugestoes } from "@core/messages";
 
 const sugestoes = gerarSugestoesContextuais({
   comando: "diagnosticar",
@@ -75,7 +75,7 @@ import {
   MENSAGENS_FIX_TYPES,
   MENSAGENS_AUTOFIX,
   MENSAGENS_RELATORIOS_ANALISE,
-} from "/messages";
+} from "@core/messages";
 
 // Fix-types
 console.log(MENSAGENS_FIX_TYPES.MENSAGENS_INICIO.titulo);
@@ -91,7 +91,7 @@ console.log(MENSAGENS_AUTOFIX.inicio.scan);
 O log-engine ajusta verbosidade baseado no contexto:
 
 ```typescript
-import { logEngine } from "/messages";
+import { logEngine } from "@core/messages";
 
 // Contextos: 'simples' | 'medio' | 'complexo' | 'ci'
 logEngine.setContexto("medio");
@@ -106,7 +106,7 @@ logEngine.info("diagnostico.scan", {
 ### API de Log Padrão
 
 ```typescript
-import { log } from "/messages";
+import { log } from "@core/messages";
 
 // Níveis básicos
 log.info("Mensagem informativa");
@@ -129,7 +129,7 @@ log.passo(2, "Segundo passo");
 ## Uso Rápido
 
 ```typescript
-import { ICONES_DIAGNOSTICO, ICONES_STATUS, log } from "/messages";
+import { ICONES_DIAGNOSTICO, ICONES_STATUS, log } from "@core/messages";
 
 // Prefixos/tokens
 log.info(`${ICONES_DIAGNOSTICO.inicio} Analisando...`);
@@ -174,7 +174,7 @@ logEngine.info("diagnostico.completo", {
 ### Type Safety
 
 ```typescript
-import { MENSAGENS_FIX_TYPES } from "/messages";
+import { MENSAGENS_FIX_TYPES } from "@core/messages";
 
 // Mensagens específicas para correção de tipos
 console.log(MENSAGENS_FIX_TYPES.anyToProper.analise);
@@ -184,7 +184,7 @@ console.log(MENSAGENS_FIX_TYPES.unknownToSpecific.sugestao);
 ### Diagnóstico
 
 ```typescript
-import { MENSAGENS_DIAGNOSTICO } from "/messages";
+import { MENSAGENS_DIAGNOSTICO } from "@core/messages";
 
 console.log(MENSAGENS_DIAGNOSTICO.modos.compact);
 // Exemplo de output: "[i] Diagnóstico (modo compacto)"
@@ -193,7 +193,7 @@ console.log(MENSAGENS_DIAGNOSTICO.modos.compact);
 ### Guardian
 
 ```typescript
-import { MENSAGENS_GUARDIAN } from "/messages";
+import { MENSAGENS_GUARDIAN } from "@core/messages";
 
 console.log(MENSAGENS_GUARDIAN.baseline.criado);
 // Exemplo de output: "[OK] Baseline criado com sucesso"

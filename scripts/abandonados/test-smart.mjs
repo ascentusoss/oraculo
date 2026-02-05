@@ -12,23 +12,11 @@ import path from 'node:path';
 
  * TODO: Adicionar descrição da função
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} env = process.env - TODO: Descrever parâmetro
+ * @param {*} env = process.env - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} args - TODO: Descrever parâmetro
-
- *  {*} env = process.env - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -36,23 +24,11 @@ import path from 'node:path';
 
  * TODO: Adicionar descrição da função
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} env = process.env - TODO: Descrever parâmetro
+ * @param {*} env = process.env - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
-
- */
-
-/**
-
- * TODO: Adicionar descrição da função
-
- *  {*} args - TODO: Descrever parâmetro
-
- *  {*} env = process.env - TODO: Descrever parâmetro
-
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
 
  */
 
@@ -60,11 +36,35 @@ import path from 'node:path';
 
  * TODO: Adicionar descrição da função
 
- *  {*} args - TODO: Descrever parâmetro
+ * @param {*} args - TODO: Descrever parâmetro
 
- *  {*} env = process.env - TODO: Descrever parâmetro
+ * @param {*} env = process.env - TODO: Descrever parâmetro
 
- *  {*} TODO: Descrever retorno
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} args - TODO: Descrever parâmetro
+
+ * @param {*} env = process.env - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
+
+ */
+
+/**
+
+ * TODO: Adicionar descrição da função
+
+ * @param {*} args - TODO: Descrever parâmetro
+
+ * @param {*} env = process.env - TODO: Descrever parâmetro
+
+ * @returns {*} TODO: Descrever retorno
 
  */
 

@@ -25,7 +25,7 @@ function collectCssIssues(src, relPath) {
         const trimmed = lineText.trim();
         const opens = (trimmed.match(/\{/g) || []).length;
         for (let i = 0; i < opens; i++) {
-            const ctx = //i.test(trimmed) ? 'font-face' : undefined;
+            const ctx = /@font-face/i.test(trimmed) ? 'font-face' : undefined;
             stack.push({ props: {}, context: ctx });
         }
         const current = stack[stack.length - 1];
@@ -56,7 +56,7 @@ function collectCssIssues(src, relPath) {
         if (/!important/.test(trimmed)) {
             ocorrencias.push(warn(CssMessages.importantUsage, relPath, line));
         }
-        if (/^\s+[^;]*http:\/\//i.test(trimmed)) {
+        if (/^@import\s+[^;]*http:\/\//i.test(trimmed)) {
             ocorrencias.push(warn(CssMessages.httpImport, relPath, line));
         }
         if (/url\(\s*['"]?http:\/\//i.test(trimmed)) {
@@ -276,7 +276,7 @@ function collectCssIssuesFromPostCssAst(root, relPath) {
     const byContextAndSignature = new Map();
     const visit = (container, ctxAtRules, ctxSelectors) => {
         const props = {};
-        const inFontFace = ctxAtRules.some((c) => c.toLowerCase().startsWith(''));
+        const inFontFace = ctxAtRules.some((c) => c.toLowerCase().startsWith('@font-face'));
         container.nodes?.forEach((node) => {
             if (node.type === 'decl') {
                 const decl = node;

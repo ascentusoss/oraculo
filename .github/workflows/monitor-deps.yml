@@ -1,0 +1,76 @@
+# SPDX-License-Identifier: MIT
+name: Monitor Dependencies
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Every Monday at 8 AM
+  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+env:
+  NODE_VERSION: "25"
+
+jobs:
+  check-updates:
+    name: 📦 Check Updates
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check Outdated Dependencies
+        id: outdated
+        run: |
+          echo "## 📦 Outdated Dependencies" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          npm outdated --json > /tmp/outdated.json 2>/dev/null || true
+          if [ -s /tmp/outdated.json ] && [ "$(cat /tmp/outdated.json)" != "{}" ]; then
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            npm outdated >> $GITHUB_STEP_SUMMARY 2>/dev/null || true
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ All dependencies are up to date!" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Security Audit
+        run: |
+          echo "## 🔐 Security Audit" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if npm audit --production --audit-level=moderate 2>/dev/null; then
+            echo "✅ No vulnerabilities found!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ See audit output above for details" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  dependabot-auto-merge:
+    name: 🤖 Auto-merge Dependabot
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.actor == 'dependabot[bot]'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto-merge minor and patch updates
+        if: steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -2,18 +2,18 @@
 
 import path from 'node:path';
 
-import { ExitCode, sair } from '/helpers/exit-codes.js';
-import { processPatternList } from '/helpers/pattern-helpers.js';
-import { configurarFiltros } from '/processing/filters.js';
-import chalk from '/config/chalk-safe.js';
-import { config } from '/config/config.js';
-import { scanRepository } from '/execution/scanner.js';
-import { log } from '/messages/index.js';
+import { ExitCode, sair } from '@cli/helpers/exit-codes.js';
+import { processPatternList } from '@cli/helpers/pattern-helpers.js';
+import { configurarFiltros } from '@cli/processing/filters.js';
+import chalk from '@core/config/chalk-safe.js';
+import { config } from '@core/config/config.js';
+import { scanRepository } from '@core/execution/scanner.js';
+import { log } from '@core/messages/index.js';
 import {
   formatarComPrettierProjeto,
   formatarPrettierMinimo,
-} from '/impar/formater.js';
-import { salvarEstado } from '/persistence/persistencia.js';
+} from '@shared/impar/formater.js';
+import { salvarEstado } from '@shared/persistence/persistencia.js';
 import { Command } from 'commander';
 import micromatch from 'micromatch';
 

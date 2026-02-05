@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
-import type { NodePath } from '/traverse';
-import type { Node } from '/types';
+import type { NodePath } from '@babel/traverse';
+import type { Node } from '@babel/types';
 
 export type OrigemArquivo = 'local' | 'remoto' | 'gerado';
 

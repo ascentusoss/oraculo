@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import { config } from '/config/config.js';
+import { config } from '@core/config/config.js';
 
 import type { ComparacaoSnapshot } from '@';
 

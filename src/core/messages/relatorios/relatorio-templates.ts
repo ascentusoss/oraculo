@@ -4,7 +4,7 @@
  * Funções que geram seções completas de MD com formatação consistente
  */
 
-import { formatMs } from '/config/format.js';
+import { formatMs } from '@core/config/format.js';
 
 import type {
   GuardianInfo,
@@ -268,6 +268,6 @@ export async function escreverRelatorioMarkdown(
   outputPath: string,
   lines: string[],
 ): Promise<void> {
-  const { salvarEstado } = await import('/persistence/persistencia.js');
+  const { salvarEstado } = await import('@shared/persistence/persistencia.js');
   await salvarEstado(outputPath, lines.join('\n'));
 }

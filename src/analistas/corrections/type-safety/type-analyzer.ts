@@ -4,9 +4,9 @@
  * Integra context-analyzer, usage-analyzer e type-inference
  */
 
-import type { Node } from '/types';
-import { getTypesDirectoryDisplay } from '/config/conventions.js';
-import { MENSAGENS_FIX_TYPES } from '/messages/index.js';
+import type { Node } from '@babel/types';
+import { getTypesDirectoryDisplay } from '@core/config/conventions.js';
+import { MENSAGENS_FIX_TYPES } from '@core/messages/index.js';
 
 import type { TypeAnalysis, TypeInferenceContext } from '@';
 

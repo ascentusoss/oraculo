@@ -1,0 +1,32 @@
+name: "Pedido de ajuda — Como contribuir / executar"
+about: "Solicitações de orientação para configurar, rodar ou contribuir com o projeto."
+title: "Ajuda: {{short description}}"
+labels: ["discussão", "ajuda"]
+category: "Perguntas"
+body: |
+  Precisa de ajuda com setup, contribuição ou execução? Preencha o formulário abaixo.
+
+questions:
+  - type: textarea
+    id: problema
+    attributes:
+      label: "Que dificuldade você está enfrentando?"
+      required: true
+
+  - type: input
+    id: comando
+    attributes:
+      label: "Comando / passo que falhou (se aplicável)"
+      placeholder: "Ex.: npm run dev"
+
+  - type: input
+    id: arquivo
+    attributes:
+      label: "Arquivo / trecho relevante (opcional)"
+      placeholder: "src/cli/index.ts"
+
+  - type: input
+    id: ambiente
+    attributes:
+      label: "Ambiente (SO, versão do Node, branch)"
+      placeholder: "Linux, Node 18, main"

@@ -4,12 +4,12 @@
  * Mais conservador que fix-any - requer confiança >= 90%
  */
 
-import type { Node } from '/types';
+import type { Node } from '@babel/types';
 import {
   buildTypesRelPathPosix,
   getTypesDirectoryDisplay,
-} from '/config/conventions.js';
-import { MENSAGENS_FIX_TYPES } from '/messages/index.js';
+} from '@core/config/conventions.js';
+import { MENSAGENS_FIX_TYPES } from '@core/messages/index.js';
 
 import type { QuickFix, QuickFixResult, TypeSafetyWarning } from '@';
 
@@ -42,7 +42,7 @@ export const fixUnknownToSpecificType: QuickFix = {
     }
 
     // 2. Não modificar arquivos de definição
-    if (filePath?.includes('.d.ts') || filePath?.includes('//')) {
+    if (filePath?.includes('.d.ts') || filePath?.includes('/@types/')) {
       return false;
     }
 

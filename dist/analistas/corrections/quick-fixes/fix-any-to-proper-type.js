@@ -18,7 +18,7 @@ export const fixAnyToProperType = {
         if (isTypeScriptContext(fullCode, match.index || 0)) {
             return false;
         }
-        if (filePath?.includes('.d.ts') || filePath?.includes('//')) {
+        if (filePath?.includes('.d.ts') || filePath?.includes('/@types/')) {
             return false;
         }
         if (isLegacyOrVendorFile(filePath)) {

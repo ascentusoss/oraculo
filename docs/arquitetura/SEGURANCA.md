@@ -81,7 +81,7 @@ if (!plugin.nome || !plugin.aplicar) {
 
 ```typescript
 // plugins/meu-plugin.ts
-import type { Analista } from "/tipos";
+import type { Analista } from "@tipos/tipos";
 
 const plugin: Analista = {
   nome: "meu-plugin",
@@ -114,7 +114,7 @@ export default plugin;
 ### Acesso Seguro
 
 ```typescript
-import { lerEstado, salvarEstado } from "/persistence/persistencia.js";
+import { lerEstado, salvarEstado } from "@shared/persistence/persistencia.js";
 
 // ❌ NUNCA faça isso
 import fs from "fs";
@@ -153,7 +153,7 @@ function sanitizePath(userPath: string): string {
 ### Globs Seguros
 
 ```typescript
-import { validateGlob } from "/validation/validacao.js";
+import { validateGlob } from "@shared/validation/validacao.js";
 
 // Valida padrões glob antes de usar
 function processGlob(pattern: string) {
@@ -199,7 +199,7 @@ export function sanitizarFlags(flags: Record<string, unknown>): void {
 ### Validação de Argumentos
 
 ```typescript
-import { validarNumeroPositivo } from "/validation/validacao.js";
+import { validarNumeroPositivo } from "@shared/validation/validacao.js";
 
 function processarTimeout(valor: unknown): number {
   const timeout = validarNumeroPositivo(valor, "timeout");
@@ -215,7 +215,7 @@ function processarTimeout(valor: unknown): number {
 ### Escape de Unicode
 
 ```typescript
-import { stringifyJsonEscaped } from "/helpers/json.js";
+import { stringifyJsonEscaped } from "@shared/helpers/json.js";
 
 // Escapa caracteres não-ASCII
 const jsonSeguro = stringifyJsonEscaped(dados, 2);
@@ -227,7 +227,7 @@ const jsonSeguro = stringifyJsonEscaped(dados, 2);
 ### Sanitização de Logs
 
 ```typescript
-import { stripLeadingSimbolos } from "/messages/log.ts";
+import { stripLeadingSimbolos } from "@core/messages/log.ts";
 
 // Remove símbolos potencialmente perigosos de logs
 function logSeguro(mensagem: string) {

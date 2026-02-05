@@ -2,7 +2,7 @@ import { config } from '../../core/config/config.js';
 import { traverse } from '../../core/config/traverse.js';
 const PADROES_TECNOLOGIA = {
     'discord-bot': {
-        dependencias: ['discord.js', '/builders', '/rest'],
+        dependencias: ['discord.js', '@discordjs/builders', '@discordjs/rest'],
         imports: ['discord.js', 'discord-api-types'],
         exports: [],
         estrutura: ['commands', 'events', 'handlers'],
@@ -81,13 +81,13 @@ const PADROES_TECNOLOGIA = {
     'fastify-api': {
         dependencias: [
             'fastify',
-            '/cors',
-            '/helmet',
-            '/jwt',
-            '/rate-limit',
-            '/swagger',
+            '@fastify/cors',
+            '@fastify/helmet',
+            '@fastify/jwt',
+            '@fastify/rate-limit',
+            '@fastify/swagger',
         ],
-        imports: ['fastify', '/cors', '/helmet'],
+        imports: ['fastify', '@fastify/cors', '@fastify/helmet'],
         exports: ['app', 'server', 'fastify'],
         estrutura: [
             'routes',
@@ -157,8 +157,8 @@ const PADROES_TECNOLOGIA = {
             'next',
             'react',
             'react-dom',
-            '/react',
-            '/node',
+            '@types/react',
+            '@types/node',
             'typescript',
         ],
         imports: ['next', 'react', 'next/router', 'next/link', 'next/head'],
@@ -220,19 +220,19 @@ const PADROES_TECNOLOGIA = {
     },
     'nest-api': {
         dependencias: [
-            '/core',
-            '/common',
-            '/platform-express',
+            '@nestjs/core',
+            '@nestjs/common',
+            '@nestjs/platform-express',
         ],
-        imports: ['/core', '/common'],
+        imports: ['@nestjs/core', '@nestjs/common'],
         exports: [],
         estrutura: ['src/modules', 'src/controllers', 'src/services'],
         configs: ['main.ts', 'app.module.ts'],
         scripts: ['start', 'start:dev', 'build'],
         codigoPatterns: [
-            /\(/i,
-            /\(/i,
-            /\(/i,
+            /@Controller\(/i,
+            /@Injectable\(/i,
+            /@Module\(/i,
             /NestFactory\.create/i,
         ],
         antiPatterns: [],
@@ -261,8 +261,8 @@ const PADROES_TECNOLOGIA = {
         antiPatterns: [],
     },
     'hapi-api': {
-        dependencias: ['/hapi', 'joi', 'boom'],
-        imports: ['/hapi', 'joi', 'boom'],
+        dependencias: ['@hapi/hapi', 'joi', 'boom'],
+        imports: ['@hapi/hapi', 'joi', 'boom'],
         exports: ['server', 'routes'],
         estrutura: ['routes', 'controllers', 'plugins', 'models'],
         configs: ['server.js', 'index.js'],
@@ -281,7 +281,7 @@ const PADROES_TECNOLOGIA = {
         dependencias: [
             'serverless',
             'serverless-offline',
-            '/aws-lambda',
+            '@types/aws-lambda',
             'aws-sdk',
         ],
         imports: ['aws-lambda', 'aws-sdk'],
@@ -300,7 +300,7 @@ const PADROES_TECNOLOGIA = {
         antiPatterns: [],
     },
     'vue-spa': {
-        dependencias: ['vue', '/cli-service', 'vue-router', 'vuex', 'pinia'],
+        dependencias: ['vue', '@vue/cli-service', 'vue-router', 'vuex', 'pinia'],
         imports: ['vue', 'vue-router', 'vuex', 'pinia'],
         exports: [],
         estrutura: [
@@ -330,8 +330,8 @@ const PADROES_TECNOLOGIA = {
         antiPatterns: [],
     },
     'nuxt-app': {
-        dependencias: ['nuxt', 'nuxt3', '/devtools', '/tailwindcss'],
-        imports: ['nuxt', '/kit'],
+        dependencias: ['nuxt', 'nuxt3', '@nuxt/devtools', '@nuxtjs/tailwindcss'],
+        imports: ['nuxt', '@nuxt/kit'],
         exports: [],
         estrutura: [
             'pages',
@@ -359,8 +359,8 @@ const PADROES_TECNOLOGIA = {
         antiPatterns: [],
     },
     'vite-vue': {
-        dependencias: ['vue', 'vite', '/plugin-vue', 'vue-router', 'pinia'],
-        imports: ['vue', 'vite', '/plugin-vue'],
+        dependencias: ['vue', 'vite', '@vitejs/plugin-vue', 'vue-router', 'pinia'],
+        imports: ['vue', 'vite', '@vitejs/plugin-vue'],
         exports: [],
         estrutura: [
             'src/components',

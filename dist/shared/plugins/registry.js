@@ -11,7 +11,7 @@ export class PluginRegistry {
         this.config = {
             enabled: ['core'],
             autoload: true,
-            registry: '/plugins',
+            registry: '@oraculo/plugins',
             ...config,
         };
         this.userConfiguredEnabled = !!config?.enabled;

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos locais para reescrita de imports
 /**
  * Helper puro para reescrever imports relativos quando um arquivo é movido.
@@ -35,7 +35,7 @@ export function reescreverImports(
       const isRelative = spec.startsWith('./') || spec.startsWith('../');
       const isAliasRoot = spec.startsWith('@/');
       // Aliases internos do projeto que queremos normalizar para src/<alias>/...
-      // Mantém /* intacto (tratado como pacote/externo nos testes)
+      // Mantém @nucleo/* intacto (tratado como pacote/externo nos testes)
       const isProjectAlias =
         /^@(?:analistas|arquitetos|cli|relatorios|tipos|zeladores)\//.test(
           spec,

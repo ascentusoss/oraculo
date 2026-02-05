@@ -1,0 +1,104 @@
+# SPDX-License-Identifier: MIT
+name: Create Release Tag
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "package.json"
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: "25"
+
+jobs:
+  check-version:
+    name: 🏷️ Check Version and Create Tag
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Get Current Version
+        id: current
+        run: |
+          version=$(node -p "require('./package.json').version")
+          echo "version=${version}" >> $GITHUB_OUTPUT
+          echo "Current version: ${version}"
+
+      - name: Check if Tag Exists
+        id: check_tag
+        run: |
+          if git rev-parse "v${{ steps.current.outputs.version }}" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Tag v${{ steps.current.outputs.version }} already exists"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Tag v${{ steps.current.outputs.version }} does not exist"
+          fi
+
+      - name: Validate Version Format
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          version="${{ steps.current.outputs.version }}"
+          if [[ ! $version =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.]+)?$ ]]; then
+            echo "❌ Invalid version format: $version"
+            echo "Expected format: X.Y.Z or X.Y.Z-prerelease"
+            exit 1
+          fi
+          echo "✅ Version format is valid: $version"
+
+      - name: Setup Node.js
+        if: steps.check_tag.outputs.exists == 'false'
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install Dependencies
+        if: steps.check_tag.outputs.exists == 'false'
+        run: npm ci
+
+      - name: Run Build
+        if: steps.check_tag.outputs.exists == 'false'
+        run: npm run build
+
+      - name: Run Lint
+        if: steps.check_tag.outputs.exists == 'false'
+        run: npm run lint
+
+      - name: Check Changelog
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          version="${{ steps.current.outputs.version }}"
+          if [ -f CHANGELOG.md ]; then
+            if grep -q "## \[${version}\]" CHANGELOG.md; then
+              echo "✅ Version ${version} found in CHANGELOG.md"
+            else
+              echo "⚠️ Warning: Version ${version} not found in CHANGELOG.md"
+              echo "Consider updating CHANGELOG.md before releasing"
+            fi
+          else
+            echo "⚠️ Warning: CHANGELOG.md not found"
+          fi
+
+      - name: Create Tag
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          version="${{ steps.current.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "v${version}" -m "Release v${version}"
+          git push origin "v${version}"
+          echo "✅ Created and pushed tag v${version}"
+
+      - name: Tag Already Exists
+        if: steps.check_tag.outputs.exists == 'true'
+        run: |
+          echo "ℹ️ Tag v${{ steps.current.outputs.version }} already exists. Skipping tag creation."
+          echo "The release workflow will be triggered automatically."

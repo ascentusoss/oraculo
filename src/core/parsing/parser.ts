@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-import type { ParserOptions } from '/parser';
-import { parse as babelParse } from '/parser';
-import type { File as BabelFile } from '/types';
-import { log, logCore } from '/messages/index.js';
-import { initializeDefaultPlugins } from '/plugins/init.js';
+import type { ParserOptions } from '@babel/parser';
+import { parse as babelParse } from '@babel/parser';
+import type { File as BabelFile } from '@babel/types';
+import { log, logCore } from '@core/messages/index.js';
+import { initializeDefaultPlugins } from '@shared/plugins/init.js';
   /* -------------------------- SISTEMA DE PLUGINS - Novo sistema de parsers modular (Fase 1) -------------------------- */
-import { getGlobalRegistry } from '/plugins/registry.js';
+import { getGlobalRegistry } from '@shared/plugins/registry.js';
 import * as csstree from 'css-tree';
 import { XMLParser } from 'fast-xml-parser';
 // Parsers externos leves para outras linguagens
@@ -323,7 +323,7 @@ export async function decifrarSintaxe(
     try {
       // Heurística rápida: detecta uso de Flow
       const pareceFlow =
-        /\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
+        /@flow\b/.test(codigo) || /\bimport\s+type\b/.test(codigo);
       if (pareceFlow) {
         const flowPlugins = [
           'flow',

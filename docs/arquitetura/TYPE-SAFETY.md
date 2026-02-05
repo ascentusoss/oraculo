@@ -216,7 +216,7 @@ Geram avisos com sugestões contextuais:
 ```typescript
 // AST/Babel nodes (80%)
 function parseFile(ast: unknown) {}
-// 💡 import type { Node } from "/types"
+// 💡 import type { Node } from "@babel/types"
 
 // Callbacks genéricos (70%)
 function onChange(opts: unknown) {}
@@ -387,7 +387,7 @@ import {
   isUnknownInGenericContext,
   isInStringOrComment,
   extractVariableName,
-} from "/corrections/type-safety/context-analyzer.js";
+} from "@analistas/corrections/type-safety/context-analyzer.js";
 
 // Categorizar uso de unknown
 const resultado = categorizarUnknown(
@@ -409,7 +409,7 @@ console.log(resultado);
 ### Criar Quick-Fix Customizado
 
 ```typescript
-import type { QuickFix } from "/analistas";
+import type { QuickFix } from "@tipos/analistas";
 
 const meuQuickFix: QuickFix = {
   tipo: "tipo-customizado",

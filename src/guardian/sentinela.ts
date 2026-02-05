@@ -2,8 +2,8 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-import { config } from '/config/config.js';
-import { log } from '/messages/index.js';
+import { config } from '@core/config/config.js';
+import { log } from '@core/messages/index.js';
 import micromatch from 'micromatch';
 
 import type { FileEntry } from '@';

@@ -75,7 +75,7 @@ oraculo/
 │   ├── arquitetos/     # Arquitetura e estrutura
 │   ├── bin/            # Entry point CLI
 │   ├── cli/            # Comandos e helpers
-│   ├── core/           # Núcleo (usando alias )
+│   ├── core/           # Núcleo (usando alias @nucleo)
 │   ├── guardian/       # Verificação de integridade
 │   ├── relatorios/     # Geração de relatórios
 │   ├── shared/         # Utilitários compartilhados
@@ -90,7 +90,7 @@ oraculo/
 
 - ✅ **Separação clara de responsabilidades**
 - ✅ **Nomenclatura em português** (consistente e clara)
-- ✅ **Path aliases** bem configurados (, , etc.)
+- ✅ **Path aliases** bem configurados (@nucleo, @analistas, etc.)
 - ✅ **Modularidade** facilita extensão (novos analistas, comandos)
 
 ---
@@ -114,7 +114,7 @@ oraculo/
 
 - ✅ **Zero vulnerabilidades** de segurança
 - ✅ Dependências de produção bem escolhidas:
-  - `/parser` - Parsing de código
+  - `@babel/parser` - Parsing de código
   - `chalk` - Output colorido
   - `commander` - CLI framework
   - `micromatch` - Glob patterns
@@ -230,9 +230,9 @@ No test files found, exiting with code 1
 
 ```json
 {
-  "/parser": "^7.28.3",
-  "/traverse": "^7.28.3",
-  "/types": "^7.28.2",
+  "@babel/parser": "^7.28.3",
+  "@babel/traverse": "^7.28.3",
+  "@babel/types": "^7.28.2",
   "chalk": "^5.6.2",
   "commander": "^14.0.0",
   "css-tree": "^2.3.1",
@@ -263,7 +263,7 @@ No test files found, exiting with code 1
 #### Sugestões:
 
 - 📦 Adicionar **Prettier** às devDependencies
-- 📦 Considerar **/cli** para gerenciamento de versões
+- 📦 Considerar **@changesets/cli** para gerenciamento de versões
 
 ---
 
@@ -272,7 +272,7 @@ No test files found, exiting with code 1
 #### Linting:
 
 - ✅ **ESLint** configurado com:
-  - ``
+  - `@typescript-eslint`
   - `eslint-plugin-import`
   - `eslint-plugin-simple-import-sort`
   - `eslint-plugin-unused-imports`

@@ -1,0 +1,50 @@
+# SPDX-License-Identifier: MIT
+
+# Code owners for Oráculo
+
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+
+- @ossmoralus
+
+# Core source code
+
+/src/ @ossmoralus
+
+# CLI commands
+
+/src/cli/ @ossmoralus
+
+# Analysts and detectors
+
+/src/analistas/ @ossmoralus
+
+# Guardian integrity system
+
+/src/guardian/ @ossmoralus
+
+# Tests
+
+/tests/ @ossmoralus
+
+# Documentation
+
+/docs/ @ossmoralus
+\*.md @ossmoralus
+
+# Configuration files
+
+/_.json @ossmoralus
+/_.ts @ossmoralus
+/\*.js @ossmoralus
+
+# CI/CD workflows
+
+/.github/ @ossmoralus
+
+# Security-sensitive files
+
+/SECURITY.md @ossmoralus
+/.github/workflows/release.yml @ossmoralus
+/.github/workflows/compliance.yml @ossmoralus

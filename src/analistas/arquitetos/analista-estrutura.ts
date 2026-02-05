@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 import path from 'node:path';
 
-import { config } from '/config/config.js';
+import { config } from '@core/config/config.js';
 import pLimit from 'p-limit';
 
 import type { FileEntryWithAst, ResultadoEstrutural } from '@';

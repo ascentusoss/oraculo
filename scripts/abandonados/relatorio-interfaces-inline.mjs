@@ -30,7 +30,7 @@ const DIRS_MOVER = [
 // Diretórios que JÁ SÃO centralizados (não precisam mover)
 const DIRS_CENTRALIZADOS = [
     'src/tipos',
-    'src/',
+    'src/@types',
 ];
 
 // Diretórios ignorados

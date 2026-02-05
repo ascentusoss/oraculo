@@ -3,7 +3,7 @@
 > Proveniência e Autoria: Este documento integra o projeto Oráculo (licença MIT).
 > Última atualização: 23 de janeiro de 2026
 
-> **Para:**
+> **Para:** @ossmoralus
 > **Data:** 2026-01-23
 > **Análise:** GitHub Copilot Workspace
 

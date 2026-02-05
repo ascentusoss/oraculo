@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: MIT
 // src/analistas/analista-padroes-uso.ts
-import type { NodePath } from '/traverse';
-import type { Node } from '/types';
-import * as t from '/types';
-import { traverse } from '/config/traverse.js';
-import { PadroesUsoMessages } from '/messages/analistas/analista-padroes-uso-messages.js';
-import { detectarContextoProjeto } from '/contexto-projeto.js';
+import type { NodePath } from '@babel/traverse';
+import type { Node } from '@babel/types';
+import * as t from '@babel/types';
+import { traverse } from '@core/config/traverse.js';
+import { PadroesUsoMessages } from '@core/messages/analistas/analista-padroes-uso-messages.js';
+import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
 import {
   garantirArray,
   incrementar,
-} from '/helpers/helpers-analistas.js';
+} from '@shared/helpers/helpers-analistas.js';
 
 import type {
   ContextoExecucao,

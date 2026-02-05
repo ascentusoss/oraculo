@@ -1,0 +1,74 @@
+# SPDX-License-Identifier: MIT
+name: License Gate
+
+on:
+  pull_request:
+    paths:
+      - "package.json"
+      - "package-lock.json"
+  push:
+    branches: [main, develop]
+    paths:
+      - "package.json"
+      - "package-lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "25"
+
+jobs:
+  license-check:
+    name: 📜 License Compatibility
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check License Compatibility
+        run: npm run licenses:auditar
+
+      - name: Generate Third-Party Notices
+        run: npm run licenses:notice
+        continue-on-error: true
+
+      - name: Check for Problematic Licenses
+        id: license-scan
+        run: |
+          # List all production dependencies and their licenses
+          npx license-checker-rseidelsohn --production --json > /tmp/licenses.json
+
+          # Check for problematic licenses (GPL, AGPL, SSPL, BUSL)
+          echo "🔍 Scanning for potentially incompatible licenses..."
+
+          problematic=$(cat /tmp/licenses.json | jq -r 'to_entries[] | select(.value.licenses | test("GPL|AGPL|SSPL|BUSL"; "i")) | "\(.key): \(.value.licenses)"' 2>/dev/null || true)
+
+          if [ -n "$problematic" ]; then
+            echo "⚠️ Potentially problematic licenses found:"
+            echo "$problematic"
+            echo ""
+            echo "Please review these dependencies for MIT compatibility."
+            echo "has_issues=true" >> $GITHUB_OUTPUT
+          else
+            echo "✅ No GPL/AGPL/SSPL/BUSL licenses found in production dependencies"
+            echo "has_issues=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload License Report
+        uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: license-scan-report
+          path: /tmp/licenses.json
+          retention-days: 7

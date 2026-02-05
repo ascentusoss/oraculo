@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 import { execSync, type ExecSyncOptions } from 'node:child_process';
 
-import { config } from '/config/config.js';
+import { config } from '@core/config/config.js';
 
 export function executarShellSeguro(
   cmd: string,

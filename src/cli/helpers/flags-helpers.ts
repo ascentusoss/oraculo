@@ -10,10 +10,10 @@
  * Exemplo: ["controller=handlers", "model=entities"]
  * → { "controller": "handlers", "model": "entities" }
  *
- *  categoria - Array de strings no formato "chave=valor"
- *  Mapa de categorias (chave minúscula → valor trimado)
+ * @param categoria - Array de strings no formato "chave=valor"
+ * @returns Mapa de categorias (chave minúscula → valor trimado)
  *
- *
+ * @example
  * ```typescript
  * const map = parsearCategorias(['Controller=handlers', 'Model=entities']);
  * // { "controller": "handlers", "model": "entities" }

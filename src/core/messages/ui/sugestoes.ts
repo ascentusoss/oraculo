@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//  tipo-literal-inline-complexo
+// @oraculo-disable tipo-literal-inline-complexo
 // Justificativa: tipos inline para sistema de sugestões
 /**
  * Sistema Centralizado de Sugestões e Dicas

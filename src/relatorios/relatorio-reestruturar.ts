@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
-import { RelatorioMessages } from '/messages/index.js';
-import { salvarEstado } from '/persistence/persistencia.js';
+import { RelatorioMessages } from '@core/messages/index.js';
+import { salvarEstado } from '@shared/persistence/persistencia.js';
 
 import type { MovimentoEstrutural, OpcoesRelatorioReestruturar } from '@';
 

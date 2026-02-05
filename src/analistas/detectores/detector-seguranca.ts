@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-//  seguranca vulnerabilidade-seguranca
-import type { NodePath } from '/traverse';
-import type { CallExpression, NewExpression, Node } from '/types';
-import { traverse } from '/config/traverse.js';
-import { DetectorAgregadosMessages } from '/messages/analistas/detector-agregados-messages.js';
-import { detectarContextoProjeto } from '/contexto-projeto.js';
-import { filtrarOcorrenciasSuprimidas } from '/helpers/suppressao.js';
+// @oraculo-disable seguranca vulnerabilidade-seguranca
+import type { NodePath } from '@babel/traverse';
+import type { CallExpression, NewExpression, Node } from '@babel/types';
+import { traverse } from '@core/config/traverse.js';
+import { DetectorAgregadosMessages } from '@core/messages/analistas/detector-agregados-messages.js';
+import { detectarContextoProjeto } from '@shared/contexto-projeto.js';
+import { filtrarOcorrenciasSuprimidas } from '@shared/helpers/suppressao.js';
 
 import type { Analista, Ocorrencia, ProblemaSeguranca } from '@';
 import { criarOcorrencia } from '@';

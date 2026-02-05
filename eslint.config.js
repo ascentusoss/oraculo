@@ -1,7 +1,7 @@
 // ESLint v9+ flat config migrated from .eslintrc.json
 
-import tsPlugin from '/eslint-plugin';
-import tsParser from '/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
@@ -29,21 +29,21 @@ export default [
       reportUnusedDisableDirectives: true,
     },
     plugins: {
-      '': tsPlugin,
+      '@typescript-eslint': tsPlugin,
       import: importPlugin,
       'unused-imports': unusedImportsPlugin,
       'simple-import-sort': simpleImportSortPlugin,
     },
     rules: {
       // TypeScript rules - mais rigorosas
-      '/no-explicit-any': 'error',
-      '/no-unused-vars': 'off', // delegado para unused-imports
-      '/explicit-module-boundary-types': 'warn',
-      '/no-non-null-assertion': 'error',
-      '/no-floating-promises': 'error',
-      '/ban-ts-comment': 'error',
-      '/no-var-requires': 'error',
-      '/consistent-type-imports': [
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-unused-vars': 'off', // delegado para unused-imports
+      '@typescript-eslint/explicit-module-boundary-types': 'warn',
+      '@typescript-eslint/no-non-null-assertion': 'error',
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/ban-ts-comment': 'error',
+      '@typescript-eslint/no-var-requires': 'error',
+      '@typescript-eslint/consistent-type-imports': [
         'error',
         {
           prefer: 'type-imports',
@@ -87,10 +87,10 @@ export default [
   {
     files: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
     rules: {
-      '/no-explicit-any': 'off',
-      '/no-unused-vars': 'off',
-      '/no-non-null-assertion': 'off',
-      '/ban-ts-comment': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
     },
   },
   {

@@ -1,4 +1,4 @@
-import type { File as BabelFile, Node } from '/types';
+import type { File as BabelFile, Node } from '@babel/types';
 export type PythonPhpAstNode = {
     type: string;
     body?: PythonPhpAstNode | PythonPhpAstNode[];

@@ -2,27 +2,27 @@
 // Analistas de melhorias e correções automáticas (unificado)
 // Resolve analistas de correção automática dinamicamente para compatibilidade com múltiplas formas de export
 // analistaFantasma not exported from js-ts/fantasma; that module provides detectarFantasmas used by zeladores
-import { analistaArquitetura } from '/detectores/detector-arquitetura.js';
-import { analistaCodigoFragil } from '/detectores/detector-codigo-fragil.js';
+import { analistaArquitetura } from '@analistas/detectores/detector-arquitetura.js';
+import { analistaCodigoFragil } from '@analistas/detectores/detector-codigo-fragil.js';
 // Novos analistas refinados
-import { analistaConstrucoesSintaticas } from '/detectores/detector-construcoes-sintaticas.js';
-import * as detectorDependenciasMod from '/detectores/detector-dependencias.js';
-import { analistaDuplicacoes } from '/detectores/detector-duplicacoes.js';
-import * as detectorEstruturaMod from '/detectores/detector-estrutura.js';
-import detectorInterfacesInline from '/detectores/detector-interfaces-inline.js';
+import { analistaConstrucoesSintaticas } from '@analistas/detectores/detector-construcoes-sintaticas.js';
+import * as detectorDependenciasMod from '@analistas/detectores/detector-dependencias.js';
+import { analistaDuplicacoes } from '@analistas/detectores/detector-duplicacoes.js';
+import * as detectorEstruturaMod from '@analistas/detectores/detector-estrutura.js';
+import detectorInterfacesInline from '@analistas/detectores/detector-interfaces-inline.js';
 // Analistas especializados complementares
-import { analistaSeguranca } from '/detectores/detector-seguranca.js';
-import detectorTiposInseguros from '/detectores/detector-tipos-inseguros.js';
+import { analistaSeguranca } from '@analistas/detectores/detector-seguranca.js';
+import detectorTiposInseguros from '@analistas/detectores/detector-tipos-inseguros.js';
 // Analistas contextuais inteligentes
-import { analistaSugestoesContextuais } from '/estrategistas/sugestoes-contextuais.js';
-import { analistaComandosCli } from '/js-ts/analista-comandos-cli.js';
-import { analistaFuncoesLongas } from '/js-ts/analista-funcoes-longas.js';
-import { analistaPadroesUso } from '/js-ts/analista-padroes-uso.js';
-import { analistaTodoComments } from '/js-ts/analista-todo-comments.js';
-// Plugins opcionais (movidos para /plugins/)
-import { analistaDocumentacao } from '/plugins/detector-documentacao.js';
-import { detectorMarkdown } from '/plugins/detector-markdown.js';
-import { comSupressaoInline } from '/helpers/analista-wrapper.js';
+import { analistaSugestoesContextuais } from '@analistas/estrategistas/sugestoes-contextuais.js';
+import { analistaComandosCli } from '@analistas/js-ts/analista-comandos-cli.js';
+import { analistaFuncoesLongas } from '@analistas/js-ts/analista-funcoes-longas.js';
+import { analistaPadroesUso } from '@analistas/js-ts/analista-padroes-uso.js';
+import { analistaTodoComments } from '@analistas/js-ts/analista-todo-comments.js';
+// Plugins opcionais (movidos para @analistas/plugins/)
+import { analistaDocumentacao } from '@analistas/plugins/detector-documentacao.js';
+import { detectorMarkdown } from '@analistas/plugins/detector-markdown.js';
+import { comSupressaoInline } from '@shared/helpers/analista-wrapper.js';
 
 import type {
   Analista,
@@ -34,7 +34,7 @@ import type {
 
 let analistaCorrecaoAutomatica: EntradaRegistry = undefined;
 try {
-  const mod = await import('/corrections/analista-pontuacao.js');
+  const mod = await import('@analistas/corrections/analista-pontuacao.js');
   // conservatively treat dynamic module shapes as unknown, avoid `any`
   const dynamicMod = mod as ModuloAnalista;
   analistaCorrecaoAutomatica =
@@ -49,7 +49,7 @@ try {
 let analistaReact: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-react.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-react.js')) as ModuloAnalista;
   analistaReact = (mod.analistaReact ?? mod.default ?? mod.analistas?.[0]) as
     | EntradaRegistry
     | undefined;
@@ -60,7 +60,7 @@ try {
 let analistaReactHooks: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-react-hooks.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-react-hooks.js')) as ModuloAnalista;
   analistaReactHooks = (mod.analistaReactHooks ??
     mod.default ??
     mod.analistas?.[0]) as EntradaRegistry | undefined;
@@ -71,7 +71,7 @@ try {
 let analistaTailwind: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-tailwind.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-tailwind.js')) as ModuloAnalista;
   analistaTailwind = (mod.analistaTailwind ??
     mod.default ??
     mod.analistas?.[0]) as EntradaRegistry | undefined;
@@ -82,7 +82,7 @@ try {
 let analistaCss: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-css.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-css.js')) as ModuloAnalista;
   analistaCss = (mod.analistaCss ?? mod.default ?? mod.analistas?.[0]) as
     | EntradaRegistry
     | undefined;
@@ -93,7 +93,7 @@ try {
 let analistaCssInJs: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-css-in-js.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-css-in-js.js')) as ModuloAnalista;
   analistaCssInJs = (mod.analistaCssInJs ??
     mod.default ??
     mod.analistas?.[0]) as EntradaRegistry | undefined;
@@ -104,7 +104,7 @@ try {
 let analistaHtml: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-html.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-html.js')) as ModuloAnalista;
   analistaHtml = (mod.analistaHtml ?? mod.default ?? mod.analistas?.[0]) as
     | EntradaRegistry
     | undefined;
@@ -115,7 +115,7 @@ try {
 let analistaXml: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-xml.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-xml.js')) as ModuloAnalista;
   analistaXml = (mod.analistaXml ?? mod.default ?? mod.analistas?.[0]) as
     | EntradaRegistry
     | undefined;
@@ -126,7 +126,7 @@ try {
 let analistaFormatador: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-formater.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-formater.js')) as ModuloAnalista;
   analistaFormatador = (mod.analistaFormatador ??
     mod.default ??
     mod.analistas?.[0]) as EntradaRegistry | undefined;
@@ -137,7 +137,7 @@ try {
 let analistaSvg: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-svg.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-svg.js')) as ModuloAnalista;
   analistaSvg = (mod.analistaSvg ?? mod.default ?? mod.analistas?.[0]) as
     | EntradaRegistry
     | undefined;
@@ -147,7 +147,7 @@ try {
 let analistaPython: EntradaRegistry | undefined = undefined;
 try {
   const mod =
-    (await import('/plugins/analista-python.js')) as ModuloAnalista;
+    (await import('@analistas/plugins/analista-python.js')) as ModuloAnalista;
   analistaPython = (mod.analistaPython ?? mod.default ?? mod.analistas?.[0]) as
     | EntradaRegistry
     | undefined;

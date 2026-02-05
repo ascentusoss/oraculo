@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 /**
- *  Tipos para detecção de problemas em arquivos Markdown
+ * @fileoverview Tipos para detecção de problemas em arquivos Markdown
  *
  * Define estruturas para verificação de compliance de licenças,
  * proveniência e referências em documentação Markdown.
