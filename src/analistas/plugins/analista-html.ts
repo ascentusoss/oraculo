@@ -494,7 +494,7 @@ function collectHtmlIssuesRegex(src: string, relPath: string): Msg[] {
   }
 
   // Detecta <script> inline com código (evitar)
-  for (const m of src.matchAll(/<script[^>]*>[\s\S]*?<\/script\b[^>]*>/gi)) {
+  for (const m of src.matchAll(/<script[^>]*>[\s\S]*?<\/\s*script\b[^>]*\s*>/gi)) {
     // Ignora se o bloco estiver dentro de comentário HTML
     if (typeof m.index === 'number') {
       const idx = m.index;
@@ -503,7 +503,7 @@ function collectHtmlIssuesRegex(src: string, relPath: string): Msg[] {
       }
     }
     const isExternal = /\ssrc=/.test(m[0]);
-    const isEmpty = /<script[^>]*>\s*<\/\s*script\b[^>]*>/i.test(m[0]);
+    const isEmpty = /<script[^>]*>\s*<\/\s*script\b[^>]*\s*>/i.test(m[0]);
     if (!isExternal && !isEmpty) {
       ocorrencias.push(
         warn(HtmlMessages.inlineScript, relPath, lineOfScan(m.index)),
@@ -512,7 +512,7 @@ function collectHtmlIssuesRegex(src: string, relPath: string): Msg[] {
   }
 
   // Detecta <style> inline (evitar)
-  for (const m of src.matchAll(/<style[^>]*>[\s\S]*?<\/style>/gi)) {
+  for (const m of src.matchAll(/<style[^>]*>[\s\S]*?<\/\s*style\b[^>]*\s*>/gi)) {
     // Ignora se o bloco estiver dentro de comentário HTML
     if (typeof m.index === 'number') {
       const idx = m.index;
@@ -520,7 +520,7 @@ function collectHtmlIssuesRegex(src: string, relPath: string): Msg[] {
         continue;
       }
     }
-    const isEmpty = /<style[^>]*>\s*<\/style>/i.test(m[0]);
+    const isEmpty = /<style[^>]*>\s*<\/\s*style\b[^>]*\s*>/i.test(m[0]);
     if (!isEmpty) {
       ocorrencias.push(
         warn(HtmlMessages.inlineStyle, relPath, lineOfScan(m.index)),
