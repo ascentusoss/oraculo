@@ -38,7 +38,7 @@ git clone https://github.com/SEU-USUARIO/oraculo.git
 cd oraculo
 
 # Adicione o repositório upstream como remote
-git remote add upstream https://github.com/ossmoralus/oraculo.git
+git remote add upstream https://github.com/ascentusoss/oraculo.git
 ```
 
 ### 2. Instalação de Dependências
@@ -79,8 +79,8 @@ git checkout -b feature/sua-contribuicao-descritiva
 
 ### 🐛 Correção de Bugs
 
-- Issues com label [`bug`](https://github.com/ossmoralus/oraculo/labels/bug)
-- Issues com label [`good-first-issue`](https://github.com/ossmoralus/oraculo/labels/good-first-issue)
+- Issues com label [`bug`](https://github.com/ascentusoss/oraculo/labels/bug)
+- Issues com label [`good-first-issue`](https://github.com/ascentusoss/oraculo/labels/good-first-issue)
 - Priorize bugs críticos e regressions
 
 ### ✨ Novas Funcionalidades
@@ -497,7 +497,7 @@ Envie o PR contra a branch `main` (ou `develop` se existir). PRs pequenos são r
 
 Toda contribuição é valorizada! Contribuidores são listados em:
 
-- [Contributors Graph](https://github.com/ossmoralus/oraculo/graphs/contributors)
+- [Contributors Graph](https://github.com/ascentusoss/oraculo/graphs/contributors)
 - Menções em releases notes quando aplicável
 
 ---
