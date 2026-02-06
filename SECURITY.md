@@ -15,9 +15,9 @@ Se você descobrir uma vulnerabilidade de segurança no Oráculo, por favor, rep
 
 ### Métodos de Relato:
 
-- **GitHub Security Advisories**: Use o [formulário de advisories do GitHub](https://github.com/i-lopos/oraculo/security/advisories/new) para relatar vulnerabilidades de forma privada.
+- **GitHub Security Advisories**: Use o [formulário de advisories do GitHub](https://github.com/ascentusoss/oraculo/security/advisories/new) para relatar vulnerabilidades de forma privada.
 - **Issues Privadas**: Abra uma issue no repositório com o rótulo `security` e marque como privada, se possível. Evite incluir detalhes sensíveis no título ou descrição inicial.
-- **E-mail**: Contate o mantenedor diretamente via e-mail (consulte o perfil do GitHub de [@ossmoralus](https://github.com/ossmoralus) para obter o e-mail).
+- **E-mail**: Contate o mantenedor diretamente via e-mail (consulte o perfil do GitHub de [@ossmoralus](https://github.com/ascentusoss) para obter o e-mail).
 
 Forneça o máximo de detalhes possível, incluindo:
 
@@ -47,7 +47,7 @@ Apenas a versão mais recente e as versões ativas de manutenção recebem corre
 
 Para questões relacionadas à segurança, entre em contato:
 
-- **Mantenedor**: Italo C Lopes ([@ossmoralus](https://github.com/ossmoralus))
-- **Repositório**: [https://github.com/ossmoralus/oraculo](https://github.com/ossmoralus/oraculo)
+- **Mantenedor**: Italo C Lopes ([@ascentusoss](https://github.com/ascentusoss))
+- **Repositório**: [https://github.com/ascentusoss/oraculo](https://github.com/ascentusoss/oraculo)
 
 Obrigado por ajudar a manter o Oráculo seguro!
