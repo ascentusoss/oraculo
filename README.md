@@ -15,10 +15,10 @@
 
 **Versão Atual:** 0.3.7 | **Node.js:** >=24.12.0 | **Licença:** MIT
 
-[![Stars](https://img.shields.io/github/stars/ossmoralus/oraculo?style=social)](https://github.com/ascentusoss/oraculo/stargazers)
-[![Forks](https://img.shields.io/github/forks/ossmoralus/oraculo?style=social)](https://github.com/ascentusoss/oraculo/network/members)
-[![Issues](https://img.shields.io/github/issues/ossmoralus/oraculo)](https://github.com/ascentusoss/oraculo/issues)
-[![Contributors](https://img.shields.io/github/contributors/ossmoralus/oraculo)](https://github.com/ascentusoss/oraculo/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/ascentusoss/oraculo?style=social)](https://github.com/ascentusoss/oraculo/stargazers)
+[![Forks](https://img.shields.io/github/forks/ascentusoss/oraculo?style=social)](https://github.com/ascentusoss/oraculo/network/members)
+[![Issues](https://img.shields.io/github/issues/ascentusoss/oraculo)](https://github.com/ascentusoss/oraculo/issues)
+[![Contributors](https://img.shields.io/github/contributors/ascentusoss/oraculo)](https://github.com/ascentusoss/oraculo/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ascentusoss/oraculo/blob/main/CONTRIBUTING.md)
 
 ## 🚀 Demo Rápido
@@ -51,7 +51,7 @@ Oráculo é uma CLI modular para analisar, diagnosticar e manter projetos (JS/TS
 
 ```bash
 # Clone o repositório
-git clone https://github.com/i-lopos/oraculo.git
+git clone https://github.com/ascentusoss/oraculo.git
 cd oraculo
 
 # Instale dependências e compile
@@ -65,7 +65,7 @@ node dist/bin/index.js diagnosticar --json
 **Windows (PowerShell):**
 
 ```powershell
-git clone https://github.com/i-lopos/oraculo.git; cd oraculo; npm install; npm run build; node dist/bin/index.js diagnosticar --json
+git clone https://github.com/ascentusoss/oraculo.git; cd oraculo; npm install; npm run build; node dist/bin/index.js diagnosticar --json
 ```
 
 ### Instalação Global (Opcional)
