@@ -1,6 +1,6 @@
 {
   "name": "oraculo",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "type": "module",
   "description": "CLI modular para análise, diagnóstico e manutenção de projetos JavaScript/TypeScript",
   "author": "Italo C Lopes",
