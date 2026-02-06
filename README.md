@@ -25,7 +25,7 @@
 
 ```bash
 # Teste em 30 segundos sem instalar (requer Node.js 24+)
-npx github:i-lopos/oraculo diagnosticar --help
+npx github:ascentusoss/oraculo diagnosticar --help
 ```
 
 ## 💡 Por que usar o Oráculo?
