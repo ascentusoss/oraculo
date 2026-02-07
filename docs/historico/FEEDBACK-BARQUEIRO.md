@@ -365,6 +365,6 @@ Apesar dos pontos de melhoria, o Oráculo **já é uma ferramenta valiosa**. Con
 
 ## 📞 Contato
 
-- **Projeto:** [github.com/ossmoralus/barqueiro](https://github.com/ossmoralus/barqueiro)
+- **Projeto:** [github.com/ascentusoss/barqueiro](https://github.com/ascentusoss/barqueiro)
 - **Feedback gerado em:** 01/12/2025
 - **Versão analisada:** Oráculo CLI v0.2.0
