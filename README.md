@@ -5,6 +5,13 @@
 > Conteúdos de terceiros não licenciados de forma compatível não devem ser incluídos.
 > Referências a materiais externos devem ser linkadas e reescritas com palavras próprias.
 
+---
+
+> NOTA: Eu foquei mais no codigo e negligenciei a documentação. a documentação esta desatualizada e não reflete o estado atual do projeto, vou descansar um pouco e focar em arrumar a documentção agora.
+
+> Favor não mexer no meu repositorio outra vez, se não for ajudar não atrapalha.
+---
+
 [![CI](https://github.com/ascentusoss/oraculo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/i-lopos/oraculo/actions/workflows/ci.yml)
 [![Build](https://github.com/ascentusoss/oraculo/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/ascentusoss/oraculo/actions/workflows/build.yml)
 [![Monitor Deps](https://github.com/ascentusoss/oraculo/actions/workflows/monitor-deps.yml/badge.svg)](https://github.com/ascentusoss/oraculo/actions/workflows/monitor-deps.yml)
