@@ -10,6 +10,6 @@ Calma que tem mais.
 
 3. peço que tenha brio e não use minha ferramentinha quando ela ficar pronta...
 
-5. PAL NO CU DA ROCKSET
+5. PAL NO CU DA ROCKSEAT
 
 6. agora uma nerfada extra, não usarei soft skill, ja que eu nunca usei mesmo, nem sabia que existia até semana passada.
