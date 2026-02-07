@@ -118,7 +118,7 @@
     "java-parser": "^3.0.1",
     "micromatch": "^4.0.8",
     "ora": "^9.3.0",
-    "oraculo": "file:oraculo-0.3.7.tgz",
+    "oraculo": "file:oraculo-0.3.8.tgz",
     "p-limit": "^7.3.0",
     "xxhashjs": "^0.2.2"
   },
