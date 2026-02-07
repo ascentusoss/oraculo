@@ -6,45 +6,45 @@
 
 # Default owner for everything
 
-- @ossmoralus
+- @ascentusoss
 
 # Core source code
 
-/src/ @ossmoralus
+/src/ @ascentusoss
 
 # CLI commands
 
-/src/cli/ @ossmoralus
+/src/cli/ @ascentusoss
 
 # Analysts and detectors
 
-/src/analistas/ @ossmoralus
+/src/analistas/ @ascentusoss
 
 # Guardian integrity system
 
-/src/guardian/ @ossmoralus
+/src/guardian/ @ascentusoss
 
 # Tests
 
-/tests/ @ossmoralus
+/tests/ @ascentusoss
 
 # Documentation
 
-/docs/ @ossmoralus
-\*.md @ossmoralus
+/docs/ @ascentusoss
+\*.md @ascentusoss
 
 # Configuration files
 
-/_.json @ossmoralus
-/_.ts @ossmoralus
-/\*.js @ossmoralus
+/_.json @ascentusoss
+/_.ts @ascentusoss
+/\*.js @ascentusoss
 
 # CI/CD workflows
 
-/.github/ @ossmoralus
+/.github/ @ascentusoss
 
 # Security-sensitive files
 
-/SECURITY.md @ossmoralus
-/.github/workflows/release.yml @ossmoralus
-/.github/workflows/compliance.yml @ossmoralus
+/SECURITY.md @ascentusoss
+/.github/workflows/release.yml @ascentusoss
+/.github/workflows/compliance.yml @ascentusoss

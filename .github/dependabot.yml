@@ -20,7 +20,7 @@ updates:
       - "dependencies"
       - "automated"
     reviewers:
-      - "ossmoralus"
+      - "ascentusoss"
     groups:
       # Group all development dependencies
       dev-dependencies:
@@ -74,4 +74,4 @@ updates:
       - "dependencies"
       - "automated"
     reviewers:
-      - "ossmoralus"
+      - "ascentusoss"
