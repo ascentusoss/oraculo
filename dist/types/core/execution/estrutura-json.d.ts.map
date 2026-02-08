@@ -1,1 +1,0 @@
-{"version":3,"file":"estrutura-json.d.ts","sourceRoot":"","sources":["../../../../src/types/core/execution/estrutura-json.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EACV,cAAc,EACd,0BAA0B,EAC1B,yBAAyB,EAC1B,MAAM,GAAG,CAAC;AAEX,MAAM,WAAW,yBAAyB;IACxC,QAAQ,EAAE,0BAA0B,EAAE,CAAC;IACvC,QAAQ,EAAE,yBAAyB,GAAG,IAAI,CAAC;IAC3C,KAAK,EAAE,cAAc,CAAC;CACvB"}
