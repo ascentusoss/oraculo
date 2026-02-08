@@ -1,1 +1,0 @@
-{"version":3,"file":"registros.d.ts","sourceRoot":"","sources":["../../src/guardian/registros.ts"],"names":[],"mappings":"AAOA,OAAO,KAAK,EAAE,SAAS,EAAE,mBAAmB,EAAE,MAAM,GAAG,CAAC;AAUxD,wBAAsB,eAAe,CACnC,WAAW,EAAE,SAAS,EAAE,EACxB,OAAO,GAAE,MAAuB,GAC/B,OAAO,CAAC,IAAI,CAAC,CAaf;AAMD,wBAAsB,iBAAiB,CACrC,OAAO,GAAE,MAAuB,GAC/B,OAAO,CAAC,mBAAmB,EAAE,CAAC,CAOhC"}

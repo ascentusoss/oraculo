@@ -1,1 +1,0 @@
-{"version":3,"file":"syntax-map.d.ts","sourceRoot":"","sources":["../../../src/shared/impar/syntax-map.ts"],"names":[],"mappings":"AAEA,MAAM,MAAM,UAAU,GAAG;IACvB,MAAM,CAAC,EAAE,MAAM,CAAC;IAChB,UAAU,CAAC,EAAE,OAAO,CAAC;CACtB,CAAC;AAEF,eAAO,MAAM,SAAS,EAAE,MAAM,CAAC,MAAM,EAAE,UAAU,CAmChD,CAAC;AAEF,wBAAgB,oBAAoB,CAAC,OAAO,EAAE,MAAM,GAAG,UAAU,GAAG,IAAI,CAMvE"}
