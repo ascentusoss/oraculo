@@ -7,7 +7,16 @@
 
 ---
 
-> NOTA: Eu foquei mais no codigo e negligenciei a documentação. a documentação esta desatualizada e não reflete o estado atual do projeto, vou descansar um pouco e focar em arrumar a documentção agora.
+> ⚠️ **Aviso Importante**
+>
+> Esta ferramenta está em fase inicial de desenvolvimento e ainda não foi validada. Portanto:
+>
+> - **Não substitui** ferramentas oficialmente validadas ou a orientação de profissionais experientes
+> - **Use com cautela** se você já domina o assunto e compreende suas limitações
+> - **Não confie cegamente** se não tem experiência, pois não há garantias de precisão
+> - **Aguarde validação** antes de usar como referência principal
+>
+> Recomendamos que aguarde feedback e validação antes de depender desta ferramenta.
 
 ---
 
