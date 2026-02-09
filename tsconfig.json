@@ -32,58 +32,57 @@
     "types": [
       "node"
     ],
-    "baseUrl": "./src",
     "paths": {
       "@core/*": [
-        "core/*"
+        "./src/core/*"
       ],
       "@shared/*": [
-        "shared/*"
+        "./src/shared/*"
       ],
       "@analistas/*": [
-        "analistas/*"
+        "./src/analistas/*"
       ],
       "@relatorios/*": [
-        "relatorios/*"
+        "./src/relatorios/*"
       ],
       "@guardian/*": [
-        "guardian/*"
+        "./src/guardian/*"
       ],
       "@cli/*": [
-        "cli/*"
+        "./src/cli/*"
       ],
       "@zeladores/*": [
-        "zeladores/*"
+        "./src/zeladores/*"
       ],
       "@types/*": [
-        "types/*"
+        "./src/types/*"
       ],
       "@types/types": [
-        "types/index.ts"
+        "./src/types/index.ts"
       ],
       "@types/analistas": [
-        "types/analistas/index.ts"
+        "./src/types/analistas/index.ts"
       ],
       "@types/guardian": [
-        "types/guardian/index.ts"
+        "./src/types/guardian/index.ts"
       ],
       "@types/cli": [
-        "types/cli/index.ts"
+        "./src/types/cli/index.ts"
       ],
       "@types/core": [
-        "types/core/index.ts"
+        "./src/types/core/index.ts"
       ],
       "@types/relatorios": [
-        "types/relatorios/index.ts"
+        "./src/types/relatorios/index.ts"
       ],
       "@types/shared": [
-        "types/shared/index.ts"
+        "./src/types/shared/index.ts"
       ],
       "@types/projeto": [
-        "types/projeto/index.ts"
+        "./src/types/projeto/index.ts"
       ],
       "@": [
-        "types/index.ts"
+        "./src/types/index.ts"
       ]
     }
   },
